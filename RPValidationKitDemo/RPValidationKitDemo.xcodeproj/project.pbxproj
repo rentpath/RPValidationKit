@@ -12,7 +12,7 @@
 		E6F682471CA5A4A3009255CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6F682451CA5A4A3009255CB /* Main.storyboard */; };
 		E6F682491CA5A4A3009255CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6F682481CA5A4A3009255CB /* Assets.xcassets */; };
 		E6F6824C1CA5A4A3009255CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6F6824A1CA5A4A3009255CB /* LaunchScreen.storyboard */; };
-		E6F682671CA5A8C5009255CB /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F682661CA5A8C5009255CB /* UITextField.swift */; };
+		E6F6827A1CA5C614009255CB /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F682791CA5C614009255CB /* CustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,7 @@
 		E6F6824B1CA5A4A3009255CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E6F6824D1CA5A4A3009255CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6F6825A1CA5A626009255CB /* RPValidationKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RPValidationKit.xcodeproj; path = ../RPValidationKit/RPValidationKit.xcodeproj; sourceTree = "<group>"; };
-		E6F682661CA5A8C5009255CB /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		E6F682791CA5C614009255CB /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +77,8 @@
 			children = (
 				E6F682411CA5A4A3009255CB /* AppDelegate.swift */,
 				E6F682431CA5A4A3009255CB /* ViewController.swift */,
+				E6F682791CA5C614009255CB /* CustomView.swift */,
 				E6F682531CA5A4CB009255CB /* Supporting Files */,
-				E6F682661CA5A8C5009255CB /* UITextField.swift */,
 			);
 			name = Source;
 			path = RPValidationKitDemo;
@@ -199,8 +199,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6F682441CA5A4A3009255CB /* ViewController.swift in Sources */,
+				E6F6827A1CA5C614009255CB /* CustomView.swift in Sources */,
 				E6F682421CA5A4A3009255CB /* AppDelegate.swift in Sources */,
-				E6F682671CA5A8C5009255CB /* UITextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
