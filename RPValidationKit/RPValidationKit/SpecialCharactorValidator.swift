@@ -6,12 +6,14 @@
 //  Copyright (c) 2015 RentPath. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-public class SpecialCharactorValidator: NSObject, Validator {
+public struct SpecialCharactorValidator: Validator {
     
     var SPECIALREGEX: String = ".*[^A-Za-z0-9 ].*"
-        
+    
+    public init() {}
+    
     public func validate(value: String) -> Bool {
         let range = value.rangeOfString(SPECIALREGEX, options:.RegularExpressionSearch)
         return range == nil ? true : false

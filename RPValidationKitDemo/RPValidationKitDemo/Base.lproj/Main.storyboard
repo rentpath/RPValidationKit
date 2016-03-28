@@ -86,10 +86,22 @@
                                                     <outlet property="textField" destination="hrQ-iI-3fA" id="Gzv-f9-g7r"/>
                                                 </connections>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaS-Qs-vF5">
-                                                <rect key="frame" x="20" y="429" width="240" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZz-78-aBm">
+                                                <rect key="frame" x="20" y="499" width="240" height="50"/>
+                                                <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="FCL-za-5dx"/>
+                                                    <constraint firstAttribute="height" constant="50" id="UCK-TW-Mds"/>
+                                                </constraints>
+                                                <state key="normal" title="Reset"/>
+                                                <connections>
+                                                    <action selector="resetAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2L5-SF-lul"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaS-Qs-vF5">
+                                                <rect key="frame" x="20" y="429" width="240" height="50"/>
+                                                <color key="backgroundColor" red="0.81568627450980391" green="0.81568627450980391" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="FCL-za-5dx"/>
                                                     <constraint firstAttribute="width" constant="240" id="idb-2H-jdS"/>
                                                 </constraints>
                                                 <state key="normal" title="Validate"/>
@@ -100,13 +112,14 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="kaS-Qs-vF5" secondAttribute="bottom" constant="20" id="0kP-Oj-6A5"/>
                                             <constraint firstItem="QwW-q0-DKt" firstAttribute="leading" secondItem="4ev-Dz-f8H" secondAttribute="leading" constant="20" id="3eR-mI-9Fz"/>
                                             <constraint firstAttribute="trailing" secondItem="7gR-Dj-3Hc" secondAttribute="trailing" constant="20" id="BVe-cP-0lW"/>
                                             <constraint firstItem="5MM-Xu-bA4" firstAttribute="leading" secondItem="4ev-Dz-f8H" secondAttribute="leading" constant="20" id="FDQ-Ur-24f"/>
                                             <constraint firstItem="5MM-Xu-bA4" firstAttribute="top" secondItem="4ev-Dz-f8H" secondAttribute="top" constant="80" id="Fdf-XF-Y16"/>
                                             <constraint firstItem="7gR-Dj-3Hc" firstAttribute="top" secondItem="QwW-q0-DKt" secondAttribute="bottom" constant="20" id="Jcd-vg-Ivw"/>
+                                            <constraint firstItem="OZz-78-aBm" firstAttribute="top" secondItem="kaS-Qs-vF5" secondAttribute="bottom" constant="20" id="NTo-ra-JE8"/>
                                             <constraint firstAttribute="trailing" secondItem="QwW-q0-DKt" secondAttribute="trailing" constant="20" id="ON3-DP-myY"/>
+                                            <constraint firstItem="OZz-78-aBm" firstAttribute="leading" secondItem="kaS-Qs-vF5" secondAttribute="leading" id="PQL-WI-4Nw"/>
                                             <constraint firstItem="kaS-Qs-vF5" firstAttribute="leading" secondItem="4ev-Dz-f8H" secondAttribute="leading" constant="20" id="Rc6-tX-C05"/>
                                             <constraint firstItem="7gR-Dj-3Hc" firstAttribute="leading" secondItem="4ev-Dz-f8H" secondAttribute="leading" constant="20" id="SBS-fT-D8B"/>
                                             <constraint firstAttribute="trailing" secondItem="5MM-Xu-bA4" secondAttribute="trailing" constant="20" id="SWx-hO-wQH"/>
@@ -117,6 +130,8 @@
                                             <constraint firstItem="1hI-Tt-nOZ" firstAttribute="leading" secondItem="4ev-Dz-f8H" secondAttribute="leading" constant="20" id="eai-gb-mva"/>
                                             <constraint firstItem="cdu-J2-aM1" firstAttribute="leading" secondItem="4ev-Dz-f8H" secondAttribute="leading" constant="20" id="vLm-0D-Lng"/>
                                             <constraint firstItem="kaS-Qs-vF5" firstAttribute="top" secondItem="cdu-J2-aM1" secondAttribute="bottom" constant="20" id="wLV-Hg-Zv5"/>
+                                            <constraint firstItem="OZz-78-aBm" firstAttribute="width" secondItem="kaS-Qs-vF5" secondAttribute="width" id="wd6-UI-Agi"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="OZz-78-aBm" secondAttribute="bottom" constant="50" id="xfM-tU-2iA"/>
                                         </constraints>
                                     </view>
                                 </subviews>

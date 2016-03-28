@@ -17,6 +17,12 @@ class ViewController: UIViewController {
         didSet {
             emailTextField.fieldName = "Email Address"
             emailTextField.validators = [EmailValidator()]
+            emailTextField.invalidHandler = {
+                self.emailTextField.backgroundColor = UIColor.blueColor()
+            }
+            emailTextField.resetHandler = {
+                self.emailTextField.backgroundColor = UIColor.whiteColor()
+            }
             validationManager.addValidatable(emailTextField)
         }
     }
@@ -24,7 +30,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField! {
         didSet {
             nameTextField.fieldName = "Name"
-            nameTextField.validators = [SpecialCharactorValidator()]
+            nameTextField.validators = [SpecialCharactorValidator(), RequiredValidator()]
+            nameTextField.invalidHandler = {
+                self.nameTextField.backgroundColor = UIColor.yellowColor()
+            }
+            nameTextField.resetHandler = {
+                self.nameTextField.backgroundColor = UIColor.whiteColor()
+            }
             validationManager.addValidatable(nameTextField)
         }
     }
@@ -52,10 +64,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func validateAction(sender: AnyObject) {
-    
         let result = validationManager.validate()
         print("result.isValid: \(result.isValid)")
         print("result.errorMessages: \(result.errorMessages)")
+    }
+    
+    @IBAction func resetAction(sender: AnyObject) {
+        validationManager.reset()
     }
 }
 

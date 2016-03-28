@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 rentpath. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-public class MinLengthValidator: NSObject, Validator {
+public struct MinLengthValidator: Validator {
     var minLength: Int = 1
     
     public init(length: Int) {

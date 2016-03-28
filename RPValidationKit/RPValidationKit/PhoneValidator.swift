@@ -6,13 +6,14 @@
 //  Copyright (c) 2015 rentpath. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-public class PhoneValidator: NSObject, Validator {
+public struct PhoneValidator: Validator {
     var PHONEREGEX: String = "^[(]\\d{3}[)][\\s]\\d{3}-\\d{4}$"
     
-    public func validate(value: String) -> Bool {
-        
+    public init() {}
+    
+    public func validate(value: String) -> Bool {    
         let range = value.rangeOfString(PHONEREGEX, options:.RegularExpressionSearch)
         return range != nil ? true : false
     }

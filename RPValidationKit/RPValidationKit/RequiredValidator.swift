@@ -6,9 +6,11 @@
 //  Copyright (c) 2015 rentpath. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-public class RequiredValidator: NSObject, Validator {
+public struct RequiredValidator: Validator {
+    
+    public init() {}
     
     public func validate(value: String) -> Bool {
         let trimmedString = value.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())

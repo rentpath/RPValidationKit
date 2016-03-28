@@ -350,6 +350,7 @@
 				E6F682521CA5A4A3009255CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

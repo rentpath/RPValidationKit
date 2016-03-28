@@ -6,9 +6,11 @@
 //  Copyright (c) 2015 RentPath. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-public class IntegerValidator: NSObject, Validator {
+public struct IntegerValidator: Validator {
+    
+    public init() {}
     
     public func validate(value: String) -> Bool {
         if let _ = Int(value) {

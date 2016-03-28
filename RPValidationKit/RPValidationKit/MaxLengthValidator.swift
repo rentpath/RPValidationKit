@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 rentpath. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-public class MaxLengthValidator: NSObject, Validator {
+public struct MaxLengthValidator: Validator {
     var maxLength: Int = 256
     
     public init(length: Int) {

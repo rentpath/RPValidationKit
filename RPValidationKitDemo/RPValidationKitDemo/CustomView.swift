@@ -24,10 +24,30 @@ class CustomView: UIView {
 extension CustomView: Validatable {
     
     func validate() -> FieldValidation {
+        let result = textField.validate()
+        
+        if result.isValid {
+            showValid()
+        } else {
+            showInvalid()
+        }
+       
         return textField.validate()
     }
     
     func validatableName() -> String {
         return "Custom View"
+    }
+    
+    func showValid() {
+        backgroundColor = UIColor.greenColor()
+    }
+    
+    func showInvalid() {
+        backgroundColor = UIColor.redColor()
+    }
+    
+    func resetValidation() {
+        backgroundColor = UIColor.yellowColor()
     }
 }

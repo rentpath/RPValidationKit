@@ -6,10 +6,12 @@
 //  Copyright (c) 2015 rentpath. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-public class EmailValidator: NSObject, Validator {
+public struct EmailValidator: Validator {
     var EMAILREGEX: String = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$"
+    
+    public init() {}
     
     public func validate(value: String) -> Bool {
         let components = value.componentsSeparatedByCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
