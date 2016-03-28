@@ -13,15 +13,18 @@ class ViewController: UIViewController {
 
     let validationManager = RPValidationManager()
     
+    let errorColor = UIColor.redColor().colorWithAlphaComponent(0.1)
+    let normalColor = UIColor.whiteColor()
+    
     @IBOutlet weak var emailTextField: UITextField! {
         didSet {
             emailTextField.fieldName = "Email Address"
             emailTextField.validators = [EmailValidator()]
-            emailTextField.invalidHandler = {
-                self.emailTextField.backgroundColor = UIColor.blueColor()
+            emailTextField.invalidHandler = { [unowned self] in
+                self.emailTextField.backgroundColor = self.errorColor
             }
-            emailTextField.resetHandler = {
-                self.emailTextField.backgroundColor = UIColor.whiteColor()
+            emailTextField.resetHandler = { [unowned self] in
+                self.emailTextField.backgroundColor = self.normalColor
             }
             validationManager.addValidatable(emailTextField)
         }
@@ -31,11 +34,11 @@ class ViewController: UIViewController {
         didSet {
             nameTextField.fieldName = "Name"
             nameTextField.validators = [SpecialCharactorValidator(), RequiredValidator()]
-            nameTextField.invalidHandler = {
-                self.nameTextField.backgroundColor = UIColor.yellowColor()
+            nameTextField.invalidHandler = { [unowned self] in
+                self.nameTextField.backgroundColor = self.errorColor
             }
-            nameTextField.resetHandler = {
-                self.nameTextField.backgroundColor = UIColor.whiteColor()
+            nameTextField.resetHandler = { [unowned self] in
+                self.nameTextField.backgroundColor = self.normalColor
             }
             validationManager.addValidatable(nameTextField)
         }
@@ -53,6 +56,7 @@ class ViewController: UIViewController {
         didSet {
             phoneNumberTextField.fieldName = "Phone Number"
             phoneNumberTextField.validators = [PhoneValidator()]
+            phoneNumberTextField.delegate = self
             validationManager.addValidatable(phoneNumberTextField)
         }
     }
@@ -71,6 +75,22 @@ class ViewController: UIViewController {
     
     @IBAction func resetAction(sender: AnyObject) {
         validationManager.reset()
+    }
+    
+    deinit {
+        print("im going away")
+    }
+}
+
+extension ViewController: UITextFieldDelegate {
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        if string.characters.count == 0 && range.length > 0 {
+            return true
+        }
+        
+        textField.text = (textField.text! as NSString).stringByReplacingCharactersInRange(range, withString: string).format(.PhoneNumber)
+        return false
     }
 }
 

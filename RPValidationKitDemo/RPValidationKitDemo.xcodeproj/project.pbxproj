@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E61508F41CA9B89C00D3D70E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61508F31CA9B89C00D3D70E /* String.swift */; };
 		E6F682421CA5A4A3009255CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F682411CA5A4A3009255CB /* AppDelegate.swift */; };
 		E6F682441CA5A4A3009255CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F682431CA5A4A3009255CB /* ViewController.swift */; };
 		E6F682471CA5A4A3009255CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6F682451CA5A4A3009255CB /* Main.storyboard */; };
@@ -16,6 +17,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		E61508EF1CA9B89300D3D70E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6F6825A1CA5A626009255CB /* RPValidationKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E61508C31CA9B1EB00D3D70E;
+			remoteInfo = "RPValidationKit tvOS";
+		};
+		E61508F11CA9B89300D3D70E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6F6825A1CA5A626009255CB /* RPValidationKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E61508CC1CA9B1EB00D3D70E;
+			remoteInfo = "RPValidationKit tvOSTests";
+		};
 		E6F6825F1CA5A626009255CB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E6F6825A1CA5A626009255CB /* RPValidationKit.xcodeproj */;
@@ -33,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E61508F31CA9B89C00D3D70E /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		E6F6823E1CA5A4A3009255CB /* RPValidationKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RPValidationKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6F682411CA5A4A3009255CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6F682431CA5A4A3009255CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +71,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E61508EA1CA9B89300D3D70E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E61508F31CA9B89C00D3D70E /* String.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		E6F682351CA5A4A3009255CB = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +99,7 @@
 		E6F682401CA5A4A3009255CB /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				E61508EA1CA9B89300D3D70E /* Extensions */,
 				E6F682411CA5A4A3009255CB /* AppDelegate.swift */,
 				E6F682431CA5A4A3009255CB /* ViewController.swift */,
 				E6F682791CA5C614009255CB /* CustomView.swift */,
@@ -100,6 +125,8 @@
 			children = (
 				E6F682601CA5A626009255CB /* RPValidationKit.framework */,
 				E6F682621CA5A626009255CB /* RPValidationKitTests.xctest */,
+				E61508F01CA9B89300D3D70E /* RPValidationKit.framework */,
+				E61508F21CA9B89300D3D70E /* RPValidationKit tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,6 +191,20 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		E61508F01CA9B89300D3D70E /* RPValidationKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RPValidationKit.framework;
+			remoteRef = E61508EF1CA9B89300D3D70E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E61508F21CA9B89300D3D70E /* RPValidationKit tvOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "RPValidationKit tvOSTests.xctest";
+			remoteRef = E61508F11CA9B89300D3D70E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		E6F682601CA5A626009255CB /* RPValidationKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -200,6 +241,7 @@
 			files = (
 				E6F682441CA5A4A3009255CB /* ViewController.swift in Sources */,
 				E6F6827A1CA5C614009255CB /* CustomView.swift in Sources */,
+				E61508F41CA9B89C00D3D70E /* String.swift in Sources */,
 				E6F682421CA5A4A3009255CB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
