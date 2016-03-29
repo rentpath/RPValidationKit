@@ -16,7 +16,6 @@
 		E61508DF1CA9B25300D3D70E /* MinLengthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6826B1CA5AB19009255CB /* MinLengthValidator.swift */; };
 		E61508E01CA9B25300D3D70E /* PhoneValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6826C1CA5AB19009255CB /* PhoneValidator.swift */; };
 		E61508E11CA9B25300D3D70E /* RequiredValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6826D1CA5AB19009255CB /* RequiredValidator.swift */; };
-		E61508E21CA9B25300D3D70E /* SpecialCharactorValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6826E1CA5AB19009255CB /* SpecialCharactorValidator.swift */; };
 		E61508E31CA9B25800D3D70E /* RPValidationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E6F6821E1CA5A461009255CB /* RPValidationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E61508E41CA9B26200D3D70E /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F682A91CA99169009255CB /* Validatable.swift */; };
 		E61508E51CA9B26200D3D70E /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F682AB1CA99175009255CB /* Validator.swift */; };
@@ -34,7 +33,6 @@
 		E6F682711CA5AB19009255CB /* MinLengthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6826B1CA5AB19009255CB /* MinLengthValidator.swift */; };
 		E6F682721CA5AB19009255CB /* PhoneValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6826C1CA5AB19009255CB /* PhoneValidator.swift */; };
 		E6F682731CA5AB19009255CB /* RequiredValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6826D1CA5AB19009255CB /* RequiredValidator.swift */; };
-		E6F682741CA5AB19009255CB /* SpecialCharactorValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6826E1CA5AB19009255CB /* SpecialCharactorValidator.swift */; };
 		E6F682781CA5BC77009255CB /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F682771CA5BC77009255CB /* EmailValidator.swift */; };
 		E6F682AA1CA99169009255CB /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F682A91CA99169009255CB /* Validatable.swift */; };
 		E6F682AC1CA99175009255CB /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F682AB1CA99175009255CB /* Validator.swift */; };
@@ -78,7 +76,6 @@
 		E6F6826B1CA5AB19009255CB /* MinLengthValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinLengthValidator.swift; sourceTree = "<group>"; };
 		E6F6826C1CA5AB19009255CB /* PhoneValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneValidator.swift; sourceTree = "<group>"; };
 		E6F6826D1CA5AB19009255CB /* RequiredValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequiredValidator.swift; sourceTree = "<group>"; };
-		E6F6826E1CA5AB19009255CB /* SpecialCharactorValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialCharactorValidator.swift; sourceTree = "<group>"; };
 		E6F682771CA5BC77009255CB /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		E6F682A91CA99169009255CB /* Validatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validatable.swift; sourceTree = "<group>"; };
 		E6F682AB1CA99175009255CB /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
@@ -196,7 +193,6 @@
 				E6F6826B1CA5AB19009255CB /* MinLengthValidator.swift */,
 				E6F6826C1CA5AB19009255CB /* PhoneValidator.swift */,
 				E6F6826D1CA5AB19009255CB /* RequiredValidator.swift */,
-				E6F6826E1CA5AB19009255CB /* SpecialCharactorValidator.swift */,
 			);
 			name = Validators;
 			sourceTree = "<group>";
@@ -378,7 +374,6 @@
 				E61508DA1CA9B24B00D3D70E /* RPValidationManager.swift in Sources */,
 				E61508E71CA9B26200D3D70E /* FieldValidation.swift in Sources */,
 				E61508E11CA9B25300D3D70E /* RequiredValidator.swift in Sources */,
-				E61508E21CA9B25300D3D70E /* SpecialCharactorValidator.swift in Sources */,
 				E61508E01CA9B25300D3D70E /* PhoneValidator.swift in Sources */,
 				E61508DF1CA9B25300D3D70E /* MinLengthValidator.swift in Sources */,
 				E61508E81CA9B26200D3D70E /* FormValidation.swift in Sources */,
@@ -406,7 +401,6 @@
 			files = (
 				E6F682591CA5A5B4009255CB /* RPValidationManager.swift in Sources */,
 				E6F682731CA5AB19009255CB /* RequiredValidator.swift in Sources */,
-				E6F682741CA5AB19009255CB /* SpecialCharactorValidator.swift in Sources */,
 				E6F682721CA5AB19009255CB /* PhoneValidator.swift in Sources */,
 				E6F682AE1CA99181009255CB /* Validation.swift in Sources */,
 				E6F682AC1CA99175009255CB /* Validator.swift in Sources */,
@@ -661,6 +655,7 @@
 				E61508D51CA9B1EB00D3D70E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E61508D91CA9B1EB00D3D70E /* Build configuration list for PBXNativeTarget "RPValidationKit tvOSTests" */ = {
 			isa = XCConfigurationList;
@@ -669,6 +664,7 @@
 				E61508D71CA9B1EB00D3D70E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E6F682151CA5A461009255CB /* Build configuration list for PBXProject "RPValidationKit" */ = {
 			isa = XCConfigurationList;

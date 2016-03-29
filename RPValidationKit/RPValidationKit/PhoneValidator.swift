@@ -9,12 +9,13 @@
 import Foundation
 
 public struct PhoneValidator: Validator {
-    var PHONEREGEX: String = "^[(]\\d{3}[)][\\s]\\d{3}-\\d{4}$"
+    var PHONEREGEX: String = "^\\d{10}$"
     
     public init() {}
     
-    public func validate(value: String) -> Bool {    
-        let range = value.rangeOfString(PHONEREGEX, options:.RegularExpressionSearch)
+    public func validate(value: String) -> Bool {
+        let valueDigits = value.stringByReplacingOccurrencesOfString("[^0-9]", withString: "", options: NSStringCompareOptions.RegularExpressionSearch, range: Range<String.Index>(start: value.startIndex, end: value.endIndex))
+        let range = valueDigits.rangeOfString(PHONEREGEX, options:.RegularExpressionSearch)
         return range != nil ? true : false
     }
     
