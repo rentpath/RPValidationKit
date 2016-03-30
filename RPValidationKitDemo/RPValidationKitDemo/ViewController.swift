@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField! {
         didSet {
             nameTextField.fieldName = "Name"
-            //nameTextField.validators = [SpecialCharactorValidator(), RequiredValidator()]
+            nameTextField.validators = [RequiredValidator()]
             nameTextField.invalidHandler = { [unowned self] in
                 self.nameTextField.backgroundColor = self.errorColor
             }
