@@ -7,38 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ADC6C0081CAC285F00969BE0 /* FieldValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0021CAC285F00969BE0 /* FieldValidation.swift */; };
+		ADC6C0091CAC285F00969BE0 /* FormValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0031CAC285F00969BE0 /* FormValidation.swift */; };
+		ADC6C00A1CAC285F00969BE0 /* RPValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0041CAC285F00969BE0 /* RPValidationManager.swift */; };
+		ADC6C00B1CAC285F00969BE0 /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0051CAC285F00969BE0 /* Validatable.swift */; };
+		ADC6C00C1CAC285F00969BE0 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0061CAC285F00969BE0 /* Validation.swift */; };
+		ADC6C00D1CAC285F00969BE0 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0071CAC285F00969BE0 /* Validator.swift */; };
+		ADC6C0101CAC28AB00969BE0 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C00F1CAC28AB00969BE0 /* UITextField.swift */; };
+		ADC6C0181CAC28BB00969BE0 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0121CAC28BB00969BE0 /* EmailValidator.swift */; };
+		ADC6C0191CAC28BB00969BE0 /* IntegerValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0131CAC28BB00969BE0 /* IntegerValidator.swift */; };
+		ADC6C01A1CAC28BB00969BE0 /* MaxLengthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0141CAC28BB00969BE0 /* MaxLengthValidator.swift */; };
+		ADC6C01B1CAC28BB00969BE0 /* MinLengthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0151CAC28BB00969BE0 /* MinLengthValidator.swift */; };
+		ADC6C01C1CAC28BB00969BE0 /* PhoneValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0161CAC28BB00969BE0 /* PhoneValidator.swift */; };
+		ADC6C01D1CAC28BB00969BE0 /* RequiredValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0171CAC28BB00969BE0 /* RequiredValidator.swift */; };
 		E61508CD1CA9B1EB00D3D70E /* RPValidationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E61508C31CA9B1EB00D3D70E /* RPValidationKit.framework */; };
-		E61508DA1CA9B24B00D3D70E /* RPValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F682581CA5A5B4009255CB /* RPValidationManager.swift */; };
-		E61508DB1CA9B24E00D3D70E /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F682641CA5A6F9009255CB /* UITextField.swift */; };
-		E61508DC1CA9B25300D3D70E /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F682771CA5BC77009255CB /* EmailValidator.swift */; };
-		E61508DD1CA9B25300D3D70E /* IntegerValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F682691CA5AB19009255CB /* IntegerValidator.swift */; };
-		E61508DE1CA9B25300D3D70E /* MaxLengthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6826A1CA5AB19009255CB /* MaxLengthValidator.swift */; };
-		E61508DF1CA9B25300D3D70E /* MinLengthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6826B1CA5AB19009255CB /* MinLengthValidator.swift */; };
-		E61508E01CA9B25300D3D70E /* PhoneValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6826C1CA5AB19009255CB /* PhoneValidator.swift */; };
-		E61508E11CA9B25300D3D70E /* RequiredValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6826D1CA5AB19009255CB /* RequiredValidator.swift */; };
 		E61508E31CA9B25800D3D70E /* RPValidationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E6F6821E1CA5A461009255CB /* RPValidationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E61508E41CA9B26200D3D70E /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F682A91CA99169009255CB /* Validatable.swift */; };
-		E61508E51CA9B26200D3D70E /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F682AB1CA99175009255CB /* Validator.swift */; };
-		E61508E61CA9B26200D3D70E /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F682AD1CA99181009255CB /* Validation.swift */; };
-		E61508E71CA9B26200D3D70E /* FieldValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F682AF1CA9918C009255CB /* FieldValidation.swift */; };
-		E61508E81CA9B26200D3D70E /* FormValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F682B11CA99194009255CB /* FormValidation.swift */; };
 		E61508E91CA9B26900D3D70E /* RPValidationKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6822A1CA5A461009255CB /* RPValidationKitTests.swift */; };
 		E6F6821F1CA5A461009255CB /* RPValidationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E6F6821E1CA5A461009255CB /* RPValidationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E6F682261CA5A461009255CB /* RPValidationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F6821B1CA5A461009255CB /* RPValidationKit.framework */; };
 		E6F6822B1CA5A461009255CB /* RPValidationKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6822A1CA5A461009255CB /* RPValidationKitTests.swift */; };
-		E6F682591CA5A5B4009255CB /* RPValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F682581CA5A5B4009255CB /* RPValidationManager.swift */; };
-		E6F682651CA5A6F9009255CB /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F682641CA5A6F9009255CB /* UITextField.swift */; };
-		E6F6826F1CA5AB19009255CB /* IntegerValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F682691CA5AB19009255CB /* IntegerValidator.swift */; };
-		E6F682701CA5AB19009255CB /* MaxLengthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6826A1CA5AB19009255CB /* MaxLengthValidator.swift */; };
-		E6F682711CA5AB19009255CB /* MinLengthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6826B1CA5AB19009255CB /* MinLengthValidator.swift */; };
-		E6F682721CA5AB19009255CB /* PhoneValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6826C1CA5AB19009255CB /* PhoneValidator.swift */; };
-		E6F682731CA5AB19009255CB /* RequiredValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6826D1CA5AB19009255CB /* RequiredValidator.swift */; };
-		E6F682781CA5BC77009255CB /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F682771CA5BC77009255CB /* EmailValidator.swift */; };
-		E6F682AA1CA99169009255CB /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F682A91CA99169009255CB /* Validatable.swift */; };
-		E6F682AC1CA99175009255CB /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F682AB1CA99175009255CB /* Validator.swift */; };
-		E6F682AE1CA99181009255CB /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F682AD1CA99181009255CB /* Validation.swift */; };
-		E6F682B01CA9918C009255CB /* FieldValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F682AF1CA9918C009255CB /* FieldValidation.swift */; };
-		E6F682B21CA99194009255CB /* FormValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F682B11CA99194009255CB /* FormValidation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +46,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ADC6C0021CAC285F00969BE0 /* FieldValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldValidation.swift; sourceTree = "<group>"; };
+		ADC6C0031CAC285F00969BE0 /* FormValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormValidation.swift; sourceTree = "<group>"; };
+		ADC6C0041CAC285F00969BE0 /* RPValidationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPValidationManager.swift; sourceTree = "<group>"; };
+		ADC6C0051CAC285F00969BE0 /* Validatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validatable.swift; sourceTree = "<group>"; };
+		ADC6C0061CAC285F00969BE0 /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		ADC6C0071CAC285F00969BE0 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		ADC6C00F1CAC28AB00969BE0 /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		ADC6C0121CAC28BB00969BE0 /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
+		ADC6C0131CAC28BB00969BE0 /* IntegerValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntegerValidator.swift; sourceTree = "<group>"; };
+		ADC6C0141CAC28BB00969BE0 /* MaxLengthValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaxLengthValidator.swift; sourceTree = "<group>"; };
+		ADC6C0151CAC28BB00969BE0 /* MinLengthValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinLengthValidator.swift; sourceTree = "<group>"; };
+		ADC6C0161CAC28BB00969BE0 /* PhoneValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneValidator.swift; sourceTree = "<group>"; };
+		ADC6C0171CAC28BB00969BE0 /* RequiredValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequiredValidator.swift; sourceTree = "<group>"; };
 		E61508C31CA9B1EB00D3D70E /* RPValidationKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RPValidationKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E61508C71CA9B1EB00D3D70E /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-tvOS.plist"; path = "RPValidationKit/Info-tvOS.plist"; sourceTree = SOURCE_ROOT; };
 		E61508CC1CA9B1EB00D3D70E /* RPValidationKit tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RPValidationKit tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,19 +69,6 @@
 		E6F682251CA5A461009255CB /* RPValidationKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RPValidationKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6F6822A1CA5A461009255CB /* RPValidationKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPValidationKitTests.swift; sourceTree = "<group>"; };
 		E6F6822C1CA5A461009255CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E6F682581CA5A5B4009255CB /* RPValidationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPValidationManager.swift; sourceTree = "<group>"; };
-		E6F682641CA5A6F9009255CB /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
-		E6F682691CA5AB19009255CB /* IntegerValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntegerValidator.swift; sourceTree = "<group>"; };
-		E6F6826A1CA5AB19009255CB /* MaxLengthValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaxLengthValidator.swift; sourceTree = "<group>"; };
-		E6F6826B1CA5AB19009255CB /* MinLengthValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinLengthValidator.swift; sourceTree = "<group>"; };
-		E6F6826C1CA5AB19009255CB /* PhoneValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneValidator.swift; sourceTree = "<group>"; };
-		E6F6826D1CA5AB19009255CB /* RequiredValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequiredValidator.swift; sourceTree = "<group>"; };
-		E6F682771CA5BC77009255CB /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
-		E6F682A91CA99169009255CB /* Validatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validatable.swift; sourceTree = "<group>"; };
-		E6F682AB1CA99175009255CB /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
-		E6F682AD1CA99181009255CB /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
-		E6F682AF1CA9918C009255CB /* FieldValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldValidation.swift; sourceTree = "<group>"; };
-		E6F682B11CA99194009255CB /* FormValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormValidation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,10 +105,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ADC6C0011CAC285F00969BE0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				ADC6C0021CAC285F00969BE0 /* FieldValidation.swift */,
+				ADC6C0031CAC285F00969BE0 /* FormValidation.swift */,
+				ADC6C0041CAC285F00969BE0 /* RPValidationManager.swift */,
+				ADC6C0051CAC285F00969BE0 /* Validatable.swift */,
+				ADC6C0061CAC285F00969BE0 /* Validation.swift */,
+				ADC6C0071CAC285F00969BE0 /* Validator.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		ADC6C00E1CAC28AB00969BE0 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				ADC6C00F1CAC28AB00969BE0 /* UITextField.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		ADC6C0111CAC28BB00969BE0 /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				ADC6C0121CAC28BB00969BE0 /* EmailValidator.swift */,
+				ADC6C0131CAC28BB00969BE0 /* IntegerValidator.swift */,
+				ADC6C0141CAC28BB00969BE0 /* MaxLengthValidator.swift */,
+				ADC6C0151CAC28BB00969BE0 /* MinLengthValidator.swift */,
+				ADC6C0161CAC28BB00969BE0 /* PhoneValidator.swift */,
+				ADC6C0171CAC28BB00969BE0 /* RequiredValidator.swift */,
+			);
+			path = Validators;
+			sourceTree = "<group>";
+		};
 		E6F682111CA5A461009255CB = {
 			isa = PBXGroup;
 			children = (
-				E6F6821D1CA5A461009255CB /* Source */,
+				E6F6821D1CA5A461009255CB /* RPValidationKit */,
 				E6F682291CA5A461009255CB /* Tests */,
 				E6F6821C1CA5A461009255CB /* Products */,
 			);
@@ -138,20 +159,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E6F6821D1CA5A461009255CB /* Source */ = {
+		E6F6821D1CA5A461009255CB /* RPValidationKit */ = {
 			isa = PBXGroup;
 			children = (
-				E6F682581CA5A5B4009255CB /* RPValidationManager.swift */,
-				E6F682A91CA99169009255CB /* Validatable.swift */,
-				E6F682AB1CA99175009255CB /* Validator.swift */,
-				E6F682AD1CA99181009255CB /* Validation.swift */,
-				E6F682AF1CA9918C009255CB /* FieldValidation.swift */,
-				E6F682B11CA99194009255CB /* FormValidation.swift */,
-				E6F682631CA5A6EC009255CB /* Extensions */,
-				E6F682681CA5AB02009255CB /* Validators */,
+				ADC6C0011CAC285F00969BE0 /* Core */,
+				ADC6C00E1CAC28AB00969BE0 /* Extentions */,
+				ADC6C0111CAC28BB00969BE0 /* Validators */,
 				E6F682561CA5A53B009255CB /* Supporting Files */,
 			);
-			name = Source;
 			path = RPValidationKit;
 			sourceTree = "<group>";
 		};
@@ -174,27 +189,6 @@
 				E6F682201CA5A461009255CB /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E6F682631CA5A6EC009255CB /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				E6F682641CA5A6F9009255CB /* UITextField.swift */,
-			);
-			name = Extensions;
-			sourceTree = "<group>";
-		};
-		E6F682681CA5AB02009255CB /* Validators */ = {
-			isa = PBXGroup;
-			children = (
-				E6F682771CA5BC77009255CB /* EmailValidator.swift */,
-				E6F682691CA5AB19009255CB /* IntegerValidator.swift */,
-				E6F6826A1CA5AB19009255CB /* MaxLengthValidator.swift */,
-				E6F6826B1CA5AB19009255CB /* MinLengthValidator.swift */,
-				E6F6826C1CA5AB19009255CB /* PhoneValidator.swift */,
-				E6F6826D1CA5AB19009255CB /* RequiredValidator.swift */,
-			);
-			name = Validators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,19 +365,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E61508DA1CA9B24B00D3D70E /* RPValidationManager.swift in Sources */,
-				E61508E71CA9B26200D3D70E /* FieldValidation.swift in Sources */,
-				E61508E11CA9B25300D3D70E /* RequiredValidator.swift in Sources */,
-				E61508E01CA9B25300D3D70E /* PhoneValidator.swift in Sources */,
-				E61508DF1CA9B25300D3D70E /* MinLengthValidator.swift in Sources */,
-				E61508E81CA9B26200D3D70E /* FormValidation.swift in Sources */,
-				E61508E51CA9B26200D3D70E /* Validator.swift in Sources */,
-				E61508E41CA9B26200D3D70E /* Validatable.swift in Sources */,
-				E61508DD1CA9B25300D3D70E /* IntegerValidator.swift in Sources */,
-				E61508DB1CA9B24E00D3D70E /* UITextField.swift in Sources */,
-				E61508DE1CA9B25300D3D70E /* MaxLengthValidator.swift in Sources */,
-				E61508E61CA9B26200D3D70E /* Validation.swift in Sources */,
-				E61508DC1CA9B25300D3D70E /* EmailValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,19 +380,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6F682591CA5A5B4009255CB /* RPValidationManager.swift in Sources */,
-				E6F682731CA5AB19009255CB /* RequiredValidator.swift in Sources */,
-				E6F682721CA5AB19009255CB /* PhoneValidator.swift in Sources */,
-				E6F682AE1CA99181009255CB /* Validation.swift in Sources */,
-				E6F682AC1CA99175009255CB /* Validator.swift in Sources */,
-				E6F682711CA5AB19009255CB /* MinLengthValidator.swift in Sources */,
-				E6F6826F1CA5AB19009255CB /* IntegerValidator.swift in Sources */,
-				E6F682781CA5BC77009255CB /* EmailValidator.swift in Sources */,
-				E6F682B21CA99194009255CB /* FormValidation.swift in Sources */,
-				E6F682B01CA9918C009255CB /* FieldValidation.swift in Sources */,
-				E6F682701CA5AB19009255CB /* MaxLengthValidator.swift in Sources */,
-				E6F682651CA5A6F9009255CB /* UITextField.swift in Sources */,
-				E6F682AA1CA99169009255CB /* Validatable.swift in Sources */,
+				ADC6C01B1CAC28BB00969BE0 /* MinLengthValidator.swift in Sources */,
+				ADC6C00D1CAC285F00969BE0 /* Validator.swift in Sources */,
+				ADC6C00A1CAC285F00969BE0 /* RPValidationManager.swift in Sources */,
+				ADC6C0191CAC28BB00969BE0 /* IntegerValidator.swift in Sources */,
+				ADC6C01A1CAC28BB00969BE0 /* MaxLengthValidator.swift in Sources */,
+				ADC6C01D1CAC28BB00969BE0 /* RequiredValidator.swift in Sources */,
+				ADC6C0101CAC28AB00969BE0 /* UITextField.swift in Sources */,
+				ADC6C0091CAC285F00969BE0 /* FormValidation.swift in Sources */,
+				ADC6C01C1CAC28BB00969BE0 /* PhoneValidator.swift in Sources */,
+				ADC6C0081CAC285F00969BE0 /* FieldValidation.swift in Sources */,
+				ADC6C0181CAC28BB00969BE0 /* EmailValidator.swift in Sources */,
+				ADC6C00C1CAC285F00969BE0 /* Validation.swift in Sources */,
+				ADC6C00B1CAC285F00969BE0 /* Validatable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

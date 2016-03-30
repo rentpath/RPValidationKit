@@ -72,9 +72,11 @@ class RPValidationKitTests: XCTestCase {
         
         let nameField = UITextField()
         nameField.validators = [RequiredValidator()]
+        nameField.fieldName = "Name"
         
         let ageField = UITextField()
         ageField.validators = [RequiredValidator(), IntegerValidator()]
+        ageField.fieldName = "Age"
         
         validationManager.addValidatable(nameField)
         validationManager.addValidatable(ageField)
