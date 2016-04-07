@@ -1,14 +1,14 @@
 //
-//  UITextField.swift
+//  UITextView.swift
 //  RPValidationKit
 //
-//  Created by crebel on 3/25/16.
+//  Created by crebel on 4/7/16.
 //  Copyright © 2016 Rentpath. All rights reserved.
 //
 
 import UIKit
 
-extension UITextField: Validatable {
+extension UITextView: Validatable {
     
     public func validate() -> ValidationResult {
         var result = ValidationResult()
@@ -20,3 +20,4 @@ extension UITextField: Validatable {
         return result
     }
 }
+

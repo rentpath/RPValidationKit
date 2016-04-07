@@ -14,15 +14,14 @@ public struct RequiredValidator: Validator {
     
     public func validate(value: String) -> Bool {
         let trimmedString = value.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
-        
         return !trimmedString.isEmpty
     }
     
-    public func validate(fieldName: String, value: String) -> Validation {
-        return Validation(isValid: validate(value), errorMessage: errorMessage(fieldName))
-    }
-    
-    private func errorMessage(fieldName: String) -> String {
-        return "\(fieldName) is required."
+    public func validateField(fieldName: String, value: String) -> Validation {
+        if validate(value) {
+            return Validation.Valid
+        } else {
+            return Validation.Error(message: "\(fieldName) is required")
+        }
     }
 }

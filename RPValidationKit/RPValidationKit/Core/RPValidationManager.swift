@@ -8,31 +8,55 @@
 
 import Foundation
 
-public class RPValidationManager {
+public struct RPValidationManager {
     
     var validatables: [Validatable] = []
     
+    public var validFields: [Validatable] {
+        return validatables.filter() {
+            $0.isValid
+        }
+    }
+    
+    public var invalidFields: [Validatable] {
+        return validatables.filter() {
+            !$0.isValid
+        }
+    }
+    
     public init() {}
     
-    public func addValidatable(validatable: Validatable) {
+    public mutating func add(validatable: Validatable) {
         validatables.append(validatable)
     }
     
-    public func validate() -> FormValidation {
-        reset()
-        
-        var formValidation = FormValidation()
-        
-        for validatable in validatables {
-            formValidation.addFieldValidation(validatable.validate())
+    public mutating func removeValidatableNamed(name validatableNameToRemove: String) {
+        while let index = validatableIndex(validatableNameToRemove) {
+            validatables.removeAtIndex(index)
         }
-        
-        return formValidation
     }
     
-    public func reset() {
-        for validatable in validatables {
-            validatable.resetValidation()
+    func validatableIndex(validatableNameToFind: String) -> Int? {
+        var index = 0
+        
+        while index < validatables.count {
+            let validatable = validatables[index]
+            if validatable.validatableName == validatableNameToFind {
+                return index
+            }
+            index = index + 1
         }
+        
+        return nil
+    }
+    
+    public func validate() -> ValidationResult {
+        var result = ValidationResult()
+        
+        for validatable in validatables {
+            result.combine(validatable.validate())
+        }
+        
+        return result
     }
 }
