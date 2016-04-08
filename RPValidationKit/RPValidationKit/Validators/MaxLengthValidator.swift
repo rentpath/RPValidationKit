@@ -18,12 +18,12 @@ public struct MaxLengthValidator: Validator {
     public func validate(value: String) -> Bool {
         return value.characters.count <= maxLength
     }
-    
-    public func validate(fieldName: String, value: String) -> Validation {
-        return Validation(isValid: validate(value), errorMessage: errorMessage(fieldName))
-    }
-    
-    private func errorMessage(fieldName: String) -> String {
-        return "\(fieldName) is too long."
+
+    public func validateField(fieldName: String, value: String) -> Validation {
+        if validate(value) {
+            return Validation.Valid
+        } else {
+            return Validation.Error(message: "\(fieldName) is too long.")
+        }
     }
 }

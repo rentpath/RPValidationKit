@@ -8,13 +8,7 @@
 
 import Foundation
 
-public struct Validation {
-    
-    public var isValid: Bool
-    public var errorMessage: String?
-    
-    public init(isValid: Bool, errorMessage: String?) {
-        self.isValid = isValid
-        self.errorMessage = errorMessage
-    }
+public enum Validation {
+    case Valid
+    case Error(message: String)
 }

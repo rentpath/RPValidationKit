@@ -68,18 +68,18 @@ class RPValidationKitTests: XCTestCase {
     }
     
     func testFormValidator() {
-        let validationManager = RPValidationManager()
+        var validationManager = RPValidationManager()
         
         let nameField = UITextField()
         nameField.validators = [RequiredValidator()]
-        nameField.fieldName = "Name"
+        nameField.validatableName = "Name"
         
         let ageField = UITextField()
         ageField.validators = [RequiredValidator(), IntegerValidator()]
-        ageField.fieldName = "Age"
+        ageField.validatableName = "Age"
         
-        validationManager.addValidatable(nameField)
-        validationManager.addValidatable(ageField)
+        validationManager.add(nameField)
+        validationManager.add(ageField)
         
         let fail = validationManager.validate()
         XCTAssert(fail.isValid == false, "An empty string passes validation for required")

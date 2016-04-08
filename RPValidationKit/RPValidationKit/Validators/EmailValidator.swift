@@ -25,11 +25,11 @@ public struct EmailValidator: Validator {
         
     }
     
-    public func validate(fieldName: String, value: String) -> Validation {
-        return Validation(isValid: validate(value), errorMessage: errorMessage(fieldName))
-    }
-    
-    private func errorMessage(fieldName: String) -> String {
-        return "\(fieldName) is not a valid email."
+    public func validateField(fieldName: String, value: String) -> Validation {
+        if validate(value) {
+            return Validation.Valid
+        } else {
+            return Validation.Error(message: "\(fieldName) is not a valid email address.")
+        }
     }
 }

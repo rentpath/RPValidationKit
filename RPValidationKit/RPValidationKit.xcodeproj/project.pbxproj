@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ADC6C0081CAC285F00969BE0 /* FieldValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0021CAC285F00969BE0 /* FieldValidation.swift */; };
-		ADC6C0091CAC285F00969BE0 /* FormValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0031CAC285F00969BE0 /* FormValidation.swift */; };
 		ADC6C00A1CAC285F00969BE0 /* RPValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0041CAC285F00969BE0 /* RPValidationManager.swift */; };
 		ADC6C00B1CAC285F00969BE0 /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0051CAC285F00969BE0 /* Validatable.swift */; };
 		ADC6C00C1CAC285F00969BE0 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0061CAC285F00969BE0 /* Validation.swift */; };
@@ -23,6 +21,8 @@
 		E61508CD1CA9B1EB00D3D70E /* RPValidationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E61508C31CA9B1EB00D3D70E /* RPValidationKit.framework */; };
 		E61508E31CA9B25800D3D70E /* RPValidationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E6F6821E1CA5A461009255CB /* RPValidationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E61508E91CA9B26900D3D70E /* RPValidationKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6822A1CA5A461009255CB /* RPValidationKitTests.swift */; };
+		E66121561CB5690D0074543F /* ValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66121551CB5690D0074543F /* ValidationResult.swift */; };
+		E6B9D5A71CB6D74D001EC5CE /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B9D5A61CB6D74D001EC5CE /* UITextView.swift */; };
 		E6F6821F1CA5A461009255CB /* RPValidationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E6F6821E1CA5A461009255CB /* RPValidationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E6F682261CA5A461009255CB /* RPValidationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F6821B1CA5A461009255CB /* RPValidationKit.framework */; };
 		E6F6822B1CA5A461009255CB /* RPValidationKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6822A1CA5A461009255CB /* RPValidationKitTests.swift */; };
@@ -46,8 +46,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		ADC6C0021CAC285F00969BE0 /* FieldValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldValidation.swift; sourceTree = "<group>"; };
-		ADC6C0031CAC285F00969BE0 /* FormValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormValidation.swift; sourceTree = "<group>"; };
 		ADC6C0041CAC285F00969BE0 /* RPValidationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPValidationManager.swift; sourceTree = "<group>"; };
 		ADC6C0051CAC285F00969BE0 /* Validatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validatable.swift; sourceTree = "<group>"; };
 		ADC6C0061CAC285F00969BE0 /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
@@ -63,6 +61,8 @@
 		E61508C71CA9B1EB00D3D70E /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-tvOS.plist"; path = "RPValidationKit/Info-tvOS.plist"; sourceTree = SOURCE_ROOT; };
 		E61508CC1CA9B1EB00D3D70E /* RPValidationKit tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RPValidationKit tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E61508D31CA9B1EB00D3D70E /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
+		E66121551CB5690D0074543F /* ValidationResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationResult.swift; sourceTree = "<group>"; };
+		E6B9D5A61CB6D74D001EC5CE /* UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 		E6F6821B1CA5A461009255CB /* RPValidationKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RPValidationKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6F6821E1CA5A461009255CB /* RPValidationKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RPValidationKit.h; sourceTree = "<group>"; };
 		E6F682201CA5A461009255CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -108,12 +108,11 @@
 		ADC6C0011CAC285F00969BE0 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				ADC6C0021CAC285F00969BE0 /* FieldValidation.swift */,
-				ADC6C0031CAC285F00969BE0 /* FormValidation.swift */,
 				ADC6C0041CAC285F00969BE0 /* RPValidationManager.swift */,
 				ADC6C0051CAC285F00969BE0 /* Validatable.swift */,
 				ADC6C0061CAC285F00969BE0 /* Validation.swift */,
 				ADC6C0071CAC285F00969BE0 /* Validator.swift */,
+				E66121551CB5690D0074543F /* ValidationResult.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -122,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				ADC6C00F1CAC28AB00969BE0 /* UITextField.swift */,
+				E6B9D5A61CB6D74D001EC5CE /* UITextView.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -386,11 +386,11 @@
 				ADC6C0191CAC28BB00969BE0 /* IntegerValidator.swift in Sources */,
 				ADC6C01A1CAC28BB00969BE0 /* MaxLengthValidator.swift in Sources */,
 				ADC6C01D1CAC28BB00969BE0 /* RequiredValidator.swift in Sources */,
+				E6B9D5A71CB6D74D001EC5CE /* UITextView.swift in Sources */,
 				ADC6C0101CAC28AB00969BE0 /* UITextField.swift in Sources */,
-				ADC6C0091CAC285F00969BE0 /* FormValidation.swift in Sources */,
 				ADC6C01C1CAC28BB00969BE0 /* PhoneValidator.swift in Sources */,
-				ADC6C0081CAC285F00969BE0 /* FieldValidation.swift in Sources */,
 				ADC6C0181CAC28BB00969BE0 /* EmailValidator.swift in Sources */,
+				E66121561CB5690D0074543F /* ValidationResult.swift in Sources */,
 				ADC6C00C1CAC285F00969BE0 /* Validation.swift in Sources */,
 				ADC6C00B1CAC285F00969BE0 /* Validatable.swift in Sources */,
 			);

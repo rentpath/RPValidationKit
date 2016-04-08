@@ -11,5 +11,5 @@ import Foundation
 public protocol Validator {
     
     func validate(value: String) -> Bool
-    func validate(fieldName: String, value: String) -> Validation
+    func validateField(fieldName: String, value: String) -> Validation
 }

@@ -11,59 +11,66 @@ import RPValidationKit
 
 class ViewController: UIViewController {
 
-    let validationManager = RPValidationManager()
+    var validationManager = RPValidationManager()
     
+    let defaultColor = UIColor.blackColor().colorWithAlphaComponent(0.03)
+    let validColor = UIColor.greenColor().colorWithAlphaComponent(0.1)
     let errorColor = UIColor.redColor().colorWithAlphaComponent(0.1)
-    let normalColor = UIColor.whiteColor()
     
     @IBOutlet weak var emailTextField: UITextField! {
         didSet {
-            emailTextField.fieldName = "Email Address"
+            emailTextField.validatableName = "Email Address"
+            emailTextField.addTarget(self, action: "validateTextFieldOnChange:", forControlEvents: .EditingChanged)
             emailTextField.validators = [EmailValidator()]
-            emailTextField.invalidHandler = { [unowned self] in
-                self.emailTextField.backgroundColor = self.errorColor
-            }
-            emailTextField.resetHandler = { [unowned self] in
-                self.emailTextField.backgroundColor = self.normalColor
-            }
-            validationManager.addValidatable(emailTextField)
+            emailTextField.backgroundColor = defaultColor
+            validationManager.add(emailTextField)
         }
     }
     
     @IBOutlet weak var nameTextField: UITextField! {
         didSet {
-            nameTextField.fieldName = "Name"
+            nameTextField.validatableName = "Name"
+            nameTextField.addTarget(self, action: "validateTextFieldOnChange:", forControlEvents: .EditingChanged)
             nameTextField.validators = [RequiredValidator()]
-            nameTextField.invalidHandler = { [unowned self] in
-                self.nameTextField.backgroundColor = self.errorColor
-            }
-            nameTextField.resetHandler = { [unowned self] in
-                self.nameTextField.backgroundColor = self.normalColor
-            }
-            validationManager.addValidatable(nameTextField)
+            nameTextField.backgroundColor = defaultColor
+            validationManager.add(nameTextField)
         }
     }
     
     @IBOutlet weak var ageTextField: UITextField! {
         didSet {
-            ageTextField.fieldName = "Age"
+            ageTextField.validatableName = "Age"
+            ageTextField.addTarget(self, action: "validateTextFieldOnChange:", forControlEvents: .EditingChanged)
             ageTextField.validators = [IntegerValidator()]
-            validationManager.addValidatable(ageTextField)
+            ageTextField.backgroundColor = defaultColor
+            validationManager.add(ageTextField)
         }
     }
     
     @IBOutlet weak var phoneNumberTextField: UITextField! {
         didSet {
-            phoneNumberTextField.fieldName = "Phone Number"
+            phoneNumberTextField.validatableName = "Phone Number"
+            phoneNumberTextField.addTarget(self, action: "validateTextFieldOnChange:", forControlEvents: .EditingChanged)
             phoneNumberTextField.validators = [PhoneValidator()]
-            phoneNumberTextField.delegate = self
-            validationManager.addValidatable(phoneNumberTextField)
+            phoneNumberTextField.backgroundColor = defaultColor
+            validationManager.add(phoneNumberTextField)
+        }
+    }
+    
+    @IBOutlet weak var sampleTextView: UITextView! {
+        didSet {
+            sampleTextView.validatableName = "Text View"
+            sampleTextView.text = "This text view must have at least 20 characters to be valid."
+            sampleTextView.delegate = self
+            sampleTextView.validators = [MinLengthValidator(length: 20)]
+            sampleTextView.backgroundColor = defaultColor
+            validationManager.add(sampleTextView)
         }
     }
     
     @IBOutlet weak var customView: CustomView! {
         didSet {
-            validationManager.addValidatable(customView)
+            validationManager.add(customView)
         }
     }
     
@@ -71,26 +78,63 @@ class ViewController: UIViewController {
         let result = validationManager.validate()
         print("result.isValid: \(result.isValid)")
         print("result.errorMessages: \(result.errorMessages)")
+        
+        for field in validationManager.validFields {
+            if let _field = field as? UIView {
+                _field.backgroundColor = validColor
+            }
+        }
+        
+        for field in validationManager.invalidFields {
+            if let _field = field as? UIView {
+                _field.backgroundColor = errorColor
+            }
+        }
     }
     
     @IBAction func resetAction(sender: AnyObject) {
-        validationManager.reset()
+        emailTextField.backgroundColor = defaultColor
+        emailTextField.text = ""
+        
+        nameTextField.backgroundColor = defaultColor
+        nameTextField.text = ""
+        
+        ageTextField.backgroundColor = defaultColor
+        ageTextField.text = ""
+        
+        phoneNumberTextField.backgroundColor = defaultColor
+        phoneNumberTextField.text = ""
+        
+        sampleTextView.backgroundColor = defaultColor
+        sampleTextView.text = ""
+        
+        customView.reset()
     }
     
     deinit {
         print("im going away")
     }
-}
-
-extension ViewController: UITextFieldDelegate {
-    
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-        if string.characters.count == 0 && range.length > 0 {
-            return true
+        
+    func validateTextFieldOnChange(textField: UITextField) {
+        if textField == phoneNumberTextField {
+            textField.text = textField.text?.format(.PhoneNumber)
         }
         
-        textField.text = (textField.text! as NSString).stringByReplacingCharactersInRange(range, withString: string).format(.PhoneNumber)
-        return false
+        if textField.validate().isValid {
+            textField.backgroundColor = validColor
+        } else {
+            textField.backgroundColor = errorColor
+        }
     }
 }
 
+extension ViewController: UITextViewDelegate {
+    
+    func textViewDidChange(textView: UITextView) {
+        if textView.validate().isValid {
+            textView.backgroundColor = validColor
+        } else {
+            textView.backgroundColor = errorColor
+        }
+    }
+}

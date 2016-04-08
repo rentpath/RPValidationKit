@@ -14,40 +14,28 @@ class CustomView: UIView {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var textField: UITextField! {
         didSet {
-            textField.fieldName = "Some Required Field"
+            textField.validatableName = "Some Required Field"
             textField.placeholder = "Required input"
             textField.validators = [RequiredValidator()]
         }
+    }
+    
+    func reset() {
+        backgroundColor = UIColor.whiteColor()
     }
 }
 
 extension CustomView: Validatable {
     
-    func validate() -> FieldValidation {
+    func validate() -> ValidationResult {
         let result = textField.validate()
         
         if result.isValid {
-            showValid()
+            backgroundColor = UIColor.greenColor().colorWithAlphaComponent(0.1)
         } else {
-            showInvalid()
+            backgroundColor = UIColor.redColor().colorWithAlphaComponent(0.1)
         }
-       
+        
         return textField.validate()
-    }
-    
-    func validatableName() -> String {
-        return "Custom View"
-    }
-    
-    func showValid() {
-        backgroundColor = UIColor.greenColor()
-    }
-    
-    func showInvalid() {
-        backgroundColor = UIColor.redColor()
-    }
-    
-    func resetValidation() {
-        backgroundColor = UIColor.yellowColor()
     }
 }
