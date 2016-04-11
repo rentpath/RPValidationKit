@@ -36,20 +36,20 @@ If there are ever failing tests, first stash all of your local changes and run t
 How It's Used
 -------------
 ### Using stand alone validator objects
-Validator objects can be used individually to validate a string and can return either a Bool value for pass/fail or a Validation object that contains an isValid Bool along with an error message for failures.
+Validator objects can be used individually to validate a string and can return either a Bool value for pass/fail or a Validation enum that returns either success or an error with an associated string.
 
 ```swift
 // Bool value
 let isValidEmail = EmailValidator().validate("hello@test.com")
 
 // Validation
-let emailValiation = EmailValidator().validate("Email", value: "hello@test.com")
+let emailValiation = EmailValidator().validateField("Email", value: "hello@test.com")
 
-if emailValidation.isValid {
-  print("email is valid")
-} else {
-  print(emailValidation.errorMessage)
+switch emailValidation {
+  case .Valid: print("email is valid")
+  case .Error(let message): print(message)
 }
+
 ```
 
 ### Validating individual fields
@@ -58,20 +58,19 @@ Single text fields can also be validated by adding validators to a new property 
 ```swift
 let emailField = UITextField()
 
-// add a field name to the textfield for use in error messages
-emailField.fieldName = "Email"
+// add a validatable name to the textfield for use in error messages
+emailField.validatableName = "Email"
 
 // make the name a required field and also check for a good email
 emailField.validators = [RequiredValidator(), EmailValidator()]
 
-// get a FieldValidation object from calling validate on a validatable
-let emailValidation = emailField.validate()
+// get a ValidationResult object from calling validate on a validatable
+let emailValidationResult = emailField.validate()
 
-if emailValidation.isValid {
+if emailValidationResult.isValid {
   print("email is valid")
 } else {
-  // notice in this case the property for error messages is plural since there can be multiple validation failures on one field.
-  print(emailValidation.errorMessages)
+  print(emailValidationResult.errorMessages)
 }
 ```
 
@@ -80,24 +79,24 @@ Entire forms can be validated using the RPValidationManager class.
 
 ```swift
 let firstNameField = UITextField()
-firstNameField.fieldName = "First name"
+firstNameField.validatableName = "First name"
 firstNameField.text = "John"
 firstNameField.validators = [RequiredValidator()]
 
 let lastNameField = UITextField()
-lastNameField.fieldName = "Last name"
+lastNameField.validatableName = "Last name"
 lastNameField.text = "Smith"
 lastNameField.validators = [RequiredValidator()]
 
 let emailField = UITextField()
-emailField.fieldName = "Email"
+emailField.validatableName = "Email"
 emailField.text = "hello@test.com"
 emailField.validators = [RequiredValidator(), EmailValidator()]
 
 let validationManager = RPValidationManager()
-validationManager.addValidatable(firstNameField)
-validationManager.addValidatable(lastNameField)
-validationManager.addValidatable(emailField)
+validationManager.add(firstNameField)
+validationManager.add(lastNameField)
+validationManager.add(emailField)
 
 let result = validationManager.validate()
 
@@ -109,16 +108,12 @@ if result.isValid {
 ```
 
 ### Validating your own custom views
-Any view can be validated as long as it conforms to the validatable protocol.
+Any view can be validated as long as it conforms to the validatable protocol and implements the validate function.
 
 ```swift
 public protocol Validatable {
-
-    func validatableName() -> String
-    func validate() -> FieldValidation
-    func showValid() -> Void
-    func showInvalid() -> Void
-    func resetValidation() -> Void
+  ...
+  func validate() -> ValidationResult
 }
 ```
 
@@ -133,7 +128,7 @@ class CustomView: UIView {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var textField: UITextField! {
         didSet {
-            textField.fieldName = "Some Required Field"
+            textField.validatableName = "Some Required Field"
             textField.placeholder = "Required input"
             textField.validators = [RequiredValidator()]
         }
@@ -142,75 +137,41 @@ class CustomView: UIView {
 
 extension CustomView: Validatable {
 
-    func validate() -> FieldValidation {
-        let result = textField.validate()
+  func validate() -> ValidationResult {
+      let result = textField.validate()
 
-        if result.isValid {
-            showValid()
-        } else {
-            showInvalid()
-        }
+      if result.isValid {
+          backgroundColor = UIColor.greenColor().colorWithAlphaComponent(0.1)
+      } else {
+          backgroundColor = UIColor.redColor().colorWithAlphaComponent(0.1)
+      }
 
-        return result
-    }
-
-    func validatableName() -> String {
-        return "Custom View"
-    }
-
-    func showValid() {
-        backgroundColor = UIColor.greenColor()
-    }
-
-    func showInvalid() {
-        backgroundColor = UIColor.redColor()
-    }
-
-    func resetValidation() {
-        backgroundColor = UIColor.yellowColor()
-    }
+      return textField.validate()
+  }
 }
 ```
 
 ### Updating the display on views being validated
-When validating custom views you can directly implement code in the showValid(), showInvalid(), and resetValidation() methods required by the Validatable protocol. For textviews you can provide closures to the textField to make updates. In the example below the background color of the textfield is changed based on whether or not validation has passed.
+A validation manager has fields for valid and invalid fields. Asking for either will run the validation functions.  You can use these arrays to adjust the display.
 
 ```swift
 
-let emailField = UITextField()
-emailField.fieldName = "Email"
-emailField.text = "hello@test.com"
-emailField.validators = [RequiredValidator(), EmailValidator()]
-emailTextField.validHandler = { [unowned self] in
-    self.emailTextField.backgroundColor = UIColor.greenColor()
-}
-emailTextField.invalidHandler = { [unowned self] in
-    self.emailTextField.backgroundColor = UIColor.redColor()
-}
-emailTextField.resetHandler = { [unowned self] in
-    self.emailTextField.backgroundColor = UIColor.whiteColor()
+let validColor = UIColor.greenColor().colorWithAlphaComponent(0.1)
+let errorColor = UIColor.redColor().colorWithAlphaComponent(0.1)
+
+for field in validationManager.validFields {
+  if let _field = field as? UIView {
+    _field.backgroundColor = validColor
+  }
 }
 
-```
-
-Also if validating a large number of fields using the RPValidationManager, there is a property called fields that stores all the validatables that failed validation.
-
-```swift
-
-let result = validationManager.validate()
-
-if result.isValid {
-  print("Form is valid")
-} else {
-  for field in result.fields {
-    if let _field = field as? UITextField {
-      _field.backgroundColor = UIColor.blackColor()
-    }
+for field in validationManager.invalidFields {
+  if let _field = field as? UIView {
+    _field.backgroundColor = errorColor
   }
 }
 
 ```
-
 
 Authors
 -------
