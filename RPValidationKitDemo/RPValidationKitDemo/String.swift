@@ -27,7 +27,7 @@ extension String {
         let digitCount = phoneDigits.characters.count
         
         if digitCount > 10 {
-            phoneDigits = phoneDigits.substringWithRange(Range<String.Index>(start: phoneDigits.startIndex, end: phoneDigits.startIndex.advancedBy(10)))
+            phoneDigits = phoneDigits.substringWithRange(phoneDigits.startIndex..<phoneDigits.startIndex.advancedBy(10))
         }
         
         if digitCount == 0 {
@@ -35,19 +35,19 @@ extension String {
         } else if digitCount < 3 {
             return "(" + phoneDigits + ")"
         } else if digitCount < 6 {
-            let areaCode = phoneDigits.substringWithRange(Range<String.Index>(start: phoneDigits.startIndex, end: phoneDigits.startIndex.advancedBy(3)))
-            let digits1 = phoneDigits.substringWithRange(Range<String.Index>(start: phoneDigits.startIndex.advancedBy(3), end: phoneDigits.endIndex))
+            let areaCode = phoneDigits.substringWithRange(phoneDigits.startIndex..<phoneDigits.startIndex.advancedBy(3))
+            let digits1 = phoneDigits.substringWithRange(phoneDigits.startIndex.advancedBy(3)..<phoneDigits.endIndex)
             return "(" + areaCode + ") " + digits1
         } else {
-            let areaCode = phoneDigits.substringWithRange(Range<String.Index>(start: phoneDigits.startIndex, end: phoneDigits.startIndex.advancedBy(3)))
-            let digits1 = phoneDigits.substringWithRange(Range<String.Index>(start: phoneDigits.startIndex.advancedBy(3), end: phoneDigits.startIndex.advancedBy(6)))
-            let digits2 = phoneDigits.substringWithRange(Range<String.Index>(start: phoneDigits.startIndex.advancedBy(6), end: phoneDigits.endIndex))
+            let areaCode = phoneDigits.substringWithRange(phoneDigits.startIndex..<phoneDigits.startIndex.advancedBy(3))
+            let digits1 = phoneDigits.substringWithRange(phoneDigits.startIndex.advancedBy(3)..<phoneDigits.startIndex.advancedBy(6))
+            let digits2 = phoneDigits.substringWithRange(phoneDigits.startIndex.advancedBy(6)..<phoneDigits.endIndex)
             return "(" + areaCode + ") " + digits1 + "-" + digits2
         }
     }
     
     func digits() -> String {
-        return stringByReplacingOccurrencesOfString("[^0-9]", withString: "", options: NSStringCompareOptions.RegularExpressionSearch, range: Range<String.Index>(start: self.startIndex, end: self.endIndex))
+        return stringByReplacingOccurrencesOfString("[^0-9]", withString: "", options: NSStringCompareOptions.RegularExpressionSearch, range: self.startIndex..<self.endIndex)
     }
     
     func toDouble() -> Double? {
@@ -62,8 +62,8 @@ extension String {
             print("end index \(end) out of bounds")
             return ""
         }
-        let range = Range(start: self.startIndex.advancedBy(start), end: self.startIndex.advancedBy(end))
-        return self.substringWithRange(range)
+        
+        return self.substringWithRange(self.startIndex.advancedBy(start)..<self.startIndex.advancedBy(end))
     }
     
     func substringWithRange(start: Int, location: Int) -> String {
@@ -74,7 +74,7 @@ extension String {
             print("end index \(start + location) out of bounds")
             return ""
         }
-        let range = Range(start: self.startIndex.advancedBy(start), end: self.startIndex.advancedBy(start + location))
+        let range = self.startIndex.advancedBy(start)..<self.startIndex.advancedBy(start + location)
         return self.substringWithRange(range)
     }
 }

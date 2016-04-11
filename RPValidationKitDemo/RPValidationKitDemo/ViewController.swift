@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField! {
         didSet {
             emailTextField.validatableName = "Email Address"
-            emailTextField.addTarget(self, action: "validateTextFieldOnChange:", forControlEvents: .EditingChanged)
+            emailTextField.addTarget(self, action: #selector(validateTextFieldOnChange(_:)), forControlEvents: .EditingChanged)
             emailTextField.validators = [EmailValidator()]
             emailTextField.backgroundColor = defaultColor
             validationManager.add(emailTextField)
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField! {
         didSet {
             nameTextField.validatableName = "Name"
-            nameTextField.addTarget(self, action: "validateTextFieldOnChange:", forControlEvents: .EditingChanged)
+            nameTextField.addTarget(self, action: #selector(validateTextFieldOnChange(_:)), forControlEvents: .EditingChanged)
             nameTextField.validators = [RequiredValidator()]
             nameTextField.backgroundColor = defaultColor
             validationManager.add(nameTextField)
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var ageTextField: UITextField! {
         didSet {
             ageTextField.validatableName = "Age"
-            ageTextField.addTarget(self, action: "validateTextFieldOnChange:", forControlEvents: .EditingChanged)
+            ageTextField.addTarget(self, action: #selector(validateTextFieldOnChange(_:)), forControlEvents: .EditingChanged)
             ageTextField.validators = [IntegerValidator()]
             ageTextField.backgroundColor = defaultColor
             validationManager.add(ageTextField)
@@ -50,7 +50,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var phoneNumberTextField: UITextField! {
         didSet {
             phoneNumberTextField.validatableName = "Phone Number"
-            phoneNumberTextField.addTarget(self, action: "validateTextFieldOnChange:", forControlEvents: .EditingChanged)
+            phoneNumberTextField.delegate = self
+            phoneNumberTextField.addTarget(self, action: #selector(validateTextFieldOnChange(_:)), forControlEvents: .EditingChanged)
             phoneNumberTextField.validators = [PhoneValidator()]
             phoneNumberTextField.backgroundColor = defaultColor
             validationManager.add(phoneNumberTextField)
@@ -116,15 +117,28 @@ class ViewController: UIViewController {
     }
         
     func validateTextFieldOnChange(textField: UITextField) {
-        if textField == phoneNumberTextField {
-            textField.text = textField.text?.format(.PhoneNumber)
-        }
+//        if textField == phoneNumberTextField {
+//            textField.text = textField.text?.format(.PhoneNumber)
+//        }
         
         if textField.validate().isValid {
             textField.backgroundColor = validColor
         } else {
             textField.backgroundColor = errorColor
         }
+    }
+}
+
+extension ViewController: UITextFieldDelegate {
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        if string.characters.count == 0 && range.length > 0 {
+            return true
+        }
+ 
+        textField.text = (textField.text! as NSString).stringByReplacingCharactersInRange(range, withString: string).format(.PhoneNumber)
+        validateTextFieldOnChange(textField)
+        return false
     }
 }
 
