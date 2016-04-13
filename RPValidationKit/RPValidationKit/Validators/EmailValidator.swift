@@ -21,8 +21,7 @@ public struct EmailValidator: Validator {
         }
         
         let range = value.rangeOfString(EMAILREGEX, options:.RegularExpressionSearch)
-        return (range != nil ? true : false)
-        
+        return (range != nil) ? true : false
     }
     
     public func validateField(fieldName: String, value: String) -> Validation {

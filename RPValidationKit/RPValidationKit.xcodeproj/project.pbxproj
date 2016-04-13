@@ -7,6 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A5EDD981CBE950E00CF0B9B /* MKCoordinateRegionValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDD971CBE950E00CF0B9B /* MKCoordinateRegionValidator.swift */; };
+		1A5EDDA11CBEC47500CF0B9B /* MKCoordinateReagionValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDDA01CBEC47500CF0B9B /* MKCoordinateReagionValidatorTests.swift */; };
+		1A5EDDA31CBECD1100CF0B9B /* NumericValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDDA21CBECD1100CF0B9B /* NumericValidator.swift */; };
+		1A5EDDA61CBECD6C00CF0B9B /* NumericValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDDA51CBECD6C00CF0B9B /* NumericValidatorTests.swift */; };
+		1A5EDDA71CBECD6C00CF0B9B /* NumericValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDDA51CBECD6C00CF0B9B /* NumericValidatorTests.swift */; };
+		1A5EDDA81CBECD7200CF0B9B /* MKCoordinateReagionValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDDA01CBEC47500CF0B9B /* MKCoordinateReagionValidatorTests.swift */; };
+		1A5EDDA91CBECDEA00CF0B9B /* RPValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0041CAC285F00969BE0 /* RPValidationManager.swift */; };
+		1A5EDDAA1CBECDEC00CF0B9B /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0051CAC285F00969BE0 /* Validatable.swift */; };
+		1A5EDDB61CBECDFB00CF0B9B /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0061CAC285F00969BE0 /* Validation.swift */; };
+		1A5EDDB71CBECDFB00CF0B9B /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0071CAC285F00969BE0 /* Validator.swift */; };
+		1A5EDDB81CBECDFB00CF0B9B /* ValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66121551CB5690D0074543F /* ValidationResult.swift */; };
+		1A5EDDB91CBECDFB00CF0B9B /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C00F1CAC28AB00969BE0 /* UITextField.swift */; };
+		1A5EDDBA1CBECDFB00CF0B9B /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B9D5A61CB6D74D001EC5CE /* UITextView.swift */; };
+		1A5EDDBB1CBECDFB00CF0B9B /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0121CAC28BB00969BE0 /* EmailValidator.swift */; };
+		1A5EDDBC1CBECDFB00CF0B9B /* IntegerValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0131CAC28BB00969BE0 /* IntegerValidator.swift */; };
+		1A5EDDBD1CBECDFB00CF0B9B /* MaxLengthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0141CAC28BB00969BE0 /* MaxLengthValidator.swift */; };
+		1A5EDDBE1CBECDFB00CF0B9B /* MinLengthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0151CAC28BB00969BE0 /* MinLengthValidator.swift */; };
+		1A5EDDBF1CBECDFB00CF0B9B /* MKCoordinateRegionValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDD971CBE950E00CF0B9B /* MKCoordinateRegionValidator.swift */; };
+		1A5EDDC01CBECDFB00CF0B9B /* NumericValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDDA21CBECD1100CF0B9B /* NumericValidator.swift */; };
+		1A5EDDC11CBECDFB00CF0B9B /* PhoneValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0161CAC28BB00969BE0 /* PhoneValidator.swift */; };
+		1A5EDDC21CBECDFB00CF0B9B /* RequiredValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0171CAC28BB00969BE0 /* RequiredValidator.swift */; };
+		1AB53B8E1CBED242009F3CEB /* FloatValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB53B8D1CBED242009F3CEB /* FloatValidator.swift */; };
+		1AB53B901CBED266009F3CEB /* DoubleValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB53B8F1CBED266009F3CEB /* DoubleValidator.swift */; };
+		1AB53B911CBED266009F3CEB /* DoubleValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB53B8F1CBED266009F3CEB /* DoubleValidator.swift */; };
+		1AB53B921CBED268009F3CEB /* FloatValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB53B8D1CBED242009F3CEB /* FloatValidator.swift */; };
 		ADC6C00A1CAC285F00969BE0 /* RPValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0041CAC285F00969BE0 /* RPValidationManager.swift */; };
 		ADC6C00B1CAC285F00969BE0 /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0051CAC285F00969BE0 /* Validatable.swift */; };
 		ADC6C00C1CAC285F00969BE0 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0061CAC285F00969BE0 /* Validation.swift */; };
@@ -46,6 +71,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A5EDD971CBE950E00CF0B9B /* MKCoordinateRegionValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKCoordinateRegionValidator.swift; sourceTree = "<group>"; };
+		1A5EDDA01CBEC47500CF0B9B /* MKCoordinateReagionValidatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKCoordinateReagionValidatorTests.swift; sourceTree = "<group>"; };
+		1A5EDDA21CBECD1100CF0B9B /* NumericValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumericValidator.swift; sourceTree = "<group>"; };
+		1A5EDDA51CBECD6C00CF0B9B /* NumericValidatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumericValidatorTests.swift; sourceTree = "<group>"; };
+		1AB53B8D1CBED242009F3CEB /* FloatValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatValidator.swift; sourceTree = "<group>"; };
+		1AB53B8F1CBED266009F3CEB /* DoubleValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleValidator.swift; sourceTree = "<group>"; };
 		ADC6C0041CAC285F00969BE0 /* RPValidationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPValidationManager.swift; sourceTree = "<group>"; };
 		ADC6C0051CAC285F00969BE0 /* Validatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validatable.swift; sourceTree = "<group>"; };
 		ADC6C0061CAC285F00969BE0 /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
@@ -59,7 +90,7 @@
 		ADC6C0171CAC28BB00969BE0 /* RequiredValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequiredValidator.swift; sourceTree = "<group>"; };
 		E61508C31CA9B1EB00D3D70E /* RPValidationKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RPValidationKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E61508C71CA9B1EB00D3D70E /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-tvOS.plist"; path = "RPValidationKit/Info-tvOS.plist"; sourceTree = SOURCE_ROOT; };
-		E61508CC1CA9B1EB00D3D70E /* RPValidationKit tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RPValidationKit tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E61508CC1CA9B1EB00D3D70E /* RPValidationKitTVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RPValidationKitTVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E61508D31CA9B1EB00D3D70E /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		E66121551CB5690D0074543F /* ValidationResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationResult.swift; sourceTree = "<group>"; };
 		E6B9D5A61CB6D74D001EC5CE /* UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
@@ -129,10 +160,14 @@
 		ADC6C0111CAC28BB00969BE0 /* Validators */ = {
 			isa = PBXGroup;
 			children = (
+				1AB53B8F1CBED266009F3CEB /* DoubleValidator.swift */,
 				ADC6C0121CAC28BB00969BE0 /* EmailValidator.swift */,
+				1AB53B8D1CBED242009F3CEB /* FloatValidator.swift */,
 				ADC6C0131CAC28BB00969BE0 /* IntegerValidator.swift */,
 				ADC6C0141CAC28BB00969BE0 /* MaxLengthValidator.swift */,
 				ADC6C0151CAC28BB00969BE0 /* MinLengthValidator.swift */,
+				1A5EDD971CBE950E00CF0B9B /* MKCoordinateRegionValidator.swift */,
+				1A5EDDA21CBECD1100CF0B9B /* NumericValidator.swift */,
 				ADC6C0161CAC28BB00969BE0 /* PhoneValidator.swift */,
 				ADC6C0171CAC28BB00969BE0 /* RequiredValidator.swift */,
 			);
@@ -154,7 +189,7 @@
 				E6F6821B1CA5A461009255CB /* RPValidationKit.framework */,
 				E6F682251CA5A461009255CB /* RPValidationKitTests.xctest */,
 				E61508C31CA9B1EB00D3D70E /* RPValidationKit.framework */,
-				E61508CC1CA9B1EB00D3D70E /* RPValidationKit tvOSTests.xctest */,
+				E61508CC1CA9B1EB00D3D70E /* RPValidationKitTVTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -174,6 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				E6F6822A1CA5A461009255CB /* RPValidationKitTests.swift */,
+				1A5EDDA01CBEC47500CF0B9B /* MKCoordinateReagionValidatorTests.swift */,
+				1A5EDDA51CBECD6C00CF0B9B /* NumericValidatorTests.swift */,
 				E6F6822C1CA5A461009255CB /* Info.plist */,
 				E61508D31CA9B1EB00D3D70E /* Info-tvOS.plist */,
 			);
@@ -213,9 +250,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		E61508C21CA9B1EB00D3D70E /* RPValidationKit tvOS */ = {
+		E61508C21CA9B1EB00D3D70E /* RPValidationKitTV */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E61508D81CA9B1EB00D3D70E /* Build configuration list for PBXNativeTarget "RPValidationKit tvOS" */;
+			buildConfigurationList = E61508D81CA9B1EB00D3D70E /* Build configuration list for PBXNativeTarget "RPValidationKitTV" */;
 			buildPhases = (
 				E61508BE1CA9B1EB00D3D70E /* Sources */,
 				E61508BF1CA9B1EB00D3D70E /* Frameworks */,
@@ -226,14 +263,14 @@
 			);
 			dependencies = (
 			);
-			name = "RPValidationKit tvOS";
+			name = RPValidationKitTV;
 			productName = "RPValidationKit tvOS";
 			productReference = E61508C31CA9B1EB00D3D70E /* RPValidationKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		E61508CB1CA9B1EB00D3D70E /* RPValidationKit tvOSTests */ = {
+		E61508CB1CA9B1EB00D3D70E /* RPValidationKitTVTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E61508D91CA9B1EB00D3D70E /* Build configuration list for PBXNativeTarget "RPValidationKit tvOSTests" */;
+			buildConfigurationList = E61508D91CA9B1EB00D3D70E /* Build configuration list for PBXNativeTarget "RPValidationKitTVTests" */;
 			buildPhases = (
 				E61508C81CA9B1EB00D3D70E /* Sources */,
 				E61508C91CA9B1EB00D3D70E /* Frameworks */,
@@ -244,9 +281,9 @@
 			dependencies = (
 				E61508CF1CA9B1EB00D3D70E /* PBXTargetDependency */,
 			);
-			name = "RPValidationKit tvOSTests";
+			name = RPValidationKitTVTests;
 			productName = "RPValidationKit tvOSTests";
-			productReference = E61508CC1CA9B1EB00D3D70E /* RPValidationKit tvOSTests.xctest */;
+			productReference = E61508CC1CA9B1EB00D3D70E /* RPValidationKitTVTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		E6F6821A1CA5A461009255CB /* RPValidationKit */ = {
@@ -291,7 +328,7 @@
 		E6F682121CA5A461009255CB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Rentpath;
 				TargetAttributes = {
@@ -323,8 +360,8 @@
 			targets = (
 				E6F6821A1CA5A461009255CB /* RPValidationKit */,
 				E6F682241CA5A461009255CB /* RPValidationKitTests */,
-				E61508C21CA9B1EB00D3D70E /* RPValidationKit tvOS */,
-				E61508CB1CA9B1EB00D3D70E /* RPValidationKit tvOSTests */,
+				E61508C21CA9B1EB00D3D70E /* RPValidationKitTV */,
+				E61508CB1CA9B1EB00D3D70E /* RPValidationKitTVTests */,
 			);
 		};
 /* End PBXProject section */
@@ -365,6 +402,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A5EDDBE1CBECDFB00CF0B9B /* MinLengthValidator.swift in Sources */,
+				1AB53B911CBED266009F3CEB /* DoubleValidator.swift in Sources */,
+				1A5EDDC11CBECDFB00CF0B9B /* PhoneValidator.swift in Sources */,
+				1A5EDDBA1CBECDFB00CF0B9B /* UITextView.swift in Sources */,
+				1A5EDDB71CBECDFB00CF0B9B /* Validator.swift in Sources */,
+				1A5EDDC01CBECDFB00CF0B9B /* NumericValidator.swift in Sources */,
+				1AB53B921CBED268009F3CEB /* FloatValidator.swift in Sources */,
+				1A5EDDBC1CBECDFB00CF0B9B /* IntegerValidator.swift in Sources */,
+				1A5EDDBD1CBECDFB00CF0B9B /* MaxLengthValidator.swift in Sources */,
+				1A5EDDA91CBECDEA00CF0B9B /* RPValidationManager.swift in Sources */,
+				1A5EDDBF1CBECDFB00CF0B9B /* MKCoordinateRegionValidator.swift in Sources */,
+				1A5EDDB61CBECDFB00CF0B9B /* Validation.swift in Sources */,
+				1A5EDDC21CBECDFB00CF0B9B /* RequiredValidator.swift in Sources */,
+				1A5EDDB81CBECDFB00CF0B9B /* ValidationResult.swift in Sources */,
+				1A5EDDBB1CBECDFB00CF0B9B /* EmailValidator.swift in Sources */,
+				1A5EDDAA1CBECDEC00CF0B9B /* Validatable.swift in Sources */,
+				1A5EDDB91CBECDFB00CF0B9B /* UITextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +426,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A5EDDA81CBECD7200CF0B9B /* MKCoordinateReagionValidatorTests.swift in Sources */,
+				1A5EDDA71CBECD6C00CF0B9B /* NumericValidatorTests.swift in Sources */,
 				E61508E91CA9B26900D3D70E /* RPValidationKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,15 +436,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A5EDD981CBE950E00CF0B9B /* MKCoordinateRegionValidator.swift in Sources */,
 				ADC6C01B1CAC28BB00969BE0 /* MinLengthValidator.swift in Sources */,
 				ADC6C00D1CAC285F00969BE0 /* Validator.swift in Sources */,
 				ADC6C00A1CAC285F00969BE0 /* RPValidationManager.swift in Sources */,
 				ADC6C0191CAC28BB00969BE0 /* IntegerValidator.swift in Sources */,
 				ADC6C01A1CAC28BB00969BE0 /* MaxLengthValidator.swift in Sources */,
+				1A5EDDA31CBECD1100CF0B9B /* NumericValidator.swift in Sources */,
 				ADC6C01D1CAC28BB00969BE0 /* RequiredValidator.swift in Sources */,
 				E6B9D5A71CB6D74D001EC5CE /* UITextView.swift in Sources */,
 				ADC6C0101CAC28AB00969BE0 /* UITextField.swift in Sources */,
 				ADC6C01C1CAC28BB00969BE0 /* PhoneValidator.swift in Sources */,
+				1AB53B8E1CBED242009F3CEB /* FloatValidator.swift in Sources */,
+				1AB53B901CBED266009F3CEB /* DoubleValidator.swift in Sources */,
 				ADC6C0181CAC28BB00969BE0 /* EmailValidator.swift in Sources */,
 				E66121561CB5690D0074543F /* ValidationResult.swift in Sources */,
 				ADC6C00C1CAC285F00969BE0 /* Validation.swift in Sources */,
@@ -400,6 +460,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A5EDDA11CBEC47500CF0B9B /* MKCoordinateReagionValidatorTests.swift in Sources */,
+				1A5EDDA61CBECD6C00CF0B9B /* NumericValidatorTests.swift in Sources */,
 				E6F6822B1CA5A461009255CB /* RPValidationKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,7 +471,7 @@
 /* Begin PBXTargetDependency section */
 		E61508CF1CA9B1EB00D3D70E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E61508C21CA9B1EB00D3D70E /* RPValidationKit tvOS */;
+			target = E61508C21CA9B1EB00D3D70E /* RPValidationKitTV */;
 			targetProxy = E61508CE1CA9B1EB00D3D70E /* PBXContainerItemProxy */;
 		};
 		E6F682281CA5A461009255CB /* PBXTargetDependency */ = {
@@ -423,6 +485,7 @@
 		E61508D41CA9B1EB00D3D70E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -434,6 +497,7 @@
 				PRODUCT_NAME = RPValidationKit;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.1;
 			};
@@ -442,6 +506,7 @@
 		E61508D51CA9B1EB00D3D70E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -631,7 +696,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E61508D81CA9B1EB00D3D70E /* Build configuration list for PBXNativeTarget "RPValidationKit tvOS" */ = {
+		E61508D81CA9B1EB00D3D70E /* Build configuration list for PBXNativeTarget "RPValidationKitTV" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E61508D41CA9B1EB00D3D70E /* Debug */,
@@ -640,7 +705,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E61508D91CA9B1EB00D3D70E /* Build configuration list for PBXNativeTarget "RPValidationKit tvOSTests" */ = {
+		E61508D91CA9B1EB00D3D70E /* Build configuration list for PBXNativeTarget "RPValidationKitTVTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E61508D61CA9B1EB00D3D70E /* Debug */,

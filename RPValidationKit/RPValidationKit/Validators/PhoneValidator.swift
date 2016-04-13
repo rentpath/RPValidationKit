@@ -14,7 +14,7 @@ public struct PhoneValidator: Validator {
     public init() {}
     
     public func validate(value: String) -> Bool {
-        let valueDigits = value.stringByReplacingOccurrencesOfString("[^0-9]", withString: "", options: NSStringCompareOptions.RegularExpressionSearch, range: Range<String.Index>(start: value.startIndex, end: value.endIndex))
+        let valueDigits = value.stringByReplacingOccurrencesOfString("[^0-9]", withString: "", options: NSStringCompareOptions.RegularExpressionSearch, range: value.startIndex..<value.endIndex)
         let range = valueDigits.rangeOfString(PHONEREGEX, options:.RegularExpressionSearch)
         return range != nil ? true : false
     }
