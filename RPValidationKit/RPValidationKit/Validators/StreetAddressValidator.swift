@@ -24,6 +24,8 @@ public struct StreetAddressValidator {
     
     let STREET_REGEX = "^\\d{1,}(\\s{1}\\w{1,})(\\s{1}?\\w{1,})+$"
     
+    public init() {}
+    
     public func validate(address: String) -> Bool {
         let trimmedAddress = address.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         if trimmedAddress.characters.count == 0 {

@@ -24,6 +24,8 @@ public struct CityStateValidator {
     
     let CITY_STATE_REGEX = "^([^,]+),\\s?([A-Za-z]{2,})$"
     
+    public init() {}
+    
     public func validate(cityState: String) -> Bool {
         
         let twoLetterRegex: NSRegularExpression!

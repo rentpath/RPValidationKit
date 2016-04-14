@@ -24,6 +24,8 @@ public struct ZipCodeValidator {
     
     let ZIP_REGEX = "^[0-9]{5}(-([0-9]{1,4}))?$"
     
+    public init() {}
+    
     public func validate(zipCode: String) -> Bool {
         
         // Check for an invalid zip in the format of 999999

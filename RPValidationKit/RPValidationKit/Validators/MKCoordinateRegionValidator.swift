@@ -32,6 +32,8 @@ public struct MKCoordinateRegionValidator {
     private let MinLongitude      = -180.0
     private let MaxLongitude      = 180.0
     
+    public init() {}
+    
     public func validate(region: MKCoordinateRegion) -> Bool {
         
         if (isnan(region.span.latitudeDelta)  ||
