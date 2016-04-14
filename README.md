@@ -177,4 +177,8 @@ Authors
 -------
 If you are having issue with this library, or would like to recommend improvements, here is a list of authors who built & maintain this library.
 * Chris Rebel
-* ...
+* Jeremy Fox
+
+# License
+
+Atlas is released under the MIT License. See the bundled LICENSE file for details.
