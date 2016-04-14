@@ -25,6 +25,16 @@ class RPValidationKitTests: XCTestCase {
         XCTAssert(IntegerValidator().validate("5") == true, "The value 5 did not validate as an integer")
         XCTAssert(IntegerValidator().validate("5.0") == false, "The value 5.0 validated as an integer")
     }
+    
+    func testFloatValidation() {
+        XCTAssert(FloatValidator().validate("5.12345") == true, "The value 5.12345 did not validate as a double")
+        XCTAssert(FloatValidator().validate("not a number") == false, "The value 5 validated as a double")
+    }
+    
+    func testDoubleValidation() {
+        XCTAssert(DoubleValidator().validate("5.0") == true, "The value 5.0 did not validate as an integer")
+        XCTAssert(DoubleValidator().validate("not a number") == false, "The value 5 validated as a float")
+    }
 
     func testMaxLengthValidation() {
         XCTAssert(MaxLengthValidator(length: 5).validate("hello") == true, "The value hello fails validation for max length 5")

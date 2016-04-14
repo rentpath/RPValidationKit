@@ -10,10 +10,6 @@ import Foundation
 
 public protocol Validatable: AnyObject {
     
-    var isValid: Bool { get }
-    var validatableName: String { get set }
-    var validators: [Validator] { get set }
-    
     func validate() -> ValidationResult
 }
 
@@ -46,10 +42,10 @@ extension Validatable {
     
     public var validators: [Validator] {
         get {
-            guard let box: Box<[Validator]>? = objc_getAssociatedObject(self, &validatorsKey) as? Box<[Validator]> else {
+            guard let box = objc_getAssociatedObject(self, &validatorsKey) as? Box<[Validator]> else {
                 return []
             }
-            return box?.value ?? []
+            return box.value ?? []
         }
         set(newValue) {
             let box = Box<[Validator]>(value: newValue)

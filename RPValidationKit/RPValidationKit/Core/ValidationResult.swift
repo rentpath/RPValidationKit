@@ -19,6 +19,7 @@ public struct ValidationResult {
             case .Error: return false
             }
         }
+        
         return true
     }
     
