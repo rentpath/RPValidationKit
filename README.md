@@ -141,10 +141,10 @@ extension CustomView: Validatable {
       let result = textField.validate()
 
       if result.isValid {
-          backgroundColor = UIColor.greenColor().colorWithAlphaComponent(0.1)
-      } else {
-          backgroundColor = UIColor.redColor().colorWithAlphaComponent(0.1)
-      }
+            result.validFields.append(self)
+        } else {
+            result.invalidFields.append(self)
+        }
 
       return textField.validate()
   }
@@ -152,20 +152,22 @@ extension CustomView: Validatable {
 ```
 
 ### Updating the display on views being validated
-A validation manager has fields for valid and invalid fields. Asking for either will run the validation functions.  You can use these arrays to adjust the display.
+A validation result has fields for valid and invalid fields. You can use these arrays to adjust the display.
 
 ```swift
+
+let result = validationManger.validate()
 
 let validColor = UIColor.greenColor().colorWithAlphaComponent(0.1)
 let errorColor = UIColor.redColor().colorWithAlphaComponent(0.1)
 
-for field in validationManager.validFields {
+for field in result.validFields {
   if let _field = field as? UIView {
     _field.backgroundColor = validColor
   }
 }
 
-for field in validationManager.invalidFields {
+for field in result.invalidFields {
   if let _field = field as? UIView {
     _field.backgroundColor = errorColor
   }

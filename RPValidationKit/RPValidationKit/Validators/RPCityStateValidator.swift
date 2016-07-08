@@ -20,37 +20,34 @@
  * SOFTWARE.
  */
 
-public struct NumbericValidator: Validator {
+public class RPCityStateValidator: RPValidator {
     
-    public init() {}
+    let CITY_STATE_REGEX = "^([^,]+),\\s?([A-Za-z]{2,})$"
     
-    public func validate(value: String) -> Bool {
-        let alphaNumbersSet = NSCharacterSet.decimalDigitCharacterSet()
-        let stringSet = NSCharacterSet(charactersInString: value)
-        if alphaNumbersSet.isSupersetOfSet(stringSet) {
-            return true
-        }
-        
-        if IntegerValidator().validate(value) {
-            return true
-        }
-        
-        if FloatValidator().validate(value) {
-            return true
-        }
-        
-        if DoubleValidator().validate(value) {
-            return true
-        }
-        
-        return false
+    public override func getType() -> String {
+        return "citystate"
     }
     
-    public func validateField(fieldName: String, value: String) -> Validation {
+    public override func validate(cityState: String) -> Bool {
+        
+        let twoLetterRegex: NSRegularExpression!
+        do {
+            twoLetterRegex = try NSRegularExpression(pattern: CITY_STATE_REGEX, options: [.CaseInsensitive, .AnchorsMatchLines])
+        } catch let error as NSError {
+            print("Error validating city state. Error: \(error.localizedDescription)")
+            return false
+        }
+        
+        let matches = twoLetterRegex.numberOfMatchesInString(cityState, options: .ReportCompletion, range: NSMakeRange(0, cityState.utf16.count))
+        
+        return matches != 0
+    }
+    
+    public override func validateField(fieldName: String, value: String) -> RPValidation {
         if validate(value) {
-            return Validation.Valid
+            return RPValidation.Valid
         } else {
-            return Validation.Error(message: "\(fieldName) is not numeric.")
+            return RPValidation.Error(message: "\(fieldName) is not a valid city state")
         }
     }
 }

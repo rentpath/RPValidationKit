@@ -21,8 +21,9 @@ class ViewController: UIViewController {
         didSet {
             emailTextField.validatableName = "Email Address"
             emailTextField.addTarget(self, action: #selector(validateTextFieldOnChange(_:)), forControlEvents: .EditingChanged)
-            emailTextField.validators = [EmailValidator()]
+            emailTextField.validators = [RPEmailValidator()]
             emailTextField.backgroundColor = defaultColor
+            emailTextField.delegate = self
             validationManager.add(emailTextField)
         }
     }
@@ -31,8 +32,9 @@ class ViewController: UIViewController {
         didSet {
             nameTextField.validatableName = "Name"
             nameTextField.addTarget(self, action: #selector(validateTextFieldOnChange(_:)), forControlEvents: .EditingChanged)
-            nameTextField.validators = [RequiredValidator()]
+            nameTextField.validators = [RPRequiredValidator()]
             nameTextField.backgroundColor = defaultColor
+            nameTextField.delegate = self
             validationManager.add(nameTextField)
         }
     }
@@ -41,8 +43,9 @@ class ViewController: UIViewController {
         didSet {
             ageTextField.validatableName = "Age"
             ageTextField.addTarget(self, action: #selector(validateTextFieldOnChange(_:)), forControlEvents: .EditingChanged)
-            ageTextField.validators = [IntegerValidator()]
+            ageTextField.validators = [RPIntegerValidator()]
             ageTextField.backgroundColor = defaultColor
+            ageTextField.delegate = self
             validationManager.add(ageTextField)
         }
     }
@@ -52,8 +55,9 @@ class ViewController: UIViewController {
             phoneNumberTextField.validatableName = "Phone Number"
             phoneNumberTextField.delegate = self
             phoneNumberTextField.addTarget(self, action: #selector(validateTextFieldOnChange(_:)), forControlEvents: .EditingChanged)
-            phoneNumberTextField.validators = [PhoneValidator()]
+            phoneNumberTextField.validators = [RPPhoneValidator()]
             phoneNumberTextField.backgroundColor = defaultColor
+            phoneNumberTextField.delegate = self
             validationManager.add(phoneNumberTextField)
         }
     }
@@ -63,7 +67,10 @@ class ViewController: UIViewController {
             sampleTextView.validatableName = "Text View"
             sampleTextView.text = "This text view must have at least 20 characters to be valid."
             sampleTextView.delegate = self
-            sampleTextView.validators = [MinLengthValidator(length: 20)]
+            
+            let minLengthValidator = RPMinLengthValidator()
+            minLengthValidator.minLength = 20
+            sampleTextView.validators = [minLengthValidator]
             sampleTextView.backgroundColor = defaultColor
             validationManager.add(sampleTextView)
         }
@@ -80,13 +87,13 @@ class ViewController: UIViewController {
         print("result.isValid: \(result.isValid)")
         print("result.errorMessages: \(result.errorMessages)")
         
-        for field in validationManager.validFields {
+        for field in result.validFields {
             if let _field = field as? UIView {
                 _field.backgroundColor = validColor
             }
         }
         
-        for field in validationManager.invalidFields {
+        for field in result.invalidFields {
             if let _field = field as? UIView {
                 _field.backgroundColor = errorColor
             }
@@ -132,12 +139,21 @@ class ViewController: UIViewController {
 extension ViewController: UITextFieldDelegate {
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        guard textField == phoneNumberTextField else {
+            return true
+        }
+        
         if string.characters.count == 0 && range.length > 0 {
             return true
         }
  
         textField.text = (textField.text! as NSString).stringByReplacingCharactersInRange(range, withString: string).format(.PhoneNumber)
         validateTextFieldOnChange(textField)
+        return false
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
         return false
     }
 }

@@ -20,22 +20,39 @@
  * SOFTWARE.
  */
 
-public struct FloatValidator: Validator {
+public class RPNumbericValidator: RPValidator {
     
-    public init() {}
+    public override func getType() -> String {
+        return "numeric"
+    }
     
-    public func validate(value: String) -> Bool {
-        if let _ = Float(value) {
+    public override func validate(value: String) -> Bool {
+        let alphaNumbersSet = NSCharacterSet.decimalDigitCharacterSet()
+        let stringSet = NSCharacterSet(charactersInString: value)
+        if alphaNumbersSet.isSupersetOfSet(stringSet) {
             return true
         }
+        
+        if RPIntegerValidator().validate(value) {
+            return true
+        }
+        
+        if RPFloatValidator().validate(value) {
+            return true
+        }
+        
+        if RPDoubleValidator().validate(value) {
+            return true
+        }
+        
         return false
     }
     
-    public func validateField(fieldName: String, value: String) -> Validation {
+    public override func validateField(fieldName: String, value: String) -> RPValidation {
         if validate(value) {
-            return Validation.Valid
+            return RPValidation.Valid
         } else {
-            return Validation.Error(message: "\(fieldName) is not a float.")
+            return RPValidation.Error(message: "\(fieldName) is not numeric.")
         }
     }
 }

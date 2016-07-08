@@ -20,25 +20,27 @@
  * SOFTWARE.
  */
 
-public struct CityStateValidator {
+import Foundation
+
+public class RPPhoneValidator: RPValidator {
     
-    let CITY_STATE_REGEX = "^([^,]+),\\s?([A-Za-z]{2,})$"
+    var PHONEREGEX: String = "^\\d{10}$"
     
-    public init() {}
-    
-    public func validate(cityState: String) -> Bool {
-        
-        let twoLetterRegex: NSRegularExpression!
-        do {
-            twoLetterRegex = try NSRegularExpression(pattern: CITY_STATE_REGEX, options: [.CaseInsensitive, .AnchorsMatchLines])
-        } catch let error as NSError {
-            print("Error validating city state. Error: \(error.localizedDescription)")
-            return false
-        }
-        
-        let matches = twoLetterRegex.numberOfMatchesInString(cityState, options: .ReportCompletion, range: NSMakeRange(0, cityState.utf16.count))
-        
-        return matches != 0
+    public override func getType() -> String {
+        return "phone"
     }
     
+    public override func validate(value: String) -> Bool {
+        let valueDigits = value.stringByReplacingOccurrencesOfString("[^0-9]", withString: "", options: NSStringCompareOptions.RegularExpressionSearch, range: value.startIndex..<value.endIndex)
+        let range = valueDigits.rangeOfString(PHONEREGEX, options:.RegularExpressionSearch)
+        return range != nil ? true : false
+    }
+    
+    public override func validateField(fieldName: String, value: String) -> RPValidation {
+        if validate(value) {
+            return RPValidation.Valid
+        } else {
+            return RPValidation.Error(message: "\(fieldName) is not a valid phone number.")
+        }
+    }
 }

@@ -22,7 +22,7 @@
 
 import Foundation
 
-public enum Validation {
+public enum RPValidation {
     case Valid
     case Error(message: String)
 }

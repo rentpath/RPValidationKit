@@ -20,24 +20,34 @@
  * SOFTWARE.
  */
 
-import Foundation
-
-public struct MinLengthValidator: Validator {
-    var minLength: Int = 1
+public class RPStreetAddressValidator: RPValidator {
     
-    public init(length: Int) {
-        minLength = length
+    let STREET_REGEX = "^\\d{1,}(\\s{1}\\w{1,})(\\s{1}?\\w{1,})+$"
+    
+    public override func getType() -> String {
+        return "streetaddress"
     }
     
-    public func validate(value: String) -> Bool {
-        return value.characters.count >= minLength
+    public override func validate(address: String) -> Bool {
+        let trimmedAddress = address.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        if trimmedAddress.characters.count == 0 {
+            return false
+        }
+        
+        guard let range = address.rangeOfString(STREET_REGEX, options:.RegularExpressionSearch) else {
+            return false
+        }
+        
+        let distance = range.startIndex.distanceTo(range.endIndex)
+        
+        return distance > 0
     }
     
-    public func validateField(fieldName: String, value: String) -> Validation {
+    public override func validateField(fieldName: String, value: String) -> RPValidation {
         if validate(value) {
-            return Validation.Valid
+            return RPValidation.Valid
         } else {
-            return Validation.Error(message: "\(fieldName) is too short.")
+            return RPValidation.Error(message: "\(fieldName) is not a valid address")
         }
     }
 }

@@ -22,22 +22,24 @@
 
 import Foundation
 
-public struct MaxLengthValidator: Validator {
-    var maxLength: Int = 256
+public class RPIntegerValidator: RPValidator {
     
-    public init(length: Int) {
-        maxLength = length
+    public override func getType() -> String {
+        return "integer"
     }
-
-    public func validate(value: String) -> Bool {
-        return value.characters.count <= maxLength
+    
+    public override func validate(value: String) -> Bool {
+        if let _ = Int(value) {
+            return true
+        }
+        return false
     }
-
-    public func validateField(fieldName: String, value: String) -> Validation {
+    
+    public override func validateField(fieldName: String, value: String) -> RPValidation {
         if validate(value) {
-            return Validation.Valid
+            return RPValidation.Valid
         } else {
-            return Validation.Error(message: "\(fieldName) is too long.")
+            return RPValidation.Error(message: "\(fieldName) is not an integer.")
         }
     }
 }

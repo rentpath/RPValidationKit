@@ -7,59 +7,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1944BC1D1CBFFEDC006004DA /* StreetAddressValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1944BC1C1CBFFEDC006004DA /* StreetAddressValidator.swift */; };
-		1944BC1E1CBFFEDC006004DA /* StreetAddressValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1944BC1C1CBFFEDC006004DA /* StreetAddressValidator.swift */; };
-		1944BC201CC00DC2006004DA /* StreetAddressValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1944BC1F1CC00DC2006004DA /* StreetAddressValidatorTests.swift */; };
-		1988DCD51CC010D200561FFD /* CityStateValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988DCD31CC010CE00561FFD /* CityStateValidatorTests.swift */; };
-		1988DCD61CC010D200561FFD /* CityStateValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988DCD31CC010CE00561FFD /* CityStateValidatorTests.swift */; };
-		1988DCD71CC010D700561FFD /* StreetAddressValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1944BC1F1CC00DC2006004DA /* StreetAddressValidatorTests.swift */; };
-		1988DCD91CC010ED00561FFD /* CityStateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988DCD81CC010ED00561FFD /* CityStateValidator.swift */; };
-		1988DCDA1CC010ED00561FFD /* CityStateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988DCD81CC010ED00561FFD /* CityStateValidator.swift */; };
-		1988DCDC1CC0175A00561FFD /* ZipCodeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988DCDB1CC0175A00561FFD /* ZipCodeValidator.swift */; };
-		1988DCDD1CC0175A00561FFD /* ZipCodeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988DCDB1CC0175A00561FFD /* ZipCodeValidator.swift */; };
-		1988DCDF1CC018F600561FFD /* ZipCodeValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988DCDE1CC018F600561FFD /* ZipCodeValidatorTests.swift */; };
-		1988DCE01CC018F600561FFD /* ZipCodeValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988DCDE1CC018F600561FFD /* ZipCodeValidatorTests.swift */; };
-		1A5EDD981CBE950E00CF0B9B /* MKCoordinateRegionValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDD971CBE950E00CF0B9B /* MKCoordinateRegionValidator.swift */; };
-		1A5EDDA11CBEC47500CF0B9B /* MKCoordinateReagionValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDDA01CBEC47500CF0B9B /* MKCoordinateReagionValidatorTests.swift */; };
-		1A5EDDA31CBECD1100CF0B9B /* NumericValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDDA21CBECD1100CF0B9B /* NumericValidator.swift */; };
-		1A5EDDA61CBECD6C00CF0B9B /* NumericValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDDA51CBECD6C00CF0B9B /* NumericValidatorTests.swift */; };
-		1A5EDDA71CBECD6C00CF0B9B /* NumericValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDDA51CBECD6C00CF0B9B /* NumericValidatorTests.swift */; };
-		1A5EDDA81CBECD7200CF0B9B /* MKCoordinateReagionValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDDA01CBEC47500CF0B9B /* MKCoordinateReagionValidatorTests.swift */; };
+		1944BC1D1CBFFEDC006004DA /* RPStreetAddressValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1944BC1C1CBFFEDC006004DA /* RPStreetAddressValidator.swift */; };
+		1944BC1E1CBFFEDC006004DA /* RPStreetAddressValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1944BC1C1CBFFEDC006004DA /* RPStreetAddressValidator.swift */; };
+		1944BC201CC00DC2006004DA /* RPStreetAddressValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1944BC1F1CC00DC2006004DA /* RPStreetAddressValidatorTests.swift */; };
+		1988DCD51CC010D200561FFD /* RPCityStateValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988DCD31CC010CE00561FFD /* RPCityStateValidatorTests.swift */; };
+		1988DCD61CC010D200561FFD /* RPCityStateValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988DCD31CC010CE00561FFD /* RPCityStateValidatorTests.swift */; };
+		1988DCD71CC010D700561FFD /* RPStreetAddressValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1944BC1F1CC00DC2006004DA /* RPStreetAddressValidatorTests.swift */; };
+		1988DCD91CC010ED00561FFD /* RPCityStateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988DCD81CC010ED00561FFD /* RPCityStateValidator.swift */; };
+		1988DCDA1CC010ED00561FFD /* RPCityStateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988DCD81CC010ED00561FFD /* RPCityStateValidator.swift */; };
+		1988DCDC1CC0175A00561FFD /* RPZipCodeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988DCDB1CC0175A00561FFD /* RPZipCodeValidator.swift */; };
+		1988DCDD1CC0175A00561FFD /* RPZipCodeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988DCDB1CC0175A00561FFD /* RPZipCodeValidator.swift */; };
+		1988DCDF1CC018F600561FFD /* RPZipCodeValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988DCDE1CC018F600561FFD /* RPZipCodeValidatorTests.swift */; };
+		1988DCE01CC018F600561FFD /* RPZipCodeValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988DCDE1CC018F600561FFD /* RPZipCodeValidatorTests.swift */; };
+		1A5EDD981CBE950E00CF0B9B /* RPMKCoordinateRegionValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDD971CBE950E00CF0B9B /* RPMKCoordinateRegionValidator.swift */; };
+		1A5EDDA11CBEC47500CF0B9B /* RPMKCoordinateReagionValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDDA01CBEC47500CF0B9B /* RPMKCoordinateReagionValidatorTests.swift */; };
+		1A5EDDA31CBECD1100CF0B9B /* RPNumericValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDDA21CBECD1100CF0B9B /* RPNumericValidator.swift */; };
+		1A5EDDA61CBECD6C00CF0B9B /* RPNumericValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDDA51CBECD6C00CF0B9B /* RPNumericValidatorTests.swift */; };
+		1A5EDDA71CBECD6C00CF0B9B /* RPNumericValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDDA51CBECD6C00CF0B9B /* RPNumericValidatorTests.swift */; };
+		1A5EDDA81CBECD7200CF0B9B /* RPMKCoordinateReagionValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDDA01CBEC47500CF0B9B /* RPMKCoordinateReagionValidatorTests.swift */; };
 		1A5EDDA91CBECDEA00CF0B9B /* RPValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0041CAC285F00969BE0 /* RPValidationManager.swift */; };
-		1A5EDDAA1CBECDEC00CF0B9B /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0051CAC285F00969BE0 /* Validatable.swift */; };
-		1A5EDDB61CBECDFB00CF0B9B /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0061CAC285F00969BE0 /* Validation.swift */; };
-		1A5EDDB71CBECDFB00CF0B9B /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0071CAC285F00969BE0 /* Validator.swift */; };
-		1A5EDDB81CBECDFB00CF0B9B /* ValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66121551CB5690D0074543F /* ValidationResult.swift */; };
+		1A5EDDAA1CBECDEC00CF0B9B /* RPValidatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0051CAC285F00969BE0 /* RPValidatable.swift */; };
+		1A5EDDB61CBECDFB00CF0B9B /* RPValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0061CAC285F00969BE0 /* RPValidation.swift */; };
+		1A5EDDB71CBECDFB00CF0B9B /* RPValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0071CAC285F00969BE0 /* RPValidator.swift */; };
+		1A5EDDB81CBECDFB00CF0B9B /* RPValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66121551CB5690D0074543F /* RPValidationResult.swift */; };
 		1A5EDDB91CBECDFB00CF0B9B /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C00F1CAC28AB00969BE0 /* UITextField.swift */; };
 		1A5EDDBA1CBECDFB00CF0B9B /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B9D5A61CB6D74D001EC5CE /* UITextView.swift */; };
-		1A5EDDBB1CBECDFB00CF0B9B /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0121CAC28BB00969BE0 /* EmailValidator.swift */; };
-		1A5EDDBC1CBECDFB00CF0B9B /* IntegerValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0131CAC28BB00969BE0 /* IntegerValidator.swift */; };
-		1A5EDDBD1CBECDFB00CF0B9B /* MaxLengthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0141CAC28BB00969BE0 /* MaxLengthValidator.swift */; };
-		1A5EDDBE1CBECDFB00CF0B9B /* MinLengthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0151CAC28BB00969BE0 /* MinLengthValidator.swift */; };
-		1A5EDDBF1CBECDFB00CF0B9B /* MKCoordinateRegionValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDD971CBE950E00CF0B9B /* MKCoordinateRegionValidator.swift */; };
-		1A5EDDC01CBECDFB00CF0B9B /* NumericValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDDA21CBECD1100CF0B9B /* NumericValidator.swift */; };
-		1A5EDDC11CBECDFB00CF0B9B /* PhoneValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0161CAC28BB00969BE0 /* PhoneValidator.swift */; };
-		1A5EDDC21CBECDFB00CF0B9B /* RequiredValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0171CAC28BB00969BE0 /* RequiredValidator.swift */; };
-		1AB53B8E1CBED242009F3CEB /* FloatValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB53B8D1CBED242009F3CEB /* FloatValidator.swift */; };
-		1AB53B901CBED266009F3CEB /* DoubleValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB53B8F1CBED266009F3CEB /* DoubleValidator.swift */; };
-		1AB53B911CBED266009F3CEB /* DoubleValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB53B8F1CBED266009F3CEB /* DoubleValidator.swift */; };
-		1AB53B921CBED268009F3CEB /* FloatValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB53B8D1CBED242009F3CEB /* FloatValidator.swift */; };
+		1A5EDDBB1CBECDFB00CF0B9B /* RPEmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0121CAC28BB00969BE0 /* RPEmailValidator.swift */; };
+		1A5EDDBC1CBECDFB00CF0B9B /* RPIntegerValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0131CAC28BB00969BE0 /* RPIntegerValidator.swift */; };
+		1A5EDDBD1CBECDFB00CF0B9B /* RPMaxLengthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0141CAC28BB00969BE0 /* RPMaxLengthValidator.swift */; };
+		1A5EDDBE1CBECDFB00CF0B9B /* RPMinLengthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0151CAC28BB00969BE0 /* RPMinLengthValidator.swift */; };
+		1A5EDDBF1CBECDFB00CF0B9B /* RPMKCoordinateRegionValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDD971CBE950E00CF0B9B /* RPMKCoordinateRegionValidator.swift */; };
+		1A5EDDC01CBECDFB00CF0B9B /* RPNumericValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDDA21CBECD1100CF0B9B /* RPNumericValidator.swift */; };
+		1A5EDDC11CBECDFB00CF0B9B /* RPPhoneValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0161CAC28BB00969BE0 /* RPPhoneValidator.swift */; };
+		1A5EDDC21CBECDFB00CF0B9B /* RPRequiredValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0171CAC28BB00969BE0 /* RPRequiredValidator.swift */; };
+		1AB53B8E1CBED242009F3CEB /* RPFloatValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB53B8D1CBED242009F3CEB /* RPFloatValidator.swift */; };
+		1AB53B901CBED266009F3CEB /* RPDoubleValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB53B8F1CBED266009F3CEB /* RPDoubleValidator.swift */; };
+		1AB53B911CBED266009F3CEB /* RPDoubleValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB53B8F1CBED266009F3CEB /* RPDoubleValidator.swift */; };
+		1AB53B921CBED268009F3CEB /* RPFloatValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB53B8D1CBED242009F3CEB /* RPFloatValidator.swift */; };
 		ADC6C00A1CAC285F00969BE0 /* RPValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0041CAC285F00969BE0 /* RPValidationManager.swift */; };
-		ADC6C00B1CAC285F00969BE0 /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0051CAC285F00969BE0 /* Validatable.swift */; };
-		ADC6C00C1CAC285F00969BE0 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0061CAC285F00969BE0 /* Validation.swift */; };
-		ADC6C00D1CAC285F00969BE0 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0071CAC285F00969BE0 /* Validator.swift */; };
+		ADC6C00B1CAC285F00969BE0 /* RPValidatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0051CAC285F00969BE0 /* RPValidatable.swift */; };
+		ADC6C00C1CAC285F00969BE0 /* RPValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0061CAC285F00969BE0 /* RPValidation.swift */; };
+		ADC6C00D1CAC285F00969BE0 /* RPValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0071CAC285F00969BE0 /* RPValidator.swift */; };
 		ADC6C0101CAC28AB00969BE0 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C00F1CAC28AB00969BE0 /* UITextField.swift */; };
-		ADC6C0181CAC28BB00969BE0 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0121CAC28BB00969BE0 /* EmailValidator.swift */; };
-		ADC6C0191CAC28BB00969BE0 /* IntegerValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0131CAC28BB00969BE0 /* IntegerValidator.swift */; };
-		ADC6C01A1CAC28BB00969BE0 /* MaxLengthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0141CAC28BB00969BE0 /* MaxLengthValidator.swift */; };
-		ADC6C01B1CAC28BB00969BE0 /* MinLengthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0151CAC28BB00969BE0 /* MinLengthValidator.swift */; };
-		ADC6C01C1CAC28BB00969BE0 /* PhoneValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0161CAC28BB00969BE0 /* PhoneValidator.swift */; };
-		ADC6C01D1CAC28BB00969BE0 /* RequiredValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0171CAC28BB00969BE0 /* RequiredValidator.swift */; };
+		ADC6C0181CAC28BB00969BE0 /* RPEmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0121CAC28BB00969BE0 /* RPEmailValidator.swift */; };
+		ADC6C0191CAC28BB00969BE0 /* RPIntegerValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0131CAC28BB00969BE0 /* RPIntegerValidator.swift */; };
+		ADC6C01A1CAC28BB00969BE0 /* RPMaxLengthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0141CAC28BB00969BE0 /* RPMaxLengthValidator.swift */; };
+		ADC6C01B1CAC28BB00969BE0 /* RPMinLengthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0151CAC28BB00969BE0 /* RPMinLengthValidator.swift */; };
+		ADC6C01C1CAC28BB00969BE0 /* RPPhoneValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0161CAC28BB00969BE0 /* RPPhoneValidator.swift */; };
+		ADC6C01D1CAC28BB00969BE0 /* RPRequiredValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0171CAC28BB00969BE0 /* RPRequiredValidator.swift */; };
 		E61508CD1CA9B1EB00D3D70E /* RPValidationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E61508C31CA9B1EB00D3D70E /* RPValidationKit.framework */; };
 		E61508E31CA9B25800D3D70E /* RPValidationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E6F6821E1CA5A461009255CB /* RPValidationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E61508E91CA9B26900D3D70E /* RPValidationKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6822A1CA5A461009255CB /* RPValidationKitTests.swift */; };
-		E66121561CB5690D0074543F /* ValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66121551CB5690D0074543F /* ValidationResult.swift */; };
+		E66121561CB5690D0074543F /* RPValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66121551CB5690D0074543F /* RPValidationResult.swift */; };
 		E6B9D5A71CB6D74D001EC5CE /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B9D5A61CB6D74D001EC5CE /* UITextView.swift */; };
+		E6F30D531D342590004A5C9B /* RPValidationReflection.h in Headers */ = {isa = PBXBuildFile; fileRef = E6F30D511D342590004A5C9B /* RPValidationReflection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6F30D541D342590004A5C9B /* RPValidationReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F30D521D342590004A5C9B /* RPValidationReflection.m */; };
+		E6F30D561D3425E9004A5C9B /* RPValidatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F30D551D3425E9004A5C9B /* RPValidatorFactory.swift */; };
+		E6F30D571D3425E9004A5C9B /* RPValidatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F30D551D3425E9004A5C9B /* RPValidatorFactory.swift */; };
 		E6F6821F1CA5A461009255CB /* RPValidationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E6F6821E1CA5A461009255CB /* RPValidationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E6F682261CA5A461009255CB /* RPValidationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F6821B1CA5A461009255CB /* RPValidationKit.framework */; };
 		E6F6822B1CA5A461009255CB /* RPValidationKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6822A1CA5A461009255CB /* RPValidationKitTests.swift */; };
@@ -83,35 +87,38 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1944BC1C1CBFFEDC006004DA /* StreetAddressValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetAddressValidator.swift; sourceTree = "<group>"; };
-		1944BC1F1CC00DC2006004DA /* StreetAddressValidatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetAddressValidatorTests.swift; sourceTree = "<group>"; };
-		1988DCD31CC010CE00561FFD /* CityStateValidatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityStateValidatorTests.swift; sourceTree = "<group>"; };
-		1988DCD81CC010ED00561FFD /* CityStateValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityStateValidator.swift; sourceTree = "<group>"; };
-		1988DCDB1CC0175A00561FFD /* ZipCodeValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZipCodeValidator.swift; sourceTree = "<group>"; };
-		1988DCDE1CC018F600561FFD /* ZipCodeValidatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZipCodeValidatorTests.swift; sourceTree = "<group>"; };
-		1A5EDD971CBE950E00CF0B9B /* MKCoordinateRegionValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKCoordinateRegionValidator.swift; sourceTree = "<group>"; };
-		1A5EDDA01CBEC47500CF0B9B /* MKCoordinateReagionValidatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKCoordinateReagionValidatorTests.swift; sourceTree = "<group>"; };
-		1A5EDDA21CBECD1100CF0B9B /* NumericValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumericValidator.swift; sourceTree = "<group>"; };
-		1A5EDDA51CBECD6C00CF0B9B /* NumericValidatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumericValidatorTests.swift; sourceTree = "<group>"; };
-		1AB53B8D1CBED242009F3CEB /* FloatValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatValidator.swift; sourceTree = "<group>"; };
-		1AB53B8F1CBED266009F3CEB /* DoubleValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleValidator.swift; sourceTree = "<group>"; };
+		1944BC1C1CBFFEDC006004DA /* RPStreetAddressValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPStreetAddressValidator.swift; sourceTree = "<group>"; };
+		1944BC1F1CC00DC2006004DA /* RPStreetAddressValidatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPStreetAddressValidatorTests.swift; sourceTree = "<group>"; };
+		1988DCD31CC010CE00561FFD /* RPCityStateValidatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPCityStateValidatorTests.swift; sourceTree = "<group>"; };
+		1988DCD81CC010ED00561FFD /* RPCityStateValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPCityStateValidator.swift; sourceTree = "<group>"; };
+		1988DCDB1CC0175A00561FFD /* RPZipCodeValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPZipCodeValidator.swift; sourceTree = "<group>"; };
+		1988DCDE1CC018F600561FFD /* RPZipCodeValidatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPZipCodeValidatorTests.swift; sourceTree = "<group>"; };
+		1A5EDD971CBE950E00CF0B9B /* RPMKCoordinateRegionValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPMKCoordinateRegionValidator.swift; sourceTree = "<group>"; };
+		1A5EDDA01CBEC47500CF0B9B /* RPMKCoordinateReagionValidatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPMKCoordinateReagionValidatorTests.swift; sourceTree = "<group>"; };
+		1A5EDDA21CBECD1100CF0B9B /* RPNumericValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPNumericValidator.swift; sourceTree = "<group>"; };
+		1A5EDDA51CBECD6C00CF0B9B /* RPNumericValidatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPNumericValidatorTests.swift; sourceTree = "<group>"; };
+		1AB53B8D1CBED242009F3CEB /* RPFloatValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPFloatValidator.swift; sourceTree = "<group>"; };
+		1AB53B8F1CBED266009F3CEB /* RPDoubleValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPDoubleValidator.swift; sourceTree = "<group>"; };
 		ADC6C0041CAC285F00969BE0 /* RPValidationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPValidationManager.swift; sourceTree = "<group>"; };
-		ADC6C0051CAC285F00969BE0 /* Validatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validatable.swift; sourceTree = "<group>"; };
-		ADC6C0061CAC285F00969BE0 /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
-		ADC6C0071CAC285F00969BE0 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		ADC6C0051CAC285F00969BE0 /* RPValidatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPValidatable.swift; sourceTree = "<group>"; };
+		ADC6C0061CAC285F00969BE0 /* RPValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPValidation.swift; sourceTree = "<group>"; };
+		ADC6C0071CAC285F00969BE0 /* RPValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPValidator.swift; sourceTree = "<group>"; };
 		ADC6C00F1CAC28AB00969BE0 /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
-		ADC6C0121CAC28BB00969BE0 /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
-		ADC6C0131CAC28BB00969BE0 /* IntegerValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntegerValidator.swift; sourceTree = "<group>"; };
-		ADC6C0141CAC28BB00969BE0 /* MaxLengthValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaxLengthValidator.swift; sourceTree = "<group>"; };
-		ADC6C0151CAC28BB00969BE0 /* MinLengthValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinLengthValidator.swift; sourceTree = "<group>"; };
-		ADC6C0161CAC28BB00969BE0 /* PhoneValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneValidator.swift; sourceTree = "<group>"; };
-		ADC6C0171CAC28BB00969BE0 /* RequiredValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequiredValidator.swift; sourceTree = "<group>"; };
+		ADC6C0121CAC28BB00969BE0 /* RPEmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPEmailValidator.swift; sourceTree = "<group>"; };
+		ADC6C0131CAC28BB00969BE0 /* RPIntegerValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPIntegerValidator.swift; sourceTree = "<group>"; };
+		ADC6C0141CAC28BB00969BE0 /* RPMaxLengthValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPMaxLengthValidator.swift; sourceTree = "<group>"; };
+		ADC6C0151CAC28BB00969BE0 /* RPMinLengthValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPMinLengthValidator.swift; sourceTree = "<group>"; };
+		ADC6C0161CAC28BB00969BE0 /* RPPhoneValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPPhoneValidator.swift; sourceTree = "<group>"; };
+		ADC6C0171CAC28BB00969BE0 /* RPRequiredValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPRequiredValidator.swift; sourceTree = "<group>"; };
 		E61508C31CA9B1EB00D3D70E /* RPValidationKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RPValidationKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E61508C71CA9B1EB00D3D70E /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-tvOS.plist"; path = "RPValidationKit/Info-tvOS.plist"; sourceTree = SOURCE_ROOT; };
 		E61508CC1CA9B1EB00D3D70E /* RPValidationKitTVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RPValidationKitTVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E61508D31CA9B1EB00D3D70E /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
-		E66121551CB5690D0074543F /* ValidationResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationResult.swift; sourceTree = "<group>"; };
+		E66121551CB5690D0074543F /* RPValidationResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPValidationResult.swift; sourceTree = "<group>"; };
 		E6B9D5A61CB6D74D001EC5CE /* UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
+		E6F30D511D342590004A5C9B /* RPValidationReflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPValidationReflection.h; sourceTree = "<group>"; };
+		E6F30D521D342590004A5C9B /* RPValidationReflection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPValidationReflection.m; sourceTree = "<group>"; };
+		E6F30D551D3425E9004A5C9B /* RPValidatorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPValidatorFactory.swift; sourceTree = "<group>"; };
 		E6F6821B1CA5A461009255CB /* RPValidationKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RPValidationKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6F6821E1CA5A461009255CB /* RPValidationKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RPValidationKit.h; sourceTree = "<group>"; };
 		E6F682201CA5A461009255CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -158,10 +165,11 @@
 			isa = PBXGroup;
 			children = (
 				ADC6C0041CAC285F00969BE0 /* RPValidationManager.swift */,
-				ADC6C0051CAC285F00969BE0 /* Validatable.swift */,
-				ADC6C0061CAC285F00969BE0 /* Validation.swift */,
-				ADC6C0071CAC285F00969BE0 /* Validator.swift */,
-				E66121551CB5690D0074543F /* ValidationResult.swift */,
+				ADC6C0051CAC285F00969BE0 /* RPValidatable.swift */,
+				ADC6C0061CAC285F00969BE0 /* RPValidation.swift */,
+				ADC6C0071CAC285F00969BE0 /* RPValidator.swift */,
+				E66121551CB5690D0074543F /* RPValidationResult.swift */,
+				E6F30D551D3425E9004A5C9B /* RPValidatorFactory.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -178,21 +186,30 @@
 		ADC6C0111CAC28BB00969BE0 /* Validators */ = {
 			isa = PBXGroup;
 			children = (
-				1988DCD81CC010ED00561FFD /* CityStateValidator.swift */,
-				1AB53B8F1CBED266009F3CEB /* DoubleValidator.swift */,
-				ADC6C0121CAC28BB00969BE0 /* EmailValidator.swift */,
-				1AB53B8D1CBED242009F3CEB /* FloatValidator.swift */,
-				ADC6C0131CAC28BB00969BE0 /* IntegerValidator.swift */,
-				ADC6C0141CAC28BB00969BE0 /* MaxLengthValidator.swift */,
-				ADC6C0151CAC28BB00969BE0 /* MinLengthValidator.swift */,
-				1A5EDD971CBE950E00CF0B9B /* MKCoordinateRegionValidator.swift */,
-				1A5EDDA21CBECD1100CF0B9B /* NumericValidator.swift */,
-				ADC6C0161CAC28BB00969BE0 /* PhoneValidator.swift */,
-				ADC6C0171CAC28BB00969BE0 /* RequiredValidator.swift */,
-				1944BC1C1CBFFEDC006004DA /* StreetAddressValidator.swift */,
-				1988DCDB1CC0175A00561FFD /* ZipCodeValidator.swift */,
+				1988DCD81CC010ED00561FFD /* RPCityStateValidator.swift */,
+				1AB53B8F1CBED266009F3CEB /* RPDoubleValidator.swift */,
+				ADC6C0121CAC28BB00969BE0 /* RPEmailValidator.swift */,
+				1AB53B8D1CBED242009F3CEB /* RPFloatValidator.swift */,
+				ADC6C0131CAC28BB00969BE0 /* RPIntegerValidator.swift */,
+				ADC6C0141CAC28BB00969BE0 /* RPMaxLengthValidator.swift */,
+				ADC6C0151CAC28BB00969BE0 /* RPMinLengthValidator.swift */,
+				1A5EDD971CBE950E00CF0B9B /* RPMKCoordinateRegionValidator.swift */,
+				1A5EDDA21CBECD1100CF0B9B /* RPNumericValidator.swift */,
+				ADC6C0161CAC28BB00969BE0 /* RPPhoneValidator.swift */,
+				ADC6C0171CAC28BB00969BE0 /* RPRequiredValidator.swift */,
+				1944BC1C1CBFFEDC006004DA /* RPStreetAddressValidator.swift */,
+				1988DCDB1CC0175A00561FFD /* RPZipCodeValidator.swift */,
 			);
 			path = Validators;
+			sourceTree = "<group>";
+		};
+		E6F30D501D342588004A5C9B /* Reflection */ = {
+			isa = PBXGroup;
+			children = (
+				E6F30D511D342590004A5C9B /* RPValidationReflection.h */,
+				E6F30D521D342590004A5C9B /* RPValidationReflection.m */,
+			);
+			path = Reflection;
 			sourceTree = "<group>";
 		};
 		E6F682111CA5A461009255CB = {
@@ -219,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				ADC6C0011CAC285F00969BE0 /* Core */,
+				E6F30D501D342588004A5C9B /* Reflection */,
 				ADC6C00E1CAC28AB00969BE0 /* Extentions */,
 				ADC6C0111CAC28BB00969BE0 /* Validators */,
 				E6F682561CA5A53B009255CB /* Supporting Files */,
@@ -229,12 +247,12 @@
 		E6F682291CA5A461009255CB /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				1988DCD31CC010CE00561FFD /* CityStateValidatorTests.swift */,
+				1988DCD31CC010CE00561FFD /* RPCityStateValidatorTests.swift */,
 				E6F6822A1CA5A461009255CB /* RPValidationKitTests.swift */,
-				1A5EDDA01CBEC47500CF0B9B /* MKCoordinateReagionValidatorTests.swift */,
-				1A5EDDA51CBECD6C00CF0B9B /* NumericValidatorTests.swift */,
-				1944BC1F1CC00DC2006004DA /* StreetAddressValidatorTests.swift */,
-				1988DCDE1CC018F600561FFD /* ZipCodeValidatorTests.swift */,
+				1A5EDDA01CBEC47500CF0B9B /* RPMKCoordinateReagionValidatorTests.swift */,
+				1A5EDDA51CBECD6C00CF0B9B /* RPNumericValidatorTests.swift */,
+				1944BC1F1CC00DC2006004DA /* RPStreetAddressValidatorTests.swift */,
+				1988DCDE1CC018F600561FFD /* RPZipCodeValidatorTests.swift */,
 				E6F6822C1CA5A461009255CB /* Info.plist */,
 				E61508D31CA9B1EB00D3D70E /* Info-tvOS.plist */,
 			);
@@ -268,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6F6821F1CA5A461009255CB /* RPValidationKit.h in Headers */,
+				E6F30D531D342590004A5C9B /* RPValidationReflection.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,25 +445,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A5EDDBE1CBECDFB00CF0B9B /* MinLengthValidator.swift in Sources */,
-				1988DCDD1CC0175A00561FFD /* ZipCodeValidator.swift in Sources */,
-				1AB53B911CBED266009F3CEB /* DoubleValidator.swift in Sources */,
-				1944BC1E1CBFFEDC006004DA /* StreetAddressValidator.swift in Sources */,
-				1A5EDDC11CBECDFB00CF0B9B /* PhoneValidator.swift in Sources */,
+				1A5EDDBE1CBECDFB00CF0B9B /* RPMinLengthValidator.swift in Sources */,
+				1988DCDD1CC0175A00561FFD /* RPZipCodeValidator.swift in Sources */,
+				1AB53B911CBED266009F3CEB /* RPDoubleValidator.swift in Sources */,
+				1944BC1E1CBFFEDC006004DA /* RPStreetAddressValidator.swift in Sources */,
+				1A5EDDC11CBECDFB00CF0B9B /* RPPhoneValidator.swift in Sources */,
 				1A5EDDBA1CBECDFB00CF0B9B /* UITextView.swift in Sources */,
-				1A5EDDB71CBECDFB00CF0B9B /* Validator.swift in Sources */,
-				1A5EDDC01CBECDFB00CF0B9B /* NumericValidator.swift in Sources */,
-				1AB53B921CBED268009F3CEB /* FloatValidator.swift in Sources */,
-				1A5EDDBC1CBECDFB00CF0B9B /* IntegerValidator.swift in Sources */,
-				1A5EDDBD1CBECDFB00CF0B9B /* MaxLengthValidator.swift in Sources */,
-				1988DCDA1CC010ED00561FFD /* CityStateValidator.swift in Sources */,
+				1A5EDDB71CBECDFB00CF0B9B /* RPValidator.swift in Sources */,
+				1A5EDDC01CBECDFB00CF0B9B /* RPNumericValidator.swift in Sources */,
+				1AB53B921CBED268009F3CEB /* RPFloatValidator.swift in Sources */,
+				1A5EDDBC1CBECDFB00CF0B9B /* RPIntegerValidator.swift in Sources */,
+				1A5EDDBD1CBECDFB00CF0B9B /* RPMaxLengthValidator.swift in Sources */,
+				1988DCDA1CC010ED00561FFD /* RPCityStateValidator.swift in Sources */,
 				1A5EDDA91CBECDEA00CF0B9B /* RPValidationManager.swift in Sources */,
-				1A5EDDBF1CBECDFB00CF0B9B /* MKCoordinateRegionValidator.swift in Sources */,
-				1A5EDDB61CBECDFB00CF0B9B /* Validation.swift in Sources */,
-				1A5EDDC21CBECDFB00CF0B9B /* RequiredValidator.swift in Sources */,
-				1A5EDDB81CBECDFB00CF0B9B /* ValidationResult.swift in Sources */,
-				1A5EDDBB1CBECDFB00CF0B9B /* EmailValidator.swift in Sources */,
-				1A5EDDAA1CBECDEC00CF0B9B /* Validatable.swift in Sources */,
+				1A5EDDBF1CBECDFB00CF0B9B /* RPMKCoordinateRegionValidator.swift in Sources */,
+				1A5EDDB61CBECDFB00CF0B9B /* RPValidation.swift in Sources */,
+				1A5EDDC21CBECDFB00CF0B9B /* RPRequiredValidator.swift in Sources */,
+				E6F30D571D3425E9004A5C9B /* RPValidatorFactory.swift in Sources */,
+				1A5EDDB81CBECDFB00CF0B9B /* RPValidationResult.swift in Sources */,
+				1A5EDDBB1CBECDFB00CF0B9B /* RPEmailValidator.swift in Sources */,
+				1A5EDDAA1CBECDEC00CF0B9B /* RPValidatable.swift in Sources */,
 				1A5EDDB91CBECDFB00CF0B9B /* UITextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,12 +473,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A5EDDA81CBECD7200CF0B9B /* MKCoordinateReagionValidatorTests.swift in Sources */,
-				1988DCD71CC010D700561FFD /* StreetAddressValidatorTests.swift in Sources */,
-				1A5EDDA71CBECD6C00CF0B9B /* NumericValidatorTests.swift in Sources */,
+				1A5EDDA81CBECD7200CF0B9B /* RPMKCoordinateReagionValidatorTests.swift in Sources */,
+				1988DCD71CC010D700561FFD /* RPStreetAddressValidatorTests.swift in Sources */,
+				1A5EDDA71CBECD6C00CF0B9B /* RPNumericValidatorTests.swift in Sources */,
 				E61508E91CA9B26900D3D70E /* RPValidationKitTests.swift in Sources */,
-				1988DCD61CC010D200561FFD /* CityStateValidatorTests.swift in Sources */,
-				1988DCE01CC018F600561FFD /* ZipCodeValidatorTests.swift in Sources */,
+				1988DCD61CC010D200561FFD /* RPCityStateValidatorTests.swift in Sources */,
+				1988DCE01CC018F600561FFD /* RPZipCodeValidatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,26 +486,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A5EDD981CBE950E00CF0B9B /* MKCoordinateRegionValidator.swift in Sources */,
-				1988DCDC1CC0175A00561FFD /* ZipCodeValidator.swift in Sources */,
-				ADC6C01B1CAC28BB00969BE0 /* MinLengthValidator.swift in Sources */,
-				1944BC1D1CBFFEDC006004DA /* StreetAddressValidator.swift in Sources */,
-				ADC6C00D1CAC285F00969BE0 /* Validator.swift in Sources */,
+				E6F30D541D342590004A5C9B /* RPValidationReflection.m in Sources */,
+				1A5EDD981CBE950E00CF0B9B /* RPMKCoordinateRegionValidator.swift in Sources */,
+				E6F30D561D3425E9004A5C9B /* RPValidatorFactory.swift in Sources */,
+				1988DCDC1CC0175A00561FFD /* RPZipCodeValidator.swift in Sources */,
+				ADC6C01B1CAC28BB00969BE0 /* RPMinLengthValidator.swift in Sources */,
+				1944BC1D1CBFFEDC006004DA /* RPStreetAddressValidator.swift in Sources */,
+				ADC6C00D1CAC285F00969BE0 /* RPValidator.swift in Sources */,
 				ADC6C00A1CAC285F00969BE0 /* RPValidationManager.swift in Sources */,
-				ADC6C0191CAC28BB00969BE0 /* IntegerValidator.swift in Sources */,
-				ADC6C01A1CAC28BB00969BE0 /* MaxLengthValidator.swift in Sources */,
-				1A5EDDA31CBECD1100CF0B9B /* NumericValidator.swift in Sources */,
-				ADC6C01D1CAC28BB00969BE0 /* RequiredValidator.swift in Sources */,
+				ADC6C0191CAC28BB00969BE0 /* RPIntegerValidator.swift in Sources */,
+				ADC6C01A1CAC28BB00969BE0 /* RPMaxLengthValidator.swift in Sources */,
+				1A5EDDA31CBECD1100CF0B9B /* RPNumericValidator.swift in Sources */,
+				ADC6C01D1CAC28BB00969BE0 /* RPRequiredValidator.swift in Sources */,
 				E6B9D5A71CB6D74D001EC5CE /* UITextView.swift in Sources */,
-				1988DCD91CC010ED00561FFD /* CityStateValidator.swift in Sources */,
+				1988DCD91CC010ED00561FFD /* RPCityStateValidator.swift in Sources */,
 				ADC6C0101CAC28AB00969BE0 /* UITextField.swift in Sources */,
-				ADC6C01C1CAC28BB00969BE0 /* PhoneValidator.swift in Sources */,
-				1AB53B8E1CBED242009F3CEB /* FloatValidator.swift in Sources */,
-				1AB53B901CBED266009F3CEB /* DoubleValidator.swift in Sources */,
-				ADC6C0181CAC28BB00969BE0 /* EmailValidator.swift in Sources */,
-				E66121561CB5690D0074543F /* ValidationResult.swift in Sources */,
-				ADC6C00C1CAC285F00969BE0 /* Validation.swift in Sources */,
-				ADC6C00B1CAC285F00969BE0 /* Validatable.swift in Sources */,
+				ADC6C01C1CAC28BB00969BE0 /* RPPhoneValidator.swift in Sources */,
+				1AB53B8E1CBED242009F3CEB /* RPFloatValidator.swift in Sources */,
+				1AB53B901CBED266009F3CEB /* RPDoubleValidator.swift in Sources */,
+				ADC6C0181CAC28BB00969BE0 /* RPEmailValidator.swift in Sources */,
+				E66121561CB5690D0074543F /* RPValidationResult.swift in Sources */,
+				ADC6C00C1CAC285F00969BE0 /* RPValidation.swift in Sources */,
+				ADC6C00B1CAC285F00969BE0 /* RPValidatable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,12 +515,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A5EDDA11CBEC47500CF0B9B /* MKCoordinateReagionValidatorTests.swift in Sources */,
-				1A5EDDA61CBECD6C00CF0B9B /* NumericValidatorTests.swift in Sources */,
-				1944BC201CC00DC2006004DA /* StreetAddressValidatorTests.swift in Sources */,
+				1A5EDDA11CBEC47500CF0B9B /* RPMKCoordinateReagionValidatorTests.swift in Sources */,
+				1A5EDDA61CBECD6C00CF0B9B /* RPNumericValidatorTests.swift in Sources */,
+				1944BC201CC00DC2006004DA /* RPStreetAddressValidatorTests.swift in Sources */,
 				E6F6822B1CA5A461009255CB /* RPValidationKitTests.swift in Sources */,
-				1988DCD51CC010D200561FFD /* CityStateValidatorTests.swift in Sources */,
-				1988DCDF1CC018F600561FFD /* ZipCodeValidatorTests.swift in Sources */,
+				1988DCD51CC010D200561FFD /* RPCityStateValidatorTests.swift in Sources */,
+				1988DCDF1CC018F600561FFD /* RPZipCodeValidatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,45 +9,45 @@
 import XCTest
 @testable import RPValidationKit
 
-class CityStateValidatorTests: XCTestCase {
+class RPCityStateValidatorTests: XCTestCase {
 
     func testValidationPassesForValidCityStateOne() {
-        let validator = CityStateValidator()
+        let validator = RPCityStateValidator()
         XCTAssertTrue(validator.validate("atlanta, ga"))
     }
     
     func testValidationPassesForValidCityStateTwo() {
-        let validator = CityStateValidator()
+        let validator = RPCityStateValidator()
         XCTAssertTrue(validator.validate("Atlanta, GA"))
     }
     
     func testValidationPassesForValidCityStateThree() {
-        let validator = CityStateValidator()
+        let validator = RPCityStateValidator()
         XCTAssertTrue(validator.validate("los angeles, ca"))
     }
     
     func testValidationFailsForInvalidCityStateOne() {
-        let validator = CityStateValidator()
+        let validator = RPCityStateValidator()
         XCTAssertFalse(validator.validate("atlanta ga"))
     }
     
     func testValidationFailsForInvalidCityStateTwo() {
-        let validator = CityStateValidator()
+        let validator = RPCityStateValidator()
         XCTAssertFalse(validator.validate("atlantaga"))
     }
     
     func testValidationFailsForEmptyCityStateOne() {
-        let validator = CityStateValidator()
+        let validator = RPCityStateValidator()
         XCTAssertFalse(validator.validate(" "))
     }
     
     func testValidationFailsForEmptyCityStateTwo() {
-        let validator = CityStateValidator()
+        let validator = RPCityStateValidator()
         XCTAssertFalse(validator.validate(""))
     }
     
     func testPerformanceExample() {
-        let validator = CityStateValidator()
+        let validator = RPCityStateValidator()
         self.measureBlock {
             validator.validate("123 main st")
         }

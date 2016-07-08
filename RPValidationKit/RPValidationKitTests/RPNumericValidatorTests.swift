@@ -9,25 +9,25 @@
 import XCTest
 @testable import RPValidationKit
 
-class NumericValidatorTests: XCTestCase {
+class RPNumericValidatorTests: XCTestCase {
 
     func testValidationPassesForIntegerValues() {
-        let validator = NumbericValidator()
+        let validator = RPNumbericValidator()
         XCTAssertTrue(validator.validate("12345"))
     }
     
     func testValidationPassesForFloatValues() {
-        let validator = NumbericValidator()
+        let validator = RPNumbericValidator()
         XCTAssertTrue(validator.validate("12345.1"))
     }
     
     func testValidationPassesForDoubleValues() {
-        let validator = NumbericValidator()
+        let validator = RPNumbericValidator()
         XCTAssertTrue(validator.validate("12.12345891234"))
     }
     
     func testValidationFails() {
-        let validator = NumbericValidator()
+        let validator = RPNumbericValidator()
         XCTAssertFalse(validator.validate("not a number"))
     }
 

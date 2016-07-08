@@ -24,23 +24,11 @@ import Foundation
 
 public struct RPValidationManager {
     
-    var validatables: [Validatable] = []
-    
-    public var validFields: [Validatable] {
-        return validatables.filter() {
-            $0.isValid
-        }
-    }
-    
-    public var invalidFields: [Validatable] {
-        return validatables.filter() {
-            !$0.isValid
-        }
-    }
+    var validatables: [RPValidatable] = []
     
     public init() {}
     
-    public mutating func add(validatable: Validatable) {
+    public mutating func add(validatable: RPValidatable) {
         validatables.append(validatable)
     }
     
@@ -64,8 +52,8 @@ public struct RPValidationManager {
         return nil
     }
     
-    public func validate() -> ValidationResult {
-        var result = ValidationResult()
+    public func validate() -> RPValidationResult {
+        var result = RPValidationResult()
         
         for validatable in validatables {
             result.combine(validatable.validate())

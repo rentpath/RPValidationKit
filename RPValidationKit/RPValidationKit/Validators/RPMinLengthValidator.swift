@@ -20,30 +20,36 @@
  * SOFTWARE.
  */
 
-public struct ZipCodeValidator {
+import Foundation
+
+public class RPMinLengthValidator: RPValidator {
     
-    let ZIP_REGEX = "^[0-9]{5}(-([0-9]{1,4}))?$"
+    public var minLength: Int = 1
     
-    public init() {}
-    
-    public func validate(zipCode: String) -> Bool {
-        
-        // Check for an invalid zip in the format of 999999
-        let reversedSearchTerm = Array(zipCode.characters.reverse()).reduce("") { $0 + "\($1)" }
-        if reversedSearchTerm == zipCode {
-            return false
-        }
-        
-        let zipRegex: NSRegularExpression!
-        do {
-            zipRegex = try NSRegularExpression(pattern: ZIP_REGEX, options: [.CaseInsensitive, .AnchorsMatchLines])
-        } catch let error as NSError {
-            print("Error validating zipcode. Error: \(error.localizedDescription)")
-            return false
-        }
-        let matches = zipRegex.numberOfMatchesInString(zipCode, options: NSMatchingOptions.ReportCompletion, range: NSMakeRange(0, zipCode.characters.count))
-        
-        return matches != 0
+    public override func getType() -> String {
+        return "minlength"
     }
     
+    public override init(string: String? = nil) {
+        guard let _string = string, let length = Int(_string) else {
+            return
+        }
+        minLength = length
+    }
+    
+    public init(minLength: Int) {
+        self.minLength = minLength
+    }
+
+    public override func validate(value: String) -> Bool {
+        return value.characters.count >= minLength
+    }
+    
+    public override func validateField(fieldName: String, value: String) -> RPValidation {
+        if validate(value) {
+            return RPValidation.Valid
+        } else {
+            return RPValidation.Error(message: "\(fieldName) is too short.")
+        }
+    }
 }
