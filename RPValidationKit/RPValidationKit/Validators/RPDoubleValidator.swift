@@ -20,22 +20,24 @@
  * SOFTWARE.
  */
 
-import Foundation
-
-public struct RequiredValidator: Validator {
+public class RPDoubleValidator: RPValidator {
     
-    public init() {}
-    
-    public func validate(value: String) -> Bool {
-        let trimmedString = value.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
-        return !trimmedString.isEmpty
+    public override func getType() -> String {
+        return "double"
     }
     
-    public func validateField(fieldName: String, value: String) -> Validation {
+    public override func validate(value: String) -> Bool {
+        if let _ = Double(value) {
+            return true
+        }
+        return false
+    }
+    
+    public override func validateField(fieldName: String, value: String) -> RPValidation {
         if validate(value) {
-            return Validation.Valid
+            return RPValidation.Valid
         } else {
-            return Validation.Error(message: "\(fieldName) is required")
+            return RPValidation.Error(message: "\(fieldName) is not a double.")
         }
     }
 }

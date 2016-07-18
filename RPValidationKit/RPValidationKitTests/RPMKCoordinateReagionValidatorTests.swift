@@ -10,7 +10,7 @@ import XCTest
 import MapKit
 @testable import RPValidationKit
 
-class MKCoordinateReagionValidatorTests: XCTestCase {
+class RPMKCoordinateReagionValidatorTests: XCTestCase {
     
     func testValidationPasses() {
         let center = CLLocationCoordinate2D(latitude: 33.7490, longitude: -84.3880)
@@ -19,7 +19,7 @@ class MKCoordinateReagionValidatorTests: XCTestCase {
         let span = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: lngDelta)
         let region = MKCoordinateRegion(center: center, span: span)
         
-        let validator = MKCoordinateRegionValidator()
+        let validator = RPMKCoordinateRegionValidator()
         XCTAssertTrue(validator.validate(region))
     }
     
@@ -30,7 +30,7 @@ class MKCoordinateReagionValidatorTests: XCTestCase {
         let span = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: lngDelta)
         let region = MKCoordinateRegion(center: center, span: span)
         
-        let validator = MKCoordinateRegionValidator()
+        let validator = RPMKCoordinateRegionValidator()
         XCTAssertFalse(validator.validate(region))
     }
     
@@ -41,7 +41,7 @@ class MKCoordinateReagionValidatorTests: XCTestCase {
         let span = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: lngDelta)
         let region = MKCoordinateRegion(center: center, span: span)
         
-        let validator = MKCoordinateRegionValidator()
+        let validator = RPMKCoordinateRegionValidator()
         XCTAssertFalse(validator.validate(region))
     }
     
@@ -52,7 +52,7 @@ class MKCoordinateReagionValidatorTests: XCTestCase {
         let span = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: lngDelta)
         let region = MKCoordinateRegion(center: center, span: span)
         
-        let validator = MKCoordinateRegionValidator()
+        let validator = RPMKCoordinateRegionValidator()
         XCTAssertFalse(validator.validate(region))
     }
     
@@ -63,7 +63,7 @@ class MKCoordinateReagionValidatorTests: XCTestCase {
         let span = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: lngDelta)
         let region = MKCoordinateRegion(center: center, span: span)
         
-        let validator = MKCoordinateRegionValidator()
+        let validator = RPMKCoordinateRegionValidator()
         XCTAssertFalse(validator.validate(region))
     }
 
@@ -74,7 +74,7 @@ class MKCoordinateReagionValidatorTests: XCTestCase {
         let span = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: lngDelta)
         let region = MKCoordinateRegion(center: center, span: span)
         
-        let validator = MKCoordinateRegionValidator()
+        let validator = RPMKCoordinateRegionValidator()
 
         self.measureBlock {
             validator.validate(region)

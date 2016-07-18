@@ -22,27 +22,34 @@
 
 import Foundation
 
-public struct EmailValidator: Validator {
-    var EMAILREGEX = "^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$"
+public class RPMaxLengthValidator: RPValidator {
     
-    public init() {}
+    public var maxLength: Int = 256
     
-    public func validate(value: String) -> Bool {
-        let components = value.componentsSeparatedByCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
-        
-        if components.count > 1 {
-            return false
-        }
-        
-        let range = value.rangeOfString(EMAILREGEX, options:.RegularExpressionSearch)
-        return (range != nil) ? true : false
+    public override func getType() -> String {
+        return "maxlength"
     }
     
-    public func validateField(fieldName: String, value: String) -> Validation {
+    public override init(string: String? = nil) {
+        guard let _string = string, let length = Int(_string) else {
+            return
+        }
+        maxLength = length
+    }
+    
+    public init(maxLength: Int) {
+        self.maxLength = maxLength
+    }
+    
+    public override func validate(value: String) -> Bool {
+        return value.characters.count <= maxLength
+    }
+
+    public override func validateField(fieldName: String, value: String) -> RPValidation {
         if validate(value) {
-            return Validation.Valid
+            return RPValidation.Valid
         } else {
-            return Validation.Error(message: "\(fieldName) is not a valid email address.")
+            return RPValidation.Error(message: "\(fieldName) is too long.")
         }
     }
 }

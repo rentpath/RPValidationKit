@@ -22,9 +22,12 @@
 
 import Foundation
 
-public struct ValidationResult {
+public struct RPValidationResult {
     
-    public var validations: [Validation] = []
+    public var validations: [RPValidation] = []
+    
+    public var validFields: [RPValidatable] = []
+    public var invalidFields: [RPValidatable] = []
     
     public var isValid: Bool {
         for validation in validations {
@@ -48,7 +51,9 @@ public struct ValidationResult {
         return messages
     }
     
-    mutating func combine(result: ValidationResult) {
+    mutating func combine(result: RPValidationResult) {
         self.validations = self.validations + result.validations
+        self.validFields = self.validFields + result.validFields
+        self.invalidFields = self.invalidFields + result.invalidFields
     }
 }

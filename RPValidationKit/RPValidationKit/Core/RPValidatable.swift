@@ -22,9 +22,9 @@
 
 import Foundation
 
-public protocol Validatable: AnyObject {
+public protocol RPValidatable: AnyObject {
     
-    func validate() -> ValidationResult
+    func validate() -> RPValidationResult
 }
 
 
@@ -39,7 +39,7 @@ private final class Box<T>: NSObject {
 private var validatableNameKey: UInt8 = 0
 private var validatorsKey: UInt8 = 0
 
-extension Validatable {
+extension RPValidatable {
     
     public var isValid: Bool {
         return self.validate().isValid
@@ -54,15 +54,15 @@ extension Validatable {
         }
     }
     
-    public var validators: [Validator] {
+    public var validators: [RPValidator] {
         get {
-            guard let box = objc_getAssociatedObject(self, &validatorsKey) as? Box<[Validator]> else {
+            guard let box = objc_getAssociatedObject(self, &validatorsKey) as? Box<[RPValidator]> else {
                 return []
             }
             return box.value ?? []
         }
         set(newValue) {
-            let box = Box<[Validator]>(value: newValue)
+            let box = Box<[RPValidator]>(value: newValue)
             objc_setAssociatedObject(self, &validatorsKey, box, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }

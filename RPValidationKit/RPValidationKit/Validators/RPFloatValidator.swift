@@ -20,45 +20,24 @@
  * SOFTWARE.
  */
 
-import MapKit
-import CoreLocation
-
-public struct MKCoordinateRegionValidator {
+public class RPFloatValidator: RPValidator {
     
-    private let MinLatitudeDelta  = 0.0
-    private let MinLongitudeDelta = 0.0
-    private let MinLatitude       = -90.0
-    private let MaxLatitude       = 90.0
-    private let MinLongitude      = -180.0
-    private let MaxLongitude      = 180.0
-    
-    public init() {}
-    
-    public func validate(region: MKCoordinateRegion) -> Bool {
-        
-        if (isnan(region.span.latitudeDelta)  ||
-            isnan(region.span.longitudeDelta) ||
-            isnan(region.center.latitude)     ||
-            isnan(region.center.longitude)) {
-            
-            return false
-        }
-        
-        if (region.span.latitudeDelta <= MinLatitudeDelta ||
-            region.span.longitudeDelta <= MinLongitudeDelta) {
-            
-            return false
-        }
-        
-        if (region.center.latitude > MaxLatitude   ||
-            region.center.latitude < MinLatitude   ||
-            region.center.longitude > MaxLongitude ||
-            region.center.longitude < MinLongitude) {
-            
-            return false
-        }
-        
-        return true
+    public override func getType() -> String {
+        return "float"
     }
     
+    public override func validate(value: String) -> Bool {
+        if let _ = Float(value) {
+            return true
+        }
+        return false
+    }
+    
+    public override func validateField(fieldName: String, value: String) -> RPValidation {
+        if validate(value) {
+            return RPValidation.Valid
+        } else {
+            return RPValidation.Error(message: "\(fieldName) is not a float.")
+        }
+    }
 }

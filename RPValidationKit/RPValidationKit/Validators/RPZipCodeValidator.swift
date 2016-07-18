@@ -20,25 +20,40 @@
  * SOFTWARE.
  */
 
-public struct StreetAddressValidator {
+public class RPZipCodeValidator: RPValidator {
     
-    let STREET_REGEX = "^\\d{1,}(\\s{1}\\w{1,})(\\s{1}?\\w{1,})+$"
+    let ZIP_REGEX = "^[0-9]{5}(-([0-9]{1,4}))?$"
     
-    public init() {}
+    public override func getType() -> String {
+        return "zipcode"
+    }
     
-    public func validate(address: String) -> Bool {
-        let trimmedAddress = address.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
-        if trimmedAddress.characters.count == 0 {
+    public override func validate(zipCode: String) -> Bool {
+        
+        // Check for an invalid zip in the format of 999999
+        let reversedSearchTerm = Array(zipCode.characters.reverse()).reduce("") { $0 + "\($1)" }
+        if reversedSearchTerm == zipCode {
             return false
         }
         
-        guard let range = address.rangeOfString(STREET_REGEX, options:.RegularExpressionSearch) else {
+        let zipRegex: NSRegularExpression!
+        do {
+            zipRegex = try NSRegularExpression(pattern: ZIP_REGEX, options: [.CaseInsensitive, .AnchorsMatchLines])
+        } catch let error as NSError {
+            print("Error validating zipcode. Error: \(error.localizedDescription)")
             return false
         }
+        let matches = zipRegex.numberOfMatchesInString(zipCode, options: NSMatchingOptions.ReportCompletion, range: NSMakeRange(0, zipCode.characters.count))
         
-        let distance = range.startIndex.distanceTo(range.endIndex)
-        
-        return distance > 0
+        return matches != 0
+    }
+    
+    public override func validateField(fieldName: String, value: String) -> RPValidation {
+        if validate(value) {
+            return RPValidation.Valid
+        } else {
+            return RPValidation.Error(message: "\(fieldName) is not a valid zip code")
+        }
     }
     
 }

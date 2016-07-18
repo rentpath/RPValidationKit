@@ -9,50 +9,50 @@
 import XCTest
 @testable import RPValidationKit
 
-class StreetAddressValidatorTests: XCTestCase {
+class RPStreetAddressValidatorTests: XCTestCase {
 
     func testValidationPassesForValidStreetAddressOne() {
-        let validator = StreetAddressValidator()
+        let validator = RPStreetAddressValidator()
         XCTAssertTrue(validator.validate("123 main st"))
     }
     
     func testValidationPassesForValidStreetAddressTwo() {
-        let validator = StreetAddressValidator()
+        let validator = RPStreetAddressValidator()
         XCTAssertTrue(validator.validate("123 Main Rd NE"))
     }
     
     func testValidationPassesForValidStreetAddressThree() {
-        let validator = StreetAddressValidator()
+        let validator = RPStreetAddressValidator()
         XCTAssertTrue(validator.validate("123 N Main Cir"))
     }
     
     func testValidationFailsForInvalidStreetAddressOne() {
-        let validator = StreetAddressValidator()
+        let validator = RPStreetAddressValidator()
         XCTAssertFalse(validator.validate("123main st"))
     }
     
     func testValidationFailsForInvalidStreetAddressTwo() {
-        let validator = StreetAddressValidator()
+        let validator = RPStreetAddressValidator()
         XCTAssertFalse(validator.validate("main st 123"))
     }
     
     func testValidationFailsForInvalidStreetAddressThree() {
-        let validator = StreetAddressValidator()
+        let validator = RPStreetAddressValidator()
         XCTAssertFalse(validator.validate("123"))
     }
     
     func testValidationFailsForInvalidStreetAddressFour() {
-        let validator = StreetAddressValidator()
+        let validator = RPStreetAddressValidator()
         XCTAssertFalse(validator.validate("main st"))
     }
     
     func testValidationFailsForEmptyStreetAddress() {
-        let validator = StreetAddressValidator()
+        let validator = RPStreetAddressValidator()
         XCTAssertFalse(validator.validate(""))
     }
     
     func testPerformanceExample() {
-        let validator = StreetAddressValidator()
+        let validator = RPStreetAddressValidator()
         self.measureBlock {
             validator.validate("123 main st")
         }

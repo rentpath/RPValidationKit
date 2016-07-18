@@ -22,22 +22,30 @@
 
 import Foundation
 
-public struct PhoneValidator: Validator {
-    var PHONEREGEX: String = "^\\d{10}$"
+public class RPEmailValidator: RPValidator {
     
-    public init() {}
+    var EMAILREGEX = "^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$"
     
-    public func validate(value: String) -> Bool {
-        let valueDigits = value.stringByReplacingOccurrencesOfString("[^0-9]", withString: "", options: NSStringCompareOptions.RegularExpressionSearch, range: value.startIndex..<value.endIndex)
-        let range = valueDigits.rangeOfString(PHONEREGEX, options:.RegularExpressionSearch)
-        return range != nil ? true : false
+    public override func getType() -> String {
+        return "email"
     }
     
-    public func validateField(fieldName: String, value: String) -> Validation {
+    public override func validate(value: String) -> Bool {
+        let components = value.componentsSeparatedByCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        
+        if components.count > 1 {
+            return false
+        }
+        
+        let range = value.rangeOfString(EMAILREGEX, options:.RegularExpressionSearch)
+        return (range != nil) ? true : false
+    }
+    
+    public override func validateField(fieldName: String, value: String) -> RPValidation {
         if validate(value) {
-            return Validation.Valid
+            return RPValidation.Valid
         } else {
-            return Validation.Error(message: "\(fieldName) is not a valid phone number.")
+            return RPValidation.Error(message: "\(fieldName) is not a valid email address.")
         }
     }
 }

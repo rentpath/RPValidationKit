@@ -20,22 +20,42 @@
  * SOFTWARE.
  */
 
-public struct DoubleValidator: Validator {
+import MapKit
+import CoreLocation
+
+public class RPMKCoordinateRegionValidator {
     
-    public init() {}
+    private let MinLatitudeDelta  = 0.0
+    private let MinLongitudeDelta = 0.0
+    private let MinLatitude       = -90.0
+    private let MaxLatitude       = 90.0
+    private let MinLongitude      = -180.0
+    private let MaxLongitude      = 180.0
     
-    public func validate(value: String) -> Bool {
-        if let _ = Double(value) {
-            return true
+    public func validate(region: MKCoordinateRegion) -> Bool {
+        
+        if (isnan(region.span.latitudeDelta)  ||
+            isnan(region.span.longitudeDelta) ||
+            isnan(region.center.latitude)     ||
+            isnan(region.center.longitude)) {
+            
+            return false
         }
-        return false
-    }
-    
-    public func validateField(fieldName: String, value: String) -> Validation {
-        if validate(value) {
-            return Validation.Valid
-        } else {
-            return Validation.Error(message: "\(fieldName) is not a double.")
+        
+        if (region.span.latitudeDelta <= MinLatitudeDelta ||
+            region.span.longitudeDelta <= MinLongitudeDelta) {
+            
+            return false
         }
+        
+        if (region.center.latitude > MaxLatitude   ||
+            region.center.latitude < MinLatitude   ||
+            region.center.longitude > MaxLongitude ||
+            region.center.longitude < MinLongitude) {
+            
+            return false
+        }
+        
+        return true
     }
 }

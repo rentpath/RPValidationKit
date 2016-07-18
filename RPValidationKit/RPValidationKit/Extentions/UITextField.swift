@@ -22,13 +22,19 @@
 
 import UIKit
 
-extension UITextField: Validatable {
+extension UITextField: RPValidatable {
     
-    public func validate() -> ValidationResult {
-        var result = ValidationResult()
+    public func validate() -> RPValidationResult {
+        var result = RPValidationResult()
         
         for validator in validators {
             result.validations.append(validator.validateField(validatableName, value: self.text!))
+        }
+        
+        if result.isValid {
+            result.validFields.append(self)
+        } else {
+            result.invalidFields.append(self)
         }
         
         return result

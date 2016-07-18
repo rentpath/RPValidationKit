@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E61508F41CA9B89C00D3D70E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61508F31CA9B89C00D3D70E /* String.swift */; };
+		E6F30BF81D3029C0004A5C9B /* RPValidationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F682601CA5A626009255CB /* RPValidationKit.framework */; };
+		E6F30BF91D3029C0004A5C9B /* RPValidationKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E6F682601CA5A626009255CB /* RPValidationKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E6F682421CA5A4A3009255CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F682411CA5A4A3009255CB /* AppDelegate.swift */; };
 		E6F682441CA5A4A3009255CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F682431CA5A4A3009255CB /* ViewController.swift */; };
 		E6F682471CA5A4A3009255CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6F682451CA5A4A3009255CB /* Main.storyboard */; };
@@ -31,6 +33,13 @@
 			remoteGlobalIDString = E61508CC1CA9B1EB00D3D70E;
 			remoteInfo = "RPValidationKit tvOSTests";
 		};
+		E6F30BFA1D3029C0004A5C9B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6F6825A1CA5A626009255CB /* RPValidationKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E6F6821A1CA5A461009255CB;
+			remoteInfo = RPValidationKit;
+		};
 		E6F6825F1CA5A626009255CB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E6F6825A1CA5A626009255CB /* RPValidationKit.xcodeproj */;
@@ -46,6 +55,20 @@
 			remoteInfo = RPValidationKitTests;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E6F30BFC1D3029C0004A5C9B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E6F30BF91D3029C0004A5C9B /* RPValidationKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E61508F31CA9B89C00D3D70E /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -65,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6F30BF81D3029C0004A5C9B /* RPValidationKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,10 +165,12 @@
 				E6F6823A1CA5A4A3009255CB /* Sources */,
 				E6F6823B1CA5A4A3009255CB /* Frameworks */,
 				E6F6823C1CA5A4A3009255CB /* Resources */,
+				E6F30BFC1D3029C0004A5C9B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E6F30BFB1D3029C0004A5C9B /* PBXTargetDependency */,
 			);
 			name = RPValidationKitDemo;
 			productName = RPValidationKitDemo;
@@ -201,7 +227,7 @@
 		E61508F21CA9B89300D3D70E /* RPValidationKit tvOSTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = "RPValidationKit tvOSTests.xctest";
+			path = RPValidationKitTVTests.xctest;
 			remoteRef = E61508F11CA9B89300D3D70E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -247,6 +273,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E6F30BFB1D3029C0004A5C9B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RPValidationKit;
+			targetProxy = E6F30BFA1D3029C0004A5C9B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E6F682451CA5A4A3009255CB /* Main.storyboard */ = {
@@ -355,6 +389,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = RPValidationKitDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -367,6 +402,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = RPValidationKitDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -16,7 +16,8 @@ class CustomView: UIView {
         didSet {
             textField.validatableName = "Some Required Field"
             textField.placeholder = "Required input"
-            textField.validators = [RequiredValidator()]
+            textField.validators = [RPRequiredValidator()]
+            textField.delegate = self
         }
     }
     
@@ -25,17 +26,25 @@ class CustomView: UIView {
     }
 }
 
-extension CustomView: Validatable {
+extension CustomView: RPValidatable {
     
-    func validate() -> ValidationResult {
-        let result = textField.validate()
+    func validate() -> RPValidationResult {
+        var result = textField.validate()
         
         if result.isValid {
-            backgroundColor = UIColor.greenColor().colorWithAlphaComponent(0.1)
+            result.validFields.append(self)
         } else {
-            backgroundColor = UIColor.redColor().colorWithAlphaComponent(0.1)
+            result.invalidFields.append(self)
         }
         
-        return textField.validate()
+        return result
+    }
+}
+
+extension CustomView: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return false
     }
 }

@@ -9,55 +9,55 @@
 import XCTest
 @testable import RPValidationKit
 
-class ZipCodeValidatorTests: XCTestCase {
+class RPZipCodeValidatorTests: XCTestCase {
 
     func testValidationPassesForValidZipCode() {
-        let validator = ZipCodeValidator()
+        let validator = RPZipCodeValidator()
         XCTAssertTrue(validator.validate("30019"))
     }
     
     func testValidationPassesForValidZipCodeTwo() {
-        let validator = ZipCodeValidator()
+        let validator = RPZipCodeValidator()
         XCTAssertTrue(validator.validate("30019-1234"))
     }
     
     func testValidationFailsForInvalidZipCodeOne() {
-        let validator = ZipCodeValidator()
+        let validator = RPZipCodeValidator()
         XCTAssertFalse(validator.validate("3001"))
     }
     
     func testValidationFailsForInvalidZipCodeTwo() {
-        let validator = ZipCodeValidator()
+        let validator = RPZipCodeValidator()
         XCTAssertFalse(validator.validate("300"))
     }
     
     func testValidationFailsForInvalidZipCodeThree() {
-        let validator = ZipCodeValidator()
+        let validator = RPZipCodeValidator()
         XCTAssertFalse(validator.validate("30"))
     }
     
     func testValidationFailsForInvalidZipCodeFour() {
-        let validator = ZipCodeValidator()
+        let validator = RPZipCodeValidator()
         XCTAssertFalse(validator.validate("3"))
     }
     
     func testValidationFailsForInvalidZipCodeFive() {
-        let validator = ZipCodeValidator()
+        let validator = RPZipCodeValidator()
         XCTAssertFalse(validator.validate("11111"))
     }
     
     func testValidationFailsForInvalidZipCodeSix() {
-        let validator = ZipCodeValidator()
+        let validator = RPZipCodeValidator()
         XCTAssertFalse(validator.validate(" "))
     }
     
     func testValidationFailsForInvalidZipCodeSeven() {
-        let validator = ZipCodeValidator()
+        let validator = RPZipCodeValidator()
         XCTAssertFalse(validator.validate(""))
     }
     
     func testPerformanceExample() {
-        let validator = ZipCodeValidator()
+        let validator = RPZipCodeValidator()
         self.measureBlock {
             validator.validate("30019")
         }

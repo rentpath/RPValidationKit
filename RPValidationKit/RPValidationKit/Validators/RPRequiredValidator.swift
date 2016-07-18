@@ -22,22 +22,22 @@
 
 import Foundation
 
-public struct IntegerValidator: Validator {
+public class RPRequiredValidator: RPValidator {
     
-    public init() {}
-    
-    public func validate(value: String) -> Bool {
-        if let _ = Int(value) {
-            return true
-        }
-        return false
+    public override func getType() -> String {
+        return "required"
     }
     
-    public func validateField(fieldName: String, value: String) -> Validation {
+    public override func validate(value: String) -> Bool {
+        let trimmedString = value.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        return !trimmedString.isEmpty
+    }
+    
+    public override func validateField(fieldName: String, value: String) -> RPValidation {
         if validate(value) {
-            return Validation.Valid
+            return RPValidation.Valid
         } else {
-            return Validation.Error(message: "\(fieldName) is not an integer.")
+            return RPValidation.Error(message: "\(fieldName) is required")
         }
     }
 }
