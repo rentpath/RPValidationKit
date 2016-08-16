@@ -19,7 +19,7 @@ before_install:
 before_script:
   - carthage bootstrap --use-ssh --platform iOS
 script: 
-  - xcodebuild -workspace RPValidationKit.xcworkspace -scheme 'RPValidationKit' -destination "name=iPhone 6" build test | xcpretty -c
+  - xcodebuild -workspace RPValidationKit.xcworkspace -scheme 'RPValidationKit' -destination "name=iPhone 6" build test | xcpretty -c; test ${PIPESTATUS[0]} -eq 0
 before_deploy:
   - carthage build --no-skip-current --platform iOS
   - carthage archive $FRAMEWORK_NAME
