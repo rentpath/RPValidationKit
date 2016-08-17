@@ -25,4 +25,12 @@ import Foundation
 public enum RPValidation {
     case Valid
     case Error(message: String)
+    
+    public var description: String {
+        switch self {
+        case .Valid: return "Valid"
+        case .Error: return "Error"
+        
+        }
+    }
 }
