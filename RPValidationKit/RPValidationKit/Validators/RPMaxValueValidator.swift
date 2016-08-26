@@ -20,24 +20,38 @@
  * SOFTWARE.
  */
 
-public class RPFloatValidator: RPValidator {
+public class RPMaxValueValidator: RPValidator {
+    
+    public var maxValue: Double = 0
     
     public override func getType() -> String {
-        return "float"
+        return "maxvalue"
+    }
+    
+    public override init(string: String? = nil) {
+        guard let _string = string, let value = Double(_string) else {
+            return
+        }
+        maxValue = value
+    }
+    
+    public init(maxValue: Double) {
+        self.maxValue = maxValue
     }
     
     public override func validate(value: String) -> Bool {
-        if let _ = Float(value) {
-            return true
+        guard let number = Double(value) else {
+            return false
         }
-        return false
+        
+        return number < maxValue
     }
     
     public override func validateField(fieldName: String, value: String) -> RPValidation {
         if validate(value) {
             return RPValidation.Valid
         } else {
-            return RPValidation.Error(message: "\(fieldName) is not a float")
+            return RPValidation.Error(message: "\(fieldName) must be less than \(maxValue)")
         }
     }
 }

@@ -52,7 +52,7 @@ public class RPNumbericValidator: RPValidator {
         if validate(value) {
             return RPValidation.Valid
         } else {
-            return RPValidation.Error(message: "\(fieldName) is not numeric.")
+            return RPValidation.Error(message: "\(fieldName) is not numeric")
         }
     }
 }

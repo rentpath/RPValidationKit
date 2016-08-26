@@ -49,7 +49,7 @@ public class RPMinLengthValidator: RPValidator {
         if validate(value) {
             return RPValidation.Valid
         } else {
-            return RPValidation.Error(message: "\(fieldName) is too short.")
+            return RPValidation.Error(message: "\(fieldName) is too short")
         }
     }
 }

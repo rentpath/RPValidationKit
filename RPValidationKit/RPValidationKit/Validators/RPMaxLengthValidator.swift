@@ -49,7 +49,7 @@ public class RPMaxLengthValidator: RPValidator {
         if validate(value) {
             return RPValidation.Valid
         } else {
-            return RPValidation.Error(message: "\(fieldName) is too long.")
+            return RPValidation.Error(message: "\(fieldName) is too long")
         }
     }
 }

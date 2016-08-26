@@ -40,7 +40,7 @@ public class RPPhoneValidator: RPValidator {
         if validate(value) {
             return RPValidation.Valid
         } else {
-            return RPValidation.Error(message: "\(fieldName) is not a valid phone number.")
+            return RPValidation.Error(message: "\(fieldName) is not a valid phone number")
         }
     }
 }
