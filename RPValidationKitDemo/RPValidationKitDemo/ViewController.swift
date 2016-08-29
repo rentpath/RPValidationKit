@@ -44,6 +44,10 @@ class ViewController: UIViewController {
             ageTextField.validatableName = "Age"
             ageTextField.addTarget(self, action: #selector(validateTextFieldOnChange(_:)), forControlEvents: .EditingChanged)
             ageTextField.validators = [RPIntegerValidator()]
+            
+            let maxValueValidator = RPValidatorFactory.sharedInstance.createValidator("maxvalue:10")
+            ageTextField.validators.append(maxValueValidator)
+            
             ageTextField.backgroundColor = defaultColor
             ageTextField.delegate = self
             validationManager.add(ageTextField)
@@ -65,7 +69,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var sampleTextView: UITextView! {
         didSet {
             sampleTextView.validatableName = "Text View"
-            sampleTextView.text = "This text view must have at least 20 characters to be valid."
+            sampleTextView.text = "This text view must have at least 20 characters to be valid"
             sampleTextView.delegate = self
             
             let minLengthValidator = RPMinLengthValidator()

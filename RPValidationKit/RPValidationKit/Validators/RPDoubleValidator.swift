@@ -37,7 +37,7 @@ public class RPDoubleValidator: RPValidator {
         if validate(value) {
             return RPValidation.Valid
         } else {
-            return RPValidation.Error(message: "\(fieldName) is not a double.")
+            return RPValidation.Error(message: "\(fieldName) is not a double")
         }
     }
 }

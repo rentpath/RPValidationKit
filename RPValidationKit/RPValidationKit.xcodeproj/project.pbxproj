@@ -58,6 +58,14 @@
 		E61508CD1CA9B1EB00D3D70E /* RPValidationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E61508C31CA9B1EB00D3D70E /* RPValidationKit.framework */; };
 		E61508E31CA9B25800D3D70E /* RPValidationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E6F6821E1CA5A461009255CB /* RPValidationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E61508E91CA9B26900D3D70E /* RPValidationKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6822A1CA5A461009255CB /* RPValidationKitTests.swift */; };
+		E627C82D1D708AC1009B5404 /* RPMaxValueValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E627C82C1D708AC1009B5404 /* RPMaxValueValidator.swift */; };
+		E627C8301D708ACD009B5404 /* RPMinValueValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E627C82F1D708ACD009B5404 /* RPMinValueValidator.swift */; };
+		E627C8331D708D92009B5404 /* RPMaxValueValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E627C8321D708D92009B5404 /* RPMaxValueValidatorTests.swift */; };
+		E627C8341D708D92009B5404 /* RPMaxValueValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E627C8321D708D92009B5404 /* RPMaxValueValidatorTests.swift */; };
+		E627C8351D708E56009B5404 /* RPMaxValueValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E627C82C1D708AC1009B5404 /* RPMaxValueValidator.swift */; };
+		E627C8361D708E5C009B5404 /* RPMinValueValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E627C82F1D708ACD009B5404 /* RPMinValueValidator.swift */; };
+		E627C8381D708E93009B5404 /* RPMinValueValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E627C8371D708E93009B5404 /* RPMinValueValidatorTests.swift */; };
+		E627C8391D708E93009B5404 /* RPMinValueValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E627C8371D708E93009B5404 /* RPMinValueValidatorTests.swift */; };
 		E66121561CB5690D0074543F /* RPValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66121551CB5690D0074543F /* RPValidationResult.swift */; };
 		E6B9D5A71CB6D74D001EC5CE /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B9D5A61CB6D74D001EC5CE /* UITextView.swift */; };
 		E6F30D531D342590004A5C9B /* RPValidationReflection.h in Headers */ = {isa = PBXBuildFile; fileRef = E6F30D511D342590004A5C9B /* RPValidationReflection.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -114,6 +122,10 @@
 		E61508C71CA9B1EB00D3D70E /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-tvOS.plist"; path = "RPValidationKit/Info-tvOS.plist"; sourceTree = SOURCE_ROOT; };
 		E61508CC1CA9B1EB00D3D70E /* RPValidationKitTVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RPValidationKitTVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E61508D31CA9B1EB00D3D70E /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
+		E627C82C1D708AC1009B5404 /* RPMaxValueValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPMaxValueValidator.swift; sourceTree = "<group>"; };
+		E627C82F1D708ACD009B5404 /* RPMinValueValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPMinValueValidator.swift; sourceTree = "<group>"; };
+		E627C8321D708D92009B5404 /* RPMaxValueValidatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPMaxValueValidatorTests.swift; sourceTree = "<group>"; };
+		E627C8371D708E93009B5404 /* RPMinValueValidatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPMinValueValidatorTests.swift; sourceTree = "<group>"; };
 		E66121551CB5690D0074543F /* RPValidationResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPValidationResult.swift; sourceTree = "<group>"; };
 		E6B9D5A61CB6D74D001EC5CE /* UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 		E6F30D511D342590004A5C9B /* RPValidationReflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPValidationReflection.h; sourceTree = "<group>"; };
@@ -199,6 +211,8 @@
 				ADC6C0171CAC28BB00969BE0 /* RPRequiredValidator.swift */,
 				1944BC1C1CBFFEDC006004DA /* RPStreetAddressValidator.swift */,
 				1988DCDB1CC0175A00561FFD /* RPZipCodeValidator.swift */,
+				E627C82C1D708AC1009B5404 /* RPMaxValueValidator.swift */,
+				E627C82F1D708ACD009B5404 /* RPMinValueValidator.swift */,
 			);
 			path = Validators;
 			sourceTree = "<group>";
@@ -253,6 +267,8 @@
 				1A5EDDA51CBECD6C00CF0B9B /* RPNumericValidatorTests.swift */,
 				1944BC1F1CC00DC2006004DA /* RPStreetAddressValidatorTests.swift */,
 				1988DCDE1CC018F600561FFD /* RPZipCodeValidatorTests.swift */,
+				E627C8321D708D92009B5404 /* RPMaxValueValidatorTests.swift */,
+				E627C8371D708E93009B5404 /* RPMinValueValidatorTests.swift */,
 				E6F6822C1CA5A461009255CB /* Info.plist */,
 				E61508D31CA9B1EB00D3D70E /* Info-tvOS.plist */,
 			);
@@ -454,6 +470,7 @@
 				1A5EDDB71CBECDFB00CF0B9B /* RPValidator.swift in Sources */,
 				1A5EDDC01CBECDFB00CF0B9B /* RPNumericValidator.swift in Sources */,
 				1AB53B921CBED268009F3CEB /* RPFloatValidator.swift in Sources */,
+				E627C8351D708E56009B5404 /* RPMaxValueValidator.swift in Sources */,
 				1A5EDDBC1CBECDFB00CF0B9B /* RPIntegerValidator.swift in Sources */,
 				1A5EDDBD1CBECDFB00CF0B9B /* RPMaxLengthValidator.swift in Sources */,
 				1988DCDA1CC010ED00561FFD /* RPCityStateValidator.swift in Sources */,
@@ -463,6 +480,7 @@
 				1A5EDDC21CBECDFB00CF0B9B /* RPRequiredValidator.swift in Sources */,
 				E6F30D571D3425E9004A5C9B /* RPValidatorFactory.swift in Sources */,
 				1A5EDDB81CBECDFB00CF0B9B /* RPValidationResult.swift in Sources */,
+				E627C8361D708E5C009B5404 /* RPMinValueValidator.swift in Sources */,
 				1A5EDDBB1CBECDFB00CF0B9B /* RPEmailValidator.swift in Sources */,
 				1A5EDDAA1CBECDEC00CF0B9B /* RPValidatable.swift in Sources */,
 				1A5EDDB91CBECDFB00CF0B9B /* UITextField.swift in Sources */,
@@ -473,10 +491,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E627C8341D708D92009B5404 /* RPMaxValueValidatorTests.swift in Sources */,
 				1A5EDDA81CBECD7200CF0B9B /* RPMKCoordinateReagionValidatorTests.swift in Sources */,
 				1988DCD71CC010D700561FFD /* RPStreetAddressValidatorTests.swift in Sources */,
 				1A5EDDA71CBECD6C00CF0B9B /* RPNumericValidatorTests.swift in Sources */,
 				E61508E91CA9B26900D3D70E /* RPValidationKitTests.swift in Sources */,
+				E627C8391D708E93009B5404 /* RPMinValueValidatorTests.swift in Sources */,
 				1988DCD61CC010D200561FFD /* RPCityStateValidatorTests.swift in Sources */,
 				1988DCE01CC018F600561FFD /* RPZipCodeValidatorTests.swift in Sources */,
 			);
@@ -499,6 +519,7 @@
 				1A5EDDA31CBECD1100CF0B9B /* RPNumericValidator.swift in Sources */,
 				ADC6C01D1CAC28BB00969BE0 /* RPRequiredValidator.swift in Sources */,
 				E6B9D5A71CB6D74D001EC5CE /* UITextView.swift in Sources */,
+				E627C8301D708ACD009B5404 /* RPMinValueValidator.swift in Sources */,
 				1988DCD91CC010ED00561FFD /* RPCityStateValidator.swift in Sources */,
 				ADC6C0101CAC28AB00969BE0 /* UITextField.swift in Sources */,
 				ADC6C01C1CAC28BB00969BE0 /* RPPhoneValidator.swift in Sources */,
@@ -506,6 +527,7 @@
 				1AB53B901CBED266009F3CEB /* RPDoubleValidator.swift in Sources */,
 				ADC6C0181CAC28BB00969BE0 /* RPEmailValidator.swift in Sources */,
 				E66121561CB5690D0074543F /* RPValidationResult.swift in Sources */,
+				E627C82D1D708AC1009B5404 /* RPMaxValueValidator.swift in Sources */,
 				ADC6C00C1CAC285F00969BE0 /* RPValidation.swift in Sources */,
 				ADC6C00B1CAC285F00969BE0 /* RPValidatable.swift in Sources */,
 			);
@@ -520,7 +542,9 @@
 				1944BC201CC00DC2006004DA /* RPStreetAddressValidatorTests.swift in Sources */,
 				E6F6822B1CA5A461009255CB /* RPValidationKitTests.swift in Sources */,
 				1988DCD51CC010D200561FFD /* RPCityStateValidatorTests.swift in Sources */,
+				E627C8381D708E93009B5404 /* RPMinValueValidatorTests.swift in Sources */,
 				1988DCDF1CC018F600561FFD /* RPZipCodeValidatorTests.swift in Sources */,
+				E627C8331D708D92009B5404 /* RPMaxValueValidatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

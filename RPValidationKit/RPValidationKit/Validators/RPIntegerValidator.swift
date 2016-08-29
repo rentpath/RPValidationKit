@@ -39,7 +39,7 @@ public class RPIntegerValidator: RPValidator {
         if validate(value) {
             return RPValidation.Valid
         } else {
-            return RPValidation.Error(message: "\(fieldName) is not an integer.")
+            return RPValidation.Error(message: "\(fieldName) is not an integer")
         }
     }
 }
