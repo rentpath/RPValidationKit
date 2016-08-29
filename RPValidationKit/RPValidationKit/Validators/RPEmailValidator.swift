@@ -45,7 +45,7 @@ public class RPEmailValidator: RPValidator {
         if validate(value) {
             return RPValidation.Valid
         } else {
-            return RPValidation.Error(message: "\(fieldName) is not a valid email address.")
+            return RPValidation.Error(message: "\(fieldName) is not a valid email address")
         }
     }
 }
