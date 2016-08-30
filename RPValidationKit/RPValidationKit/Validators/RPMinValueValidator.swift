@@ -44,14 +44,14 @@ public class RPMinValueValidator: RPValidator {
             return false
         }
         
-        return number > minValue
+        return number >= minValue
     }
     
     public override func validateField(fieldName: String, value: String) -> RPValidation {
         if validate(value) {
             return RPValidation.Valid
         } else {
-            return RPValidation.Error(message: "\(fieldName) must be greater than \(minValue)")
+            return RPValidation.Error(message: "\(fieldName) cannot be less than \(minValue)")
         }
     }
 }
