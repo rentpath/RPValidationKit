@@ -44,14 +44,14 @@ public class RPMaxValueValidator: RPValidator {
             return false
         }
         
-        return number < maxValue
+        return number <= maxValue
     }
     
     public override func validateField(fieldName: String, value: String) -> RPValidation {
         if validate(value) {
             return RPValidation.Valid
         } else {
-            return RPValidation.Error(message: "\(fieldName) must be less than \(maxValue)")
+            return RPValidation.Error(message: "\(fieldName) cannot be greater than \(maxValue)")
         }
     }
 }
