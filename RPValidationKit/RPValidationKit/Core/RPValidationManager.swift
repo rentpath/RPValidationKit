@@ -28,17 +28,17 @@ public struct RPValidationManager {
     
     public init() {}
     
-    public mutating func add(validatable: RPValidatable) {
+    public mutating func add(_ validatable: RPValidatable) {
         validatables.append(validatable)
     }
     
     public mutating func removeValidatableNamed(name validatableNameToRemove: String) {
         while let index = validatableIndex(validatableNameToRemove) {
-            validatables.removeAtIndex(index)
+            validatables.remove(at: index)
         }
     }
     
-    func validatableIndex(validatableNameToFind: String) -> Int? {
+    func validatableIndex(_ validatableNameToFind: String) -> Int? {
         var index = 0
         
         while index < validatables.count {

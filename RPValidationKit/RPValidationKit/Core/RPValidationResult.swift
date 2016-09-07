@@ -32,8 +32,8 @@ public struct RPValidationResult {
     public var isValid: Bool {
         for validation in validations {
             switch validation {
-            case .Valid: continue
-            case .Error: return false
+            case .valid: continue
+            case .error: return false
             }
         }
         
@@ -44,14 +44,14 @@ public struct RPValidationResult {
         var messages: [String] = []
         for validation in validations {
             switch validation {
-            case .Valid: continue
-            case .Error(let message): messages.append(message)
+            case .valid: continue
+            case .error(let message): messages.append(message)
             }
         }
         return messages
     }
     
-    mutating func combine(result: RPValidationResult) {
+    mutating func combine(_ result: RPValidationResult) {
         self.validations = self.validations + result.validations
         self.validFields = self.validFields + result.validFields
         self.invalidFields = self.invalidFields + result.invalidFields

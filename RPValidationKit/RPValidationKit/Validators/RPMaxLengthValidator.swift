@@ -22,11 +22,11 @@
 
 import Foundation
 
-public class RPMaxLengthValidator: RPValidator {
+open class RPMaxLengthValidator: RPValidator {
     
-    public var maxLength: Int = 256
+    open var maxLength: Int = 256
     
-    public override func getType() -> String {
+    open override func getType() -> String {
         return "maxlength"
     }
     
@@ -41,15 +41,15 @@ public class RPMaxLengthValidator: RPValidator {
         self.maxLength = maxLength
     }
     
-    public override func validate(value: String) -> Bool {
+    open override func validate(_ value: String) -> Bool {
         return value.characters.count <= maxLength
     }
 
-    public override func validateField(fieldName: String, value: String) -> RPValidation {
+    open override func validateField(_ fieldName: String, value: String) -> RPValidation {
         if validate(value) {
-            return RPValidation.Valid
+            return RPValidation.valid
         } else {
-            return RPValidation.Error(message: "\(fieldName) is too long")
+            return RPValidation.error(message: "\(fieldName) is too long")
         }
     }
 }

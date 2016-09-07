@@ -20,11 +20,11 @@
  * SOFTWARE.
  */
 
-public class RPMinValueValidator: RPValidator {
+open class RPMinValueValidator: RPValidator {
     
-     public var minValue: Double = 0
+     open var minValue: Double = 0
     
-    public override func getType() -> String {
+    open override func getType() -> String {
         return "minvalue"
     }
     
@@ -39,7 +39,7 @@ public class RPMinValueValidator: RPValidator {
         self.minValue = minValue
     }
     
-    public override func validate(value: String) -> Bool {
+    open override func validate(_ value: String) -> Bool {
         guard let number = Double(value) else {
             return false
         }
@@ -47,11 +47,11 @@ public class RPMinValueValidator: RPValidator {
         return number >= minValue
     }
     
-    public override func validateField(fieldName: String, value: String) -> RPValidation {
+    open override func validateField(_ fieldName: String, value: String) -> RPValidation {
         if validate(value) {
-            return RPValidation.Valid
+            return RPValidation.valid
         } else {
-            return RPValidation.Error(message: "\(fieldName) cannot be less than \(minValue)")
+            return RPValidation.error(message: "\(fieldName) cannot be less than \(minValue)")
         }
     }
 }

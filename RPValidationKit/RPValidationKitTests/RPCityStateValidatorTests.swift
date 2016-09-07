@@ -48,8 +48,8 @@ class RPCityStateValidatorTests: XCTestCase {
     
     func testPerformanceExample() {
         let validator = RPCityStateValidator()
-        self.measureBlock {
-            validator.validate("123 main st")
+        self.measure {
+            let _ = validator.validate("123 main st")
         }
     }
 

@@ -11,23 +11,23 @@ import Foundation
 /**
  Finds all sublcasses of RPExternalCardConverter and registers them to be created based on a string value.
  */
-public class RPValidatorFactory {
+open class RPValidatorFactory {
     
-    public static let sharedInstance = RPValidatorFactory()
-    public var registry : [String : AnyClass!] = [:]
+    open static let sharedInstance = RPValidatorFactory()
+    open var registry : [String : AnyClass?] = [:]
     
     public init() {
-        let subclasses = RPValidationReflection.getSubclasses(RPValidator)
-        for anyClass in subclasses {
+        let subclasses = RPValidationReflection.getSubclasses(RPValidator.self)
+        for anyClass in subclasses! {
             let instance = RPValidationReflection.createObject(anyClass as! AnyClass, initializer: #selector(RPValidator.init), argument: nil) as! RPValidator
             registry[instance.getType()] = anyClass as? AnyClass
         }
     }
     
-    public func createValidator(type: String) -> RPValidator {
-        let typeParts = type.componentsSeparatedByString(":")
+    open func createValidator(_ type: String) -> RPValidator {
+        let typeParts = type.components(separatedBy: ":")
         let validatorType = typeParts[0]
         let args: String? = typeParts.count > 1 ? typeParts[1] : nil
-        return RPValidationReflection.createObject(registry[validatorType], initializer: #selector(RPValidator.init), argument: args) as! RPValidator
+        return RPValidationReflection.createObject(registry[validatorType]!, initializer: #selector(RPValidator.init), argument: args) as! RPValidator
     }
 }

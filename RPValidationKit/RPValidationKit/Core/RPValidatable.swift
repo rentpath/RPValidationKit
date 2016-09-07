@@ -27,15 +27,6 @@ public protocol RPValidatable: AnyObject {
     func validate() -> RPValidationResult
 }
 
-
-private final class Box<T>: NSObject {
-    let value: T
-    
-    init(value: T) {
-        self.value = value
-    }
-}
-
 private var validatableNameKey: UInt8 = 0
 private var validatorsKey: UInt8 = 0
 
@@ -56,14 +47,10 @@ extension RPValidatable {
     
     public var validators: [RPValidator] {
         get {
-            guard let box = objc_getAssociatedObject(self, &validatorsKey) as? Box<[RPValidator]> else {
-                return []
-            }
-            return box.value ?? []
+            return objc_getAssociatedObject(self, &validatorsKey) as? [RPValidator] ?? []
         }
         set(newValue) {
-            let box = Box<[RPValidator]>(value: newValue)
-            objc_setAssociatedObject(self, &validatorsKey, box, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &validatorsKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
 }

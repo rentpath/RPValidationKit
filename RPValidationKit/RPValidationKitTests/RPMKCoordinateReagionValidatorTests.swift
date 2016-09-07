@@ -76,8 +76,8 @@ class RPMKCoordinateReagionValidatorTests: XCTestCase {
         
         let validator = RPMKCoordinateRegionValidator()
 
-        self.measureBlock {
-            validator.validate(region)
+        self.measure {
+            let _ = validator.validate(region)
         }
     }
 

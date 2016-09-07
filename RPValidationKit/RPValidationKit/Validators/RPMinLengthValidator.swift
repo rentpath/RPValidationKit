@@ -22,11 +22,11 @@
 
 import Foundation
 
-public class RPMinLengthValidator: RPValidator {
+open class RPMinLengthValidator: RPValidator {
     
-    public var minLength: Int = 1
+    open var minLength: Int = 1
     
-    public override func getType() -> String {
+    open override func getType() -> String {
         return "minlength"
     }
     
@@ -41,15 +41,15 @@ public class RPMinLengthValidator: RPValidator {
         self.minLength = minLength
     }
 
-    public override func validate(value: String) -> Bool {
+    open override func validate(_ value: String) -> Bool {
         return value.characters.count >= minLength
     }
     
-    public override func validateField(fieldName: String, value: String) -> RPValidation {
+    open override func validateField(_ fieldName: String, value: String) -> RPValidation {
         if validate(value) {
-            return RPValidation.Valid
+            return RPValidation.valid
         } else {
-            return RPValidation.Error(message: "\(fieldName) is too short")
+            return RPValidation.error(message: "\(fieldName) is too short")
         }
     }
 }

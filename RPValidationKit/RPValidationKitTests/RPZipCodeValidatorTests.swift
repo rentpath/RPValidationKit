@@ -58,8 +58,8 @@ class RPZipCodeValidatorTests: XCTestCase {
     
     func testPerformanceExample() {
         let validator = RPZipCodeValidator()
-        self.measureBlock {
-            validator.validate("30019")
+        self.measure {
+            let _ = validator.validate("30019")
         }
     }
 

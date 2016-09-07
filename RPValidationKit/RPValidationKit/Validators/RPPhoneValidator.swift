@@ -22,25 +22,25 @@
 
 import Foundation
 
-public class RPPhoneValidator: RPValidator {
+open class RPPhoneValidator: RPValidator {
     
     var PHONEREGEX: String = "^\\d{10}$"
     
-    public override func getType() -> String {
+    open override func getType() -> String {
         return "phone"
     }
     
-    public override func validate(value: String) -> Bool {
-        let valueDigits = value.stringByReplacingOccurrencesOfString("[^0-9]", withString: "", options: NSStringCompareOptions.RegularExpressionSearch, range: value.startIndex..<value.endIndex)
-        let range = valueDigits.rangeOfString(PHONEREGEX, options:.RegularExpressionSearch)
+    open override func validate(_ value: String) -> Bool {
+        let valueDigits = value.replacingOccurrences(of: "[^0-9]", with: "", options: NSString.CompareOptions.regularExpression, range: value.startIndex..<value.endIndex)
+        let range = valueDigits.range(of: PHONEREGEX, options:.regularExpression)
         return range != nil ? true : false
     }
     
-    public override func validateField(fieldName: String, value: String) -> RPValidation {
+    open override func validateField(_ fieldName: String, value: String) -> RPValidation {
         if validate(value) {
-            return RPValidation.Valid
+            return RPValidation.valid
         } else {
-            return RPValidation.Error(message: "\(fieldName) is not a valid phone number")
+            return RPValidation.error(message: "\(fieldName) is not a valid phone number")
         }
     }
 }

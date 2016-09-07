@@ -22,7 +22,7 @@ class CustomView: UIView {
     }
     
     func reset() {
-        backgroundColor = UIColor.whiteColor()
+        backgroundColor = UIColor.white
     }
 }
 
@@ -43,7 +43,7 @@ extension CustomView: RPValidatable {
 
 extension CustomView: UITextFieldDelegate {
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return false
     }

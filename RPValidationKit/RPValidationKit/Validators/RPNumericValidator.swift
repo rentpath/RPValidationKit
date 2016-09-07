@@ -20,16 +20,16 @@
  * SOFTWARE.
  */
 
-public class RPNumbericValidator: RPValidator {
+open class RPNumbericValidator: RPValidator {
     
-    public override func getType() -> String {
+    open override func getType() -> String {
         return "numeric"
     }
     
-    public override func validate(value: String) -> Bool {
-        let alphaNumbersSet = NSCharacterSet.decimalDigitCharacterSet()
-        let stringSet = NSCharacterSet(charactersInString: value)
-        if alphaNumbersSet.isSupersetOfSet(stringSet) {
+    open override func validate(_ value: String) -> Bool {
+        let alphaNumbersSet = CharacterSet.decimalDigits
+        let stringSet = CharacterSet(charactersIn: value)
+        if alphaNumbersSet.isSuperset(of: stringSet) {
             return true
         }
         
@@ -48,11 +48,11 @@ public class RPNumbericValidator: RPValidator {
         return false
     }
     
-    public override func validateField(fieldName: String, value: String) -> RPValidation {
+    open override func validateField(_ fieldName: String, value: String) -> RPValidation {
         if validate(value) {
-            return RPValidation.Valid
+            return RPValidation.valid
         } else {
-            return RPValidation.Error(message: "\(fieldName) is not numeric")
+            return RPValidation.error(message: "\(fieldName) is not numeric")
         }
     }
 }

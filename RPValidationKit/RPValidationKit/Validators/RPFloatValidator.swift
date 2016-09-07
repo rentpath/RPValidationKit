@@ -20,24 +20,24 @@
  * SOFTWARE.
  */
 
-public class RPFloatValidator: RPValidator {
+open class RPFloatValidator: RPValidator {
     
-    public override func getType() -> String {
+    open override func getType() -> String {
         return "float"
     }
     
-    public override func validate(value: String) -> Bool {
+    open override func validate(_ value: String) -> Bool {
         if let _ = Float(value) {
             return true
         }
         return false
     }
     
-    public override func validateField(fieldName: String, value: String) -> RPValidation {
+    open override func validateField(_ fieldName: String, value: String) -> RPValidation {
         if validate(value) {
-            return RPValidation.Valid
+            return RPValidation.valid
         } else {
-            return RPValidation.Error(message: "\(fieldName) is not a float")
+            return RPValidation.error(message: "\(fieldName) is not a float")
         }
     }
 }
