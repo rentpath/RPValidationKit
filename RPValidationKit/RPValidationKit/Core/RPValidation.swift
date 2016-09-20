@@ -23,6 +23,6 @@
 import Foundation
 
 public enum RPValidation {
-    case Valid
-    case Error(message: String)
+    case valid
+    case error(message: String)
 }

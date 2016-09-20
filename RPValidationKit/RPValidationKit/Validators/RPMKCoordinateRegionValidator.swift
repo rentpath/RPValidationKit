@@ -23,23 +23,23 @@
 import MapKit
 import CoreLocation
 
-public class RPMKCoordinateRegionValidator {
+open class RPMKCoordinateRegionValidator {
     
-    private let MinLatitudeDelta  = 0.0
-    private let MinLongitudeDelta = 0.0
-    private let MinLatitude       = -90.0
-    private let MaxLatitude       = 90.0
-    private let MinLongitude      = -180.0
-    private let MaxLongitude      = 180.0
+    fileprivate let MinLatitudeDelta  = 0.0
+    fileprivate let MinLongitudeDelta = 0.0
+    fileprivate let MinLatitude       = -90.0
+    fileprivate let MaxLatitude       = 90.0
+    fileprivate let MinLongitude      = -180.0
+    fileprivate let MaxLongitude      = 180.0
     
     public init() { }
     
-    public func validate(region: MKCoordinateRegion) -> Bool {
+    open func validate(_ region: MKCoordinateRegion) -> Bool {
         
-        if (isnan(region.span.latitudeDelta)  ||
-            isnan(region.span.longitudeDelta) ||
-            isnan(region.center.latitude)     ||
-            isnan(region.center.longitude)) {
+        if (region.span.latitudeDelta.isNaN  ||
+            region.span.longitudeDelta.isNaN ||
+            region.center.latitude.isNaN     ||
+            region.center.longitude.isNaN) {
             
             return false
         }

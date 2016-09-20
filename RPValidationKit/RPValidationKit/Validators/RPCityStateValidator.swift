@@ -20,34 +20,34 @@
  * SOFTWARE.
  */
 
-public class RPCityStateValidator: RPValidator {
+open class RPCityStateValidator: RPValidator {
     
     let CITY_STATE_REGEX = "^([^,]+),\\s?([A-Za-z]{2,})$"
     
-    public override func getType() -> String {
+    open override func getType() -> String {
         return "citystate"
     }
     
-    public override func validate(cityState: String) -> Bool {
+    open override func validate(_ cityState: String) -> Bool {
         
         let twoLetterRegex: NSRegularExpression!
         do {
-            twoLetterRegex = try NSRegularExpression(pattern: CITY_STATE_REGEX, options: [.CaseInsensitive, .AnchorsMatchLines])
+            twoLetterRegex = try NSRegularExpression(pattern: CITY_STATE_REGEX, options: [.caseInsensitive, .anchorsMatchLines])
         } catch let error as NSError {
             print("Error validating city state. Error: \(error.localizedDescription)")
             return false
         }
         
-        let matches = twoLetterRegex.numberOfMatchesInString(cityState, options: .ReportCompletion, range: NSMakeRange(0, cityState.utf16.count))
+        let matches = twoLetterRegex.numberOfMatches(in: cityState, options: .reportCompletion, range: NSMakeRange(0, cityState.utf16.count))
         
         return matches != 0
     }
     
-    public override func validateField(fieldName: String, value: String) -> RPValidation {
+    open override func validateField(_ fieldName: String, value: String) -> RPValidation {
         if validate(value) {
-            return RPValidation.Valid
+            return RPValidation.valid
         } else {
-            return RPValidation.Error(message: "\(fieldName) is not a valid city state")
+            return RPValidation.error(message: "\(fieldName) is not a valid city state")
         }
     }
 }

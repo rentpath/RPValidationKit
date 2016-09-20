@@ -6,21 +6,21 @@
 //  Copyright © 2016 Rentpath. All rights reserved.
 //
 
-public class RPValidator: NSObject {
+open class RPValidator: NSObject {
     
     public init(string: String? = nil) {
         
     }
     
-    public func getType() -> String {
+    open func getType() -> String {
         fatalError("implement in subclass")
     }
     
-    public func validate(value: String) -> Bool {
+    open func validate(_ value: String) -> Bool {
         fatalError("implement in subclass")
     }
     
-    public func validateField(fieldName: String, value: String) -> RPValidation {
+    open func validateField(_ fieldName: String, value: String) -> RPValidation {
         fatalError("implement in subclass")
     }
 }

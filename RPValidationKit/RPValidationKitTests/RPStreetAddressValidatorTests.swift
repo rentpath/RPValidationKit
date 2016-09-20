@@ -53,8 +53,8 @@ class RPStreetAddressValidatorTests: XCTestCase {
     
     func testPerformanceExample() {
         let validator = RPStreetAddressValidator()
-        self.measureBlock {
-            validator.validate("123 main st")
+        self.measure {
+            let _ = validator.validate("123 main st")
         }
     }
 

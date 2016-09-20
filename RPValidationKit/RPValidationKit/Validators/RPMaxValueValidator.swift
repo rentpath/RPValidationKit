@@ -20,11 +20,11 @@
  * SOFTWARE.
  */
 
-public class RPMaxValueValidator: RPValidator {
+open class RPMaxValueValidator: RPValidator {
     
-    public var maxValue: Double = 0
+    open var maxValue: Double = 0
     
-    public override func getType() -> String {
+    open override func getType() -> String {
         return "maxvalue"
     }
     
@@ -39,7 +39,7 @@ public class RPMaxValueValidator: RPValidator {
         self.maxValue = maxValue
     }
     
-    public override func validate(value: String) -> Bool {
+    open override func validate(_ value: String) -> Bool {
         guard let number = Double(value) else {
             return false
         }
@@ -47,11 +47,11 @@ public class RPMaxValueValidator: RPValidator {
         return number <= maxValue
     }
     
-    public override func validateField(fieldName: String, value: String) -> RPValidation {
+    open override func validateField(_ fieldName: String, value: String) -> RPValidation {
         if validate(value) {
-            return RPValidation.Valid
+            return RPValidation.valid
         } else {
-            return RPValidation.Error(message: "\(fieldName) cannot be greater than \(maxValue)")
+            return RPValidation.error(message: "\(fieldName) cannot be greater than \(maxValue)")
         }
     }
 }

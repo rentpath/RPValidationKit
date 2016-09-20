@@ -9,25 +9,25 @@
 import Foundation
 
 enum CustomFormat {
-    case None
-    case PhoneNumber
+    case none
+    case phoneNumber
 }
 
 extension String {
     
-    func format(customFormat: CustomFormat) -> String {
+    func format(_ customFormat: CustomFormat) -> String {
         switch customFormat {
-        case .PhoneNumber:  return phoneNumberFormat()
+        case .phoneNumber:  return phoneNumberFormat()
         default: return self
         }
     }
     
-    private func phoneNumberFormat() -> String {
+    fileprivate func phoneNumberFormat() -> String {
         var phoneDigits = digits()
         let digitCount = phoneDigits.characters.count
         
         if digitCount > 10 {
-            phoneDigits = phoneDigits.substringWithRange(phoneDigits.startIndex..<phoneDigits.startIndex.advancedBy(10))
+            phoneDigits = phoneDigits.substring(with: phoneDigits.startIndex..<phoneDigits.characters.index(phoneDigits.startIndex, offsetBy: 10))
         }
         
         if digitCount == 0 {
@@ -35,26 +35,26 @@ extension String {
         } else if digitCount < 3 {
             return "(" + phoneDigits + ")"
         } else if digitCount < 6 {
-            let areaCode = phoneDigits.substringWithRange(phoneDigits.startIndex..<phoneDigits.startIndex.advancedBy(3))
-            let digits1 = phoneDigits.substringWithRange(phoneDigits.startIndex.advancedBy(3)..<phoneDigits.endIndex)
+            let areaCode = phoneDigits.substring(with: phoneDigits.startIndex..<phoneDigits.characters.index(phoneDigits.startIndex, offsetBy: 3))
+            let digits1 = phoneDigits.substring(with: phoneDigits.characters.index(phoneDigits.startIndex, offsetBy: 3)..<phoneDigits.endIndex)
             return "(" + areaCode + ") " + digits1
         } else {
-            let areaCode = phoneDigits.substringWithRange(phoneDigits.startIndex..<phoneDigits.startIndex.advancedBy(3))
-            let digits1 = phoneDigits.substringWithRange(phoneDigits.startIndex.advancedBy(3)..<phoneDigits.startIndex.advancedBy(6))
-            let digits2 = phoneDigits.substringWithRange(phoneDigits.startIndex.advancedBy(6)..<phoneDigits.endIndex)
+            let areaCode = phoneDigits.substring(with: phoneDigits.startIndex..<phoneDigits.characters.index(phoneDigits.startIndex, offsetBy: 3))
+            let digits1 = phoneDigits.substring(with: phoneDigits.characters.index(phoneDigits.startIndex, offsetBy: 3)..<phoneDigits.characters.index(phoneDigits.startIndex, offsetBy: 6))
+            let digits2 = phoneDigits.substring(with: phoneDigits.characters.index(phoneDigits.startIndex, offsetBy: 6)..<phoneDigits.endIndex)
             return "(" + areaCode + ") " + digits1 + "-" + digits2
         }
     }
     
     func digits() -> String {
-        return stringByReplacingOccurrencesOfString("[^0-9]", withString: "", options: NSStringCompareOptions.RegularExpressionSearch, range: self.startIndex..<self.endIndex)
+        return replacingOccurrences(of: "[^0-9]", with: "", options: NSString.CompareOptions.regularExpression)
     }
     
     func toDouble() -> Double? {
-        return NSNumberFormatter().numberFromString(self)?.doubleValue
+        return NumberFormatter().number(from: self)?.doubleValue
     }
     
-    func substringWithRange(start: Int, end: Int) -> String {
+    func substringWithRange(_ start: Int, end: Int) -> String {
         if (start < 0 || start > self.characters.count) {
             print("start index \(start) out of bounds")
             return ""
@@ -63,10 +63,10 @@ extension String {
             return ""
         }
         
-        return self.substringWithRange(self.startIndex.advancedBy(start)..<self.startIndex.advancedBy(end))
+        return self.substring(with: self.characters.index(self.startIndex, offsetBy: start)..<self.characters.index(self.startIndex, offsetBy: end))
     }
     
-    func substringWithRange(start: Int, location: Int) -> String {
+    func substringWithRange(_ start: Int, location: Int) -> String {
         if (start < 0 || start > self.characters.count) {
             print("start index \(start) out of bounds")
             return ""
@@ -74,7 +74,7 @@ extension String {
             print("end index \(start + location) out of bounds")
             return ""
         }
-        let range = self.startIndex.advancedBy(start)..<self.startIndex.advancedBy(start + location)
-        return self.substringWithRange(range)
+        let range = self.characters.index(self.startIndex, offsetBy: start)..<self.characters.index(self.startIndex, offsetBy: start + location)
+        return self.substring(with: range)
     }
 }

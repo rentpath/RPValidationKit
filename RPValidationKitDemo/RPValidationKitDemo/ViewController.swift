@@ -13,14 +13,14 @@ class ViewController: UIViewController {
 
     var validationManager = RPValidationManager()
     
-    let defaultColor = UIColor.blackColor().colorWithAlphaComponent(0.03)
-    let validColor = UIColor.greenColor().colorWithAlphaComponent(0.1)
-    let errorColor = UIColor.redColor().colorWithAlphaComponent(0.1)
+    let defaultColor = UIColor.black.withAlphaComponent(0.03)
+    let validColor = UIColor.green.withAlphaComponent(0.1)
+    let errorColor = UIColor.red.withAlphaComponent(0.1)
     
     @IBOutlet weak var emailTextField: UITextField! {
         didSet {
             emailTextField.validatableName = "Email Address"
-            emailTextField.addTarget(self, action: #selector(validateTextFieldOnChange(_:)), forControlEvents: .EditingChanged)
+            emailTextField.addTarget(self, action: #selector(validateTextFieldOnChange(_:)), for: .editingChanged)
             emailTextField.validators = [RPEmailValidator()]
             emailTextField.backgroundColor = defaultColor
             emailTextField.delegate = self
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField! {
         didSet {
             nameTextField.validatableName = "Name"
-            nameTextField.addTarget(self, action: #selector(validateTextFieldOnChange(_:)), forControlEvents: .EditingChanged)
+            nameTextField.addTarget(self, action: #selector(validateTextFieldOnChange(_:)), for: .editingChanged)
             nameTextField.validators = [RPRequiredValidator()]
             nameTextField.backgroundColor = defaultColor
             nameTextField.delegate = self
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var ageTextField: UITextField! {
         didSet {
             ageTextField.validatableName = "Age"
-            ageTextField.addTarget(self, action: #selector(validateTextFieldOnChange(_:)), forControlEvents: .EditingChanged)
+            ageTextField.addTarget(self, action: #selector(validateTextFieldOnChange(_:)), for: .editingChanged)
             ageTextField.validators = [RPIntegerValidator()]
             
             let maxValueValidator = RPValidatorFactory.sharedInstance.createValidator("maxvalue:10")
@@ -58,7 +58,7 @@ class ViewController: UIViewController {
         didSet {
             phoneNumberTextField.validatableName = "Phone Number"
             phoneNumberTextField.delegate = self
-            phoneNumberTextField.addTarget(self, action: #selector(validateTextFieldOnChange(_:)), forControlEvents: .EditingChanged)
+            phoneNumberTextField.addTarget(self, action: #selector(validateTextFieldOnChange(_:)), for: .editingChanged)
             phoneNumberTextField.validators = [RPPhoneValidator()]
             phoneNumberTextField.backgroundColor = defaultColor
             phoneNumberTextField.delegate = self
@@ -86,7 +86,7 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func validateAction(sender: AnyObject) {
+    @IBAction func validateAction(_ sender: AnyObject) {
         let result = validationManager.validate()
         print("result.isValid: \(result.isValid)")
         print("result.errorMessages: \(result.errorMessages)")
@@ -104,7 +104,7 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func resetAction(sender: AnyObject) {
+    @IBAction func resetAction(_ sender: AnyObject) {
         emailTextField.backgroundColor = defaultColor
         emailTextField.text = ""
         
@@ -127,7 +127,7 @@ class ViewController: UIViewController {
         print("im going away")
     }
         
-    func validateTextFieldOnChange(textField: UITextField) {
+    func validateTextFieldOnChange(_ textField: UITextField) {
 //        if textField == phoneNumberTextField {
 //            textField.text = textField.text?.format(.PhoneNumber)
 //        }
@@ -142,7 +142,7 @@ class ViewController: UIViewController {
 
 extension ViewController: UITextFieldDelegate {
     
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard textField == phoneNumberTextField else {
             return true
         }
@@ -151,12 +151,12 @@ extension ViewController: UITextFieldDelegate {
             return true
         }
  
-        textField.text = (textField.text! as NSString).stringByReplacingCharactersInRange(range, withString: string).format(.PhoneNumber)
+        textField.text = (textField.text! as NSString).replacingCharacters(in: range, with: string).format(.phoneNumber)
         validateTextFieldOnChange(textField)
         return false
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return false
     }
@@ -164,7 +164,7 @@ extension ViewController: UITextFieldDelegate {
 
 extension ViewController: UITextViewDelegate {
     
-    func textViewDidChange(textView: UITextView) {
+    func textViewDidChange(_ textView: UITextView) {
         if textView.validate().isValid {
             textView.backgroundColor = validColor
         } else {

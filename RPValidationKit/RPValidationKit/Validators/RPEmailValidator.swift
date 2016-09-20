@@ -22,30 +22,30 @@
 
 import Foundation
 
-public class RPEmailValidator: RPValidator {
+open class RPEmailValidator: RPValidator {
     
     var EMAILREGEX = "^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$"
     
-    public override func getType() -> String {
+    open override func getType() -> String {
         return "email"
     }
     
-    public override func validate(value: String) -> Bool {
-        let components = value.componentsSeparatedByCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+    open override func validate(_ value: String) -> Bool {
+        let components = value.components(separatedBy: CharacterSet.whitespaces)
         
         if components.count > 1 {
             return false
         }
         
-        let range = value.rangeOfString(EMAILREGEX, options:.RegularExpressionSearch)
+        let range = value.range(of: EMAILREGEX, options:.regularExpression)
         return (range != nil) ? true : false
     }
     
-    public override func validateField(fieldName: String, value: String) -> RPValidation {
+    open override func validateField(_ fieldName: String, value: String) -> RPValidation {
         if validate(value) {
-            return RPValidation.Valid
+            return RPValidation.valid
         } else {
-            return RPValidation.Error(message: "\(fieldName) is not a valid email address")
+            return RPValidation.error(message: "\(fieldName) is not a valid email address")
         }
     }
 }

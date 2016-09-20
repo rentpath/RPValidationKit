@@ -20,34 +20,34 @@
  * SOFTWARE.
  */
 
-public class RPStreetAddressValidator: RPValidator {
+open class RPStreetAddressValidator: RPValidator {
     
     let STREET_REGEX = "^\\d{1,}(\\s{1}\\w{1,})(\\s{1}?\\w{1,})+$"
     
-    public override func getType() -> String {
+    open override func getType() -> String {
         return "streetaddress"
     }
     
-    public override func validate(address: String) -> Bool {
-        let trimmedAddress = address.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+    open override func validate(_ address: String) -> Bool {
+        let trimmedAddress = address.trimmingCharacters(in: CharacterSet.whitespaces)
         if trimmedAddress.characters.count == 0 {
             return false
         }
         
-        guard let range = address.rangeOfString(STREET_REGEX, options:.RegularExpressionSearch) else {
+        guard let range = address.range(of: STREET_REGEX, options:.regularExpression) else {
             return false
         }
-        
-        let distance = range.startIndex.distanceTo(range.endIndex)
+
+        let distance = address.distance(from: range.lowerBound, to: range.upperBound)
         
         return distance > 0
     }
     
-    public override func validateField(fieldName: String, value: String) -> RPValidation {
+    open override func validateField(_ fieldName: String, value: String) -> RPValidation {
         if validate(value) {
-            return RPValidation.Valid
+            return RPValidation.valid
         } else {
-            return RPValidation.Error(message: "\(fieldName) is not a valid address")
+            return RPValidation.error(message: "\(fieldName) is not a valid address")
         }
     }
 }
