@@ -41,7 +41,7 @@ open class RPMaxValueValidator: RPValidator {
     
     open override func validate(_ value: String) -> Bool {
         guard let number = Double(value) else {
-            return false
+            return true
         }
         
         return number <= maxValue
