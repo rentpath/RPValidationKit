@@ -19,6 +19,8 @@
 		1988DCDD1CC0175A00561FFD /* RPZipCodeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988DCDB1CC0175A00561FFD /* RPZipCodeValidator.swift */; };
 		1988DCDF1CC018F600561FFD /* RPZipCodeValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988DCDE1CC018F600561FFD /* RPZipCodeValidatorTests.swift */; };
 		1988DCE01CC018F600561FFD /* RPZipCodeValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988DCDE1CC018F600561FFD /* RPZipCodeValidatorTests.swift */; };
+		1A19FBB61DAE5B6200F55A6F /* RPValidationReflection.h in Headers */ = {isa = PBXBuildFile; fileRef = E6F30D511D342590004A5C9B /* RPValidationReflection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A19FBB71DAE5B6500F55A6F /* RPValidationReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F30D521D342590004A5C9B /* RPValidationReflection.m */; };
 		1A5EDD981CBE950E00CF0B9B /* RPMKCoordinateRegionValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDD971CBE950E00CF0B9B /* RPMKCoordinateRegionValidator.swift */; };
 		1A5EDDA11CBEC47500CF0B9B /* RPMKCoordinateReagionValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDDA01CBEC47500CF0B9B /* RPMKCoordinateReagionValidatorTests.swift */; };
 		1A5EDDA31CBECD1100CF0B9B /* RPNumericValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDDA21CBECD1100CF0B9B /* RPNumericValidator.swift */; };
@@ -293,6 +295,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A19FBB61DAE5B6200F55A6F /* RPValidationReflection.h in Headers */,
 				E61508E31CA9B25800D3D70E /* RPValidationKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +485,7 @@
 				1A5EDDC21CBECDFB00CF0B9B /* RPRequiredValidator.swift in Sources */,
 				E6F30D571D3425E9004A5C9B /* RPValidatorFactory.swift in Sources */,
 				1A5EDDB81CBECDFB00CF0B9B /* RPValidationResult.swift in Sources */,
+				1A19FBB71DAE5B6500F55A6F /* RPValidationReflection.m in Sources */,
 				E627C8361D708E5C009B5404 /* RPMinValueValidator.swift in Sources */,
 				1A5EDDBB1CBECDFB00CF0B9B /* RPEmailValidator.swift in Sources */,
 				1A5EDDAA1CBECDEC00CF0B9B /* RPValidatable.swift in Sources */,
@@ -582,6 +586,7 @@
 				PRODUCT_NAME = RPValidationKit;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -605,6 +610,7 @@
 				PRODUCT_NAME = RPValidationKit;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.1;
@@ -619,6 +625,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rentpath.RPValidationKit-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
 				TVOS_DEPLOYMENT_TARGET = 9.1;
 			};
 			name = Debug;
@@ -631,6 +638,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rentpath.RPValidationKit-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
 				TVOS_DEPLOYMENT_TARGET = 9.1;
 			};
 			name = Release;
@@ -745,6 +753,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rentpath.RPValidationKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -766,6 +775,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rentpath.RPValidationKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
