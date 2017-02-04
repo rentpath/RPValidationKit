@@ -8,42 +8,45 @@
 
 /* Begin PBXBuildFile section */
 		1944BC1D1CBFFEDC006004DA /* RPStreetAddressValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1944BC1C1CBFFEDC006004DA /* RPStreetAddressValidator.swift */; };
-		1944BC1E1CBFFEDC006004DA /* RPStreetAddressValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1944BC1C1CBFFEDC006004DA /* RPStreetAddressValidator.swift */; };
 		1944BC201CC00DC2006004DA /* RPStreetAddressValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1944BC1F1CC00DC2006004DA /* RPStreetAddressValidatorTests.swift */; };
 		1988DCD51CC010D200561FFD /* RPCityStateValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988DCD31CC010CE00561FFD /* RPCityStateValidatorTests.swift */; };
-		1988DCD61CC010D200561FFD /* RPCityStateValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988DCD31CC010CE00561FFD /* RPCityStateValidatorTests.swift */; };
-		1988DCD71CC010D700561FFD /* RPStreetAddressValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1944BC1F1CC00DC2006004DA /* RPStreetAddressValidatorTests.swift */; };
 		1988DCD91CC010ED00561FFD /* RPCityStateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988DCD81CC010ED00561FFD /* RPCityStateValidator.swift */; };
-		1988DCDA1CC010ED00561FFD /* RPCityStateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988DCD81CC010ED00561FFD /* RPCityStateValidator.swift */; };
 		1988DCDC1CC0175A00561FFD /* RPZipCodeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988DCDB1CC0175A00561FFD /* RPZipCodeValidator.swift */; };
-		1988DCDD1CC0175A00561FFD /* RPZipCodeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988DCDB1CC0175A00561FFD /* RPZipCodeValidator.swift */; };
 		1988DCDF1CC018F600561FFD /* RPZipCodeValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988DCDE1CC018F600561FFD /* RPZipCodeValidatorTests.swift */; };
-		1988DCE01CC018F600561FFD /* RPZipCodeValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988DCDE1CC018F600561FFD /* RPZipCodeValidatorTests.swift */; };
 		1A5EDD981CBE950E00CF0B9B /* RPMKCoordinateRegionValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDD971CBE950E00CF0B9B /* RPMKCoordinateRegionValidator.swift */; };
 		1A5EDDA11CBEC47500CF0B9B /* RPMKCoordinateReagionValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDDA01CBEC47500CF0B9B /* RPMKCoordinateReagionValidatorTests.swift */; };
 		1A5EDDA31CBECD1100CF0B9B /* RPNumericValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDDA21CBECD1100CF0B9B /* RPNumericValidator.swift */; };
 		1A5EDDA61CBECD6C00CF0B9B /* RPNumericValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDDA51CBECD6C00CF0B9B /* RPNumericValidatorTests.swift */; };
-		1A5EDDA71CBECD6C00CF0B9B /* RPNumericValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDDA51CBECD6C00CF0B9B /* RPNumericValidatorTests.swift */; };
-		1A5EDDA81CBECD7200CF0B9B /* RPMKCoordinateReagionValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDDA01CBEC47500CF0B9B /* RPMKCoordinateReagionValidatorTests.swift */; };
-		1A5EDDA91CBECDEA00CF0B9B /* RPValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0041CAC285F00969BE0 /* RPValidationManager.swift */; };
-		1A5EDDAA1CBECDEC00CF0B9B /* RPValidatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0051CAC285F00969BE0 /* RPValidatable.swift */; };
-		1A5EDDB61CBECDFB00CF0B9B /* RPValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0061CAC285F00969BE0 /* RPValidation.swift */; };
-		1A5EDDB71CBECDFB00CF0B9B /* RPValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0071CAC285F00969BE0 /* RPValidator.swift */; };
-		1A5EDDB81CBECDFB00CF0B9B /* RPValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66121551CB5690D0074543F /* RPValidationResult.swift */; };
-		1A5EDDB91CBECDFB00CF0B9B /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C00F1CAC28AB00969BE0 /* UITextField.swift */; };
-		1A5EDDBA1CBECDFB00CF0B9B /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B9D5A61CB6D74D001EC5CE /* UITextView.swift */; };
-		1A5EDDBB1CBECDFB00CF0B9B /* RPEmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0121CAC28BB00969BE0 /* RPEmailValidator.swift */; };
-		1A5EDDBC1CBECDFB00CF0B9B /* RPIntegerValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0131CAC28BB00969BE0 /* RPIntegerValidator.swift */; };
-		1A5EDDBD1CBECDFB00CF0B9B /* RPMaxLengthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0141CAC28BB00969BE0 /* RPMaxLengthValidator.swift */; };
-		1A5EDDBE1CBECDFB00CF0B9B /* RPMinLengthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0151CAC28BB00969BE0 /* RPMinLengthValidator.swift */; };
-		1A5EDDBF1CBECDFB00CF0B9B /* RPMKCoordinateRegionValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDD971CBE950E00CF0B9B /* RPMKCoordinateRegionValidator.swift */; };
-		1A5EDDC01CBECDFB00CF0B9B /* RPNumericValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDDA21CBECD1100CF0B9B /* RPNumericValidator.swift */; };
-		1A5EDDC11CBECDFB00CF0B9B /* RPPhoneValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0161CAC28BB00969BE0 /* RPPhoneValidator.swift */; };
-		1A5EDDC21CBECDFB00CF0B9B /* RPRequiredValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0171CAC28BB00969BE0 /* RPRequiredValidator.swift */; };
 		1AB53B8E1CBED242009F3CEB /* RPFloatValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB53B8D1CBED242009F3CEB /* RPFloatValidator.swift */; };
 		1AB53B901CBED266009F3CEB /* RPDoubleValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB53B8F1CBED266009F3CEB /* RPDoubleValidator.swift */; };
-		1AB53B911CBED266009F3CEB /* RPDoubleValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB53B8F1CBED266009F3CEB /* RPDoubleValidator.swift */; };
-		1AB53B921CBED268009F3CEB /* RPFloatValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB53B8D1CBED242009F3CEB /* RPFloatValidator.swift */; };
+		AD13E5771E4CCFE300A28EAA /* RPValidationKitTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD13E56E1E4CCFE200A28EAA /* RPValidationKitTV.framework */; };
+		AD13E57C1E4CCFE300A28EAA /* RPValidationKitTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13E57B1E4CCFE300A28EAA /* RPValidationKitTVTests.swift */; };
+		AD13E57E1E4CCFE300A28EAA /* RPValidationKitTV.h in Headers */ = {isa = PBXBuildFile; fileRef = AD13E5701E4CCFE200A28EAA /* RPValidationKitTV.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD13E5851E4CD00400A28EAA /* RPValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0041CAC285F00969BE0 /* RPValidationManager.swift */; };
+		AD13E5861E4CD00400A28EAA /* RPValidatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0051CAC285F00969BE0 /* RPValidatable.swift */; };
+		AD13E5871E4CD00400A28EAA /* RPValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0061CAC285F00969BE0 /* RPValidation.swift */; };
+		AD13E5881E4CD00400A28EAA /* RPValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0071CAC285F00969BE0 /* RPValidator.swift */; };
+		AD13E5891E4CD00400A28EAA /* RPValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66121551CB5690D0074543F /* RPValidationResult.swift */; };
+		AD13E58A1E4CD00400A28EAA /* RPValidatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F30D551D3425E9004A5C9B /* RPValidatorFactory.swift */; };
+		AD13E58B1E4CD00900A28EAA /* RPValidationReflection.h in Headers */ = {isa = PBXBuildFile; fileRef = E6F30D511D342590004A5C9B /* RPValidationReflection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD13E58C1E4CD00900A28EAA /* RPValidationReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F30D521D342590004A5C9B /* RPValidationReflection.m */; };
+		AD13E58D1E4CD01A00A28EAA /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C00F1CAC28AB00969BE0 /* UITextField.swift */; };
+		AD13E58E1E4CD01A00A28EAA /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B9D5A61CB6D74D001EC5CE /* UITextView.swift */; };
+		AD13E58F1E4CD01F00A28EAA /* RPCityStateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988DCD81CC010ED00561FFD /* RPCityStateValidator.swift */; };
+		AD13E5901E4CD01F00A28EAA /* RPDoubleValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB53B8F1CBED266009F3CEB /* RPDoubleValidator.swift */; };
+		AD13E5911E4CD01F00A28EAA /* RPEmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0121CAC28BB00969BE0 /* RPEmailValidator.swift */; };
+		AD13E5921E4CD01F00A28EAA /* RPFloatValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB53B8D1CBED242009F3CEB /* RPFloatValidator.swift */; };
+		AD13E5931E4CD01F00A28EAA /* RPIntegerValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0131CAC28BB00969BE0 /* RPIntegerValidator.swift */; };
+		AD13E5941E4CD01F00A28EAA /* RPMaxLengthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0141CAC28BB00969BE0 /* RPMaxLengthValidator.swift */; };
+		AD13E5951E4CD01F00A28EAA /* RPMinLengthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0151CAC28BB00969BE0 /* RPMinLengthValidator.swift */; };
+		AD13E5961E4CD01F00A28EAA /* RPMKCoordinateRegionValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDD971CBE950E00CF0B9B /* RPMKCoordinateRegionValidator.swift */; };
+		AD13E5971E4CD01F00A28EAA /* RPNumericValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDDA21CBECD1100CF0B9B /* RPNumericValidator.swift */; };
+		AD13E5981E4CD01F00A28EAA /* RPPhoneValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0161CAC28BB00969BE0 /* RPPhoneValidator.swift */; };
+		AD13E5991E4CD01F00A28EAA /* RPRequiredValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0171CAC28BB00969BE0 /* RPRequiredValidator.swift */; };
+		AD13E59A1E4CD01F00A28EAA /* RPStreetAddressValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1944BC1C1CBFFEDC006004DA /* RPStreetAddressValidator.swift */; };
+		AD13E59B1E4CD01F00A28EAA /* RPZipCodeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988DCDB1CC0175A00561FFD /* RPZipCodeValidator.swift */; };
+		AD13E59C1E4CD01F00A28EAA /* RPMaxValueValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E627C82C1D708AC1009B5404 /* RPMaxValueValidator.swift */; };
+		AD13E59D1E4CD01F00A28EAA /* RPMinValueValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E627C82F1D708ACD009B5404 /* RPMinValueValidator.swift */; };
 		ADC6C00A1CAC285F00969BE0 /* RPValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0041CAC285F00969BE0 /* RPValidationManager.swift */; };
 		ADC6C00B1CAC285F00969BE0 /* RPValidatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0051CAC285F00969BE0 /* RPValidatable.swift */; };
 		ADC6C00C1CAC285F00969BE0 /* RPValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0061CAC285F00969BE0 /* RPValidation.swift */; };
@@ -55,35 +58,27 @@
 		ADC6C01B1CAC28BB00969BE0 /* RPMinLengthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0151CAC28BB00969BE0 /* RPMinLengthValidator.swift */; };
 		ADC6C01C1CAC28BB00969BE0 /* RPPhoneValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0161CAC28BB00969BE0 /* RPPhoneValidator.swift */; };
 		ADC6C01D1CAC28BB00969BE0 /* RPRequiredValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0171CAC28BB00969BE0 /* RPRequiredValidator.swift */; };
-		E61508CD1CA9B1EB00D3D70E /* RPValidationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E61508C31CA9B1EB00D3D70E /* RPValidationKit.framework */; };
-		E61508E31CA9B25800D3D70E /* RPValidationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E6F6821E1CA5A461009255CB /* RPValidationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E61508E91CA9B26900D3D70E /* RPValidationKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6822A1CA5A461009255CB /* RPValidationKitTests.swift */; };
 		E627C82D1D708AC1009B5404 /* RPMaxValueValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E627C82C1D708AC1009B5404 /* RPMaxValueValidator.swift */; };
 		E627C8301D708ACD009B5404 /* RPMinValueValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E627C82F1D708ACD009B5404 /* RPMinValueValidator.swift */; };
 		E627C8331D708D92009B5404 /* RPMaxValueValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E627C8321D708D92009B5404 /* RPMaxValueValidatorTests.swift */; };
-		E627C8341D708D92009B5404 /* RPMaxValueValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E627C8321D708D92009B5404 /* RPMaxValueValidatorTests.swift */; };
-		E627C8351D708E56009B5404 /* RPMaxValueValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E627C82C1D708AC1009B5404 /* RPMaxValueValidator.swift */; };
-		E627C8361D708E5C009B5404 /* RPMinValueValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E627C82F1D708ACD009B5404 /* RPMinValueValidator.swift */; };
 		E627C8381D708E93009B5404 /* RPMinValueValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E627C8371D708E93009B5404 /* RPMinValueValidatorTests.swift */; };
-		E627C8391D708E93009B5404 /* RPMinValueValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E627C8371D708E93009B5404 /* RPMinValueValidatorTests.swift */; };
 		E66121561CB5690D0074543F /* RPValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66121551CB5690D0074543F /* RPValidationResult.swift */; };
 		E6B9D5A71CB6D74D001EC5CE /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B9D5A61CB6D74D001EC5CE /* UITextView.swift */; };
 		E6F30D531D342590004A5C9B /* RPValidationReflection.h in Headers */ = {isa = PBXBuildFile; fileRef = E6F30D511D342590004A5C9B /* RPValidationReflection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E6F30D541D342590004A5C9B /* RPValidationReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F30D521D342590004A5C9B /* RPValidationReflection.m */; };
 		E6F30D561D3425E9004A5C9B /* RPValidatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F30D551D3425E9004A5C9B /* RPValidatorFactory.swift */; };
-		E6F30D571D3425E9004A5C9B /* RPValidatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F30D551D3425E9004A5C9B /* RPValidatorFactory.swift */; };
 		E6F6821F1CA5A461009255CB /* RPValidationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E6F6821E1CA5A461009255CB /* RPValidationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E6F682261CA5A461009255CB /* RPValidationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F6821B1CA5A461009255CB /* RPValidationKit.framework */; };
 		E6F6822B1CA5A461009255CB /* RPValidationKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6822A1CA5A461009255CB /* RPValidationKitTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E61508CE1CA9B1EB00D3D70E /* PBXContainerItemProxy */ = {
+		AD13E5781E4CCFE300A28EAA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E6F682121CA5A461009255CB /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E61508C21CA9B1EB00D3D70E;
-			remoteInfo = "RPValidationKit tvOS";
+			remoteGlobalIDString = AD13E56D1E4CCFE200A28EAA;
+			remoteInfo = RPValidationKitTV;
 		};
 		E6F682271CA5A461009255CB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -107,6 +102,12 @@
 		1A5EDDA51CBECD6C00CF0B9B /* RPNumericValidatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPNumericValidatorTests.swift; sourceTree = "<group>"; };
 		1AB53B8D1CBED242009F3CEB /* RPFloatValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPFloatValidator.swift; sourceTree = "<group>"; };
 		1AB53B8F1CBED266009F3CEB /* RPDoubleValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPDoubleValidator.swift; sourceTree = "<group>"; };
+		AD13E56E1E4CCFE200A28EAA /* RPValidationKitTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RPValidationKitTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD13E5701E4CCFE200A28EAA /* RPValidationKitTV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RPValidationKitTV.h; sourceTree = "<group>"; };
+		AD13E5711E4CCFE200A28EAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD13E5761E4CCFE200A28EAA /* RPValidationKitTVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RPValidationKitTVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD13E57B1E4CCFE300A28EAA /* RPValidationKitTVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPValidationKitTVTests.swift; sourceTree = "<group>"; };
+		AD13E57D1E4CCFE300A28EAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADC6C0041CAC285F00969BE0 /* RPValidationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPValidationManager.swift; sourceTree = "<group>"; };
 		ADC6C0051CAC285F00969BE0 /* RPValidatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPValidatable.swift; sourceTree = "<group>"; };
 		ADC6C0061CAC285F00969BE0 /* RPValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPValidation.swift; sourceTree = "<group>"; };
@@ -118,9 +119,6 @@
 		ADC6C0151CAC28BB00969BE0 /* RPMinLengthValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPMinLengthValidator.swift; sourceTree = "<group>"; };
 		ADC6C0161CAC28BB00969BE0 /* RPPhoneValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPPhoneValidator.swift; sourceTree = "<group>"; };
 		ADC6C0171CAC28BB00969BE0 /* RPRequiredValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPRequiredValidator.swift; sourceTree = "<group>"; };
-		E61508C31CA9B1EB00D3D70E /* RPValidationKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RPValidationKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E61508C71CA9B1EB00D3D70E /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-tvOS.plist"; path = "RPValidationKit/Info-tvOS.plist"; sourceTree = SOURCE_ROOT; };
-		E61508CC1CA9B1EB00D3D70E /* RPValidationKitTVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RPValidationKitTVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E61508D31CA9B1EB00D3D70E /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		E627C82C1D708AC1009B5404 /* RPMaxValueValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPMaxValueValidator.swift; sourceTree = "<group>"; };
 		E627C82F1D708ACD009B5404 /* RPMinValueValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPMinValueValidator.swift; sourceTree = "<group>"; };
@@ -140,18 +138,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E61508BF1CA9B1EB00D3D70E /* Frameworks */ = {
+		AD13E56A1E4CCFE200A28EAA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E61508C91CA9B1EB00D3D70E /* Frameworks */ = {
+		AD13E5731E4CCFE200A28EAA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E61508CD1CA9B1EB00D3D70E /* RPValidationKit.framework in Frameworks */,
+				AD13E5771E4CCFE300A28EAA /* RPValidationKitTV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +171,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD13E56F1E4CCFE200A28EAA /* RPValidationKitTV */ = {
+			isa = PBXGroup;
+			children = (
+				AD13E5701E4CCFE200A28EAA /* RPValidationKitTV.h */,
+				AD13E5711E4CCFE200A28EAA /* Info.plist */,
+			);
+			path = RPValidationKitTV;
+			sourceTree = "<group>";
+		};
+		AD13E57A1E4CCFE300A28EAA /* RPValidationKitTVTests */ = {
+			isa = PBXGroup;
+			children = (
+				AD13E57B1E4CCFE300A28EAA /* RPValidationKitTVTests.swift */,
+				AD13E57D1E4CCFE300A28EAA /* Info.plist */,
+			);
+			path = RPValidationKitTVTests;
+			sourceTree = "<group>";
+		};
 		ADC6C0011CAC285F00969BE0 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +247,8 @@
 			children = (
 				E6F6821D1CA5A461009255CB /* RPValidationKit */,
 				E6F682291CA5A461009255CB /* Tests */,
+				AD13E56F1E4CCFE200A28EAA /* RPValidationKitTV */,
+				AD13E57A1E4CCFE300A28EAA /* RPValidationKitTVTests */,
 				E6F6821C1CA5A461009255CB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -240,8 +258,8 @@
 			children = (
 				E6F6821B1CA5A461009255CB /* RPValidationKit.framework */,
 				E6F682251CA5A461009255CB /* RPValidationKitTests.xctest */,
-				E61508C31CA9B1EB00D3D70E /* RPValidationKit.framework */,
-				E61508CC1CA9B1EB00D3D70E /* RPValidationKitTVTests.xctest */,
+				AD13E56E1E4CCFE200A28EAA /* RPValidationKitTV.framework */,
+				AD13E5761E4CCFE200A28EAA /* RPValidationKitTVTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -280,7 +298,6 @@
 			isa = PBXGroup;
 			children = (
 				E6F6821E1CA5A461009255CB /* RPValidationKit.h */,
-				E61508C71CA9B1EB00D3D70E /* Info-tvOS.plist */,
 				E6F682201CA5A461009255CB /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -289,11 +306,12 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		E61508C01CA9B1EB00D3D70E /* Headers */ = {
+		AD13E56B1E4CCFE200A28EAA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E61508E31CA9B25800D3D70E /* RPValidationKit.h in Headers */,
+				AD13E58B1E4CD00900A28EAA /* RPValidationReflection.h in Headers */,
+				AD13E57E1E4CCFE300A28EAA /* RPValidationKitTV.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,40 +327,40 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		E61508C21CA9B1EB00D3D70E /* RPValidationKitTV */ = {
+		AD13E56D1E4CCFE200A28EAA /* RPValidationKitTV */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E61508D81CA9B1EB00D3D70E /* Build configuration list for PBXNativeTarget "RPValidationKitTV" */;
+			buildConfigurationList = AD13E57F1E4CCFE300A28EAA /* Build configuration list for PBXNativeTarget "RPValidationKitTV" */;
 			buildPhases = (
-				E61508BE1CA9B1EB00D3D70E /* Sources */,
-				E61508BF1CA9B1EB00D3D70E /* Frameworks */,
-				E61508C01CA9B1EB00D3D70E /* Headers */,
-				E61508C11CA9B1EB00D3D70E /* Resources */,
+				AD13E5691E4CCFE200A28EAA /* Sources */,
+				AD13E56A1E4CCFE200A28EAA /* Frameworks */,
+				AD13E56B1E4CCFE200A28EAA /* Headers */,
+				AD13E56C1E4CCFE200A28EAA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = RPValidationKitTV;
-			productName = "RPValidationKit tvOS";
-			productReference = E61508C31CA9B1EB00D3D70E /* RPValidationKit.framework */;
+			productName = RPValidationKitTV;
+			productReference = AD13E56E1E4CCFE200A28EAA /* RPValidationKitTV.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		E61508CB1CA9B1EB00D3D70E /* RPValidationKitTVTests */ = {
+		AD13E5751E4CCFE200A28EAA /* RPValidationKitTVTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E61508D91CA9B1EB00D3D70E /* Build configuration list for PBXNativeTarget "RPValidationKitTVTests" */;
+			buildConfigurationList = AD13E5821E4CCFE300A28EAA /* Build configuration list for PBXNativeTarget "RPValidationKitTVTests" */;
 			buildPhases = (
-				E61508C81CA9B1EB00D3D70E /* Sources */,
-				E61508C91CA9B1EB00D3D70E /* Frameworks */,
-				E61508CA1CA9B1EB00D3D70E /* Resources */,
+				AD13E5721E4CCFE200A28EAA /* Sources */,
+				AD13E5731E4CCFE200A28EAA /* Frameworks */,
+				AD13E5741E4CCFE200A28EAA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E61508CF1CA9B1EB00D3D70E /* PBXTargetDependency */,
+				AD13E5791E4CCFE300A28EAA /* PBXTargetDependency */,
 			);
 			name = RPValidationKitTVTests;
-			productName = "RPValidationKit tvOSTests";
-			productReference = E61508CC1CA9B1EB00D3D70E /* RPValidationKitTVTests.xctest */;
+			productName = RPValidationKitTVTests;
+			productReference = AD13E5761E4CCFE200A28EAA /* RPValidationKitTVTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		E6F6821A1CA5A461009255CB /* RPValidationKit */ = {
@@ -387,15 +405,19 @@
 		E6F682121CA5A461009255CB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Rentpath;
 				TargetAttributes = {
-					E61508C21CA9B1EB00D3D70E = {
-						CreatedOnToolsVersion = 7.2.1;
+					AD13E56D1E4CCFE200A28EAA = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = QTWPSC4W56;
+						ProvisioningStyle = Automatic;
 					};
-					E61508CB1CA9B1EB00D3D70E = {
-						CreatedOnToolsVersion = 7.2.1;
+					AD13E5751E4CCFE200A28EAA = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = QTWPSC4W56;
+						ProvisioningStyle = Automatic;
 					};
 					E6F6821A1CA5A461009255CB = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -421,21 +443,21 @@
 			targets = (
 				E6F6821A1CA5A461009255CB /* RPValidationKit */,
 				E6F682241CA5A461009255CB /* RPValidationKitTests */,
-				E61508C21CA9B1EB00D3D70E /* RPValidationKitTV */,
-				E61508CB1CA9B1EB00D3D70E /* RPValidationKitTVTests */,
+				AD13E56D1E4CCFE200A28EAA /* RPValidationKitTV */,
+				AD13E5751E4CCFE200A28EAA /* RPValidationKitTVTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		E61508C11CA9B1EB00D3D70E /* Resources */ = {
+		AD13E56C1E4CCFE200A28EAA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E61508CA1CA9B1EB00D3D70E /* Resources */ = {
+		AD13E5741E4CCFE200A28EAA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -459,48 +481,42 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E61508BE1CA9B1EB00D3D70E /* Sources */ = {
+		AD13E5691E4CCFE200A28EAA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A5EDDBE1CBECDFB00CF0B9B /* RPMinLengthValidator.swift in Sources */,
-				1988DCDD1CC0175A00561FFD /* RPZipCodeValidator.swift in Sources */,
-				1AB53B911CBED266009F3CEB /* RPDoubleValidator.swift in Sources */,
-				1944BC1E1CBFFEDC006004DA /* RPStreetAddressValidator.swift in Sources */,
-				1A5EDDC11CBECDFB00CF0B9B /* RPPhoneValidator.swift in Sources */,
-				1A5EDDBA1CBECDFB00CF0B9B /* UITextView.swift in Sources */,
-				1A5EDDB71CBECDFB00CF0B9B /* RPValidator.swift in Sources */,
-				1A5EDDC01CBECDFB00CF0B9B /* RPNumericValidator.swift in Sources */,
-				1AB53B921CBED268009F3CEB /* RPFloatValidator.swift in Sources */,
-				E627C8351D708E56009B5404 /* RPMaxValueValidator.swift in Sources */,
-				1A5EDDBC1CBECDFB00CF0B9B /* RPIntegerValidator.swift in Sources */,
-				1A5EDDBD1CBECDFB00CF0B9B /* RPMaxLengthValidator.swift in Sources */,
-				1988DCDA1CC010ED00561FFD /* RPCityStateValidator.swift in Sources */,
-				1A5EDDA91CBECDEA00CF0B9B /* RPValidationManager.swift in Sources */,
-				1A5EDDBF1CBECDFB00CF0B9B /* RPMKCoordinateRegionValidator.swift in Sources */,
-				1A5EDDB61CBECDFB00CF0B9B /* RPValidation.swift in Sources */,
-				1A5EDDC21CBECDFB00CF0B9B /* RPRequiredValidator.swift in Sources */,
-				E6F30D571D3425E9004A5C9B /* RPValidatorFactory.swift in Sources */,
-				1A5EDDB81CBECDFB00CF0B9B /* RPValidationResult.swift in Sources */,
-				E627C8361D708E5C009B5404 /* RPMinValueValidator.swift in Sources */,
-				1A5EDDBB1CBECDFB00CF0B9B /* RPEmailValidator.swift in Sources */,
-				1A5EDDAA1CBECDEC00CF0B9B /* RPValidatable.swift in Sources */,
-				1A5EDDB91CBECDFB00CF0B9B /* UITextField.swift in Sources */,
+				AD13E5881E4CD00400A28EAA /* RPValidator.swift in Sources */,
+				AD13E5991E4CD01F00A28EAA /* RPRequiredValidator.swift in Sources */,
+				AD13E5941E4CD01F00A28EAA /* RPMaxLengthValidator.swift in Sources */,
+				AD13E5911E4CD01F00A28EAA /* RPEmailValidator.swift in Sources */,
+				AD13E59A1E4CD01F00A28EAA /* RPStreetAddressValidator.swift in Sources */,
+				AD13E5951E4CD01F00A28EAA /* RPMinLengthValidator.swift in Sources */,
+				AD13E5851E4CD00400A28EAA /* RPValidationManager.swift in Sources */,
+				AD13E5901E4CD01F00A28EAA /* RPDoubleValidator.swift in Sources */,
+				AD13E5961E4CD01F00A28EAA /* RPMKCoordinateRegionValidator.swift in Sources */,
+				AD13E5871E4CD00400A28EAA /* RPValidation.swift in Sources */,
+				AD13E5971E4CD01F00A28EAA /* RPNumericValidator.swift in Sources */,
+				AD13E58F1E4CD01F00A28EAA /* RPCityStateValidator.swift in Sources */,
+				AD13E5921E4CD01F00A28EAA /* RPFloatValidator.swift in Sources */,
+				AD13E59D1E4CD01F00A28EAA /* RPMinValueValidator.swift in Sources */,
+				AD13E58D1E4CD01A00A28EAA /* UITextField.swift in Sources */,
+				AD13E58E1E4CD01A00A28EAA /* UITextView.swift in Sources */,
+				AD13E5931E4CD01F00A28EAA /* RPIntegerValidator.swift in Sources */,
+				AD13E5861E4CD00400A28EAA /* RPValidatable.swift in Sources */,
+				AD13E5981E4CD01F00A28EAA /* RPPhoneValidator.swift in Sources */,
+				AD13E5891E4CD00400A28EAA /* RPValidationResult.swift in Sources */,
+				AD13E58A1E4CD00400A28EAA /* RPValidatorFactory.swift in Sources */,
+				AD13E59C1E4CD01F00A28EAA /* RPMaxValueValidator.swift in Sources */,
+				AD13E58C1E4CD00900A28EAA /* RPValidationReflection.m in Sources */,
+				AD13E59B1E4CD01F00A28EAA /* RPZipCodeValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E61508C81CA9B1EB00D3D70E /* Sources */ = {
+		AD13E5721E4CCFE200A28EAA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E627C8341D708D92009B5404 /* RPMaxValueValidatorTests.swift in Sources */,
-				1A5EDDA81CBECD7200CF0B9B /* RPMKCoordinateReagionValidatorTests.swift in Sources */,
-				1988DCD71CC010D700561FFD /* RPStreetAddressValidatorTests.swift in Sources */,
-				1A5EDDA71CBECD6C00CF0B9B /* RPNumericValidatorTests.swift in Sources */,
-				E61508E91CA9B26900D3D70E /* RPValidationKitTests.swift in Sources */,
-				E627C8391D708E93009B5404 /* RPMinValueValidatorTests.swift in Sources */,
-				1988DCD61CC010D200561FFD /* RPCityStateValidatorTests.swift in Sources */,
-				1988DCE01CC018F600561FFD /* RPZipCodeValidatorTests.swift in Sources */,
+				AD13E57C1E4CCFE300A28EAA /* RPValidationKitTVTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,10 +569,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E61508CF1CA9B1EB00D3D70E /* PBXTargetDependency */ = {
+		AD13E5791E4CCFE300A28EAA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E61508C21CA9B1EB00D3D70E /* RPValidationKitTV */;
-			targetProxy = E61508CE1CA9B1EB00D3D70E /* PBXContainerItemProxy */;
+			target = AD13E56D1E4CCFE200A28EAA /* RPValidationKitTV */;
+			targetProxy = AD13E5781E4CCFE300A28EAA /* PBXContainerItemProxy */;
 		};
 		E6F682281CA5A461009255CB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -566,70 +582,91 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		E61508D41CA9B1EB00D3D70E /* Debug */ = {
+		AD13E5801E4CCFE300A28EAA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = QTWPSC4W56;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/RPValidationKit/Info-tvOS.plist";
+				INFOPLIST_FILE = RPValidationKitTV/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rentpath.RPValidationKit;
-				PRODUCT_NAME = RPValidationKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rentpath.RPValidationKitTV.RPValidationKitTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.1;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
-		E61508D51CA9B1EB00D3D70E /* Release */ = {
+		AD13E5811E4CCFE300A28EAA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = QTWPSC4W56;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/RPValidationKit/Info-tvOS.plist";
+				INFOPLIST_FILE = RPValidationKitTV/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rentpath.RPValidationKit;
-				PRODUCT_NAME = RPValidationKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rentpath.RPValidationKitTV.RPValidationKitTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.1;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};
-		E61508D61CA9B1EB00D3D70E /* Debug */ = {
+		AD13E5831E4CCFE300A28EAA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = "RPValidationKitTests/Info-tvOS.plist";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEVELOPMENT_TEAM = QTWPSC4W56;
+				INFOPLIST_FILE = RPValidationKitTVTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rentpath.RPValidationKit-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rentpath.RPValidationKitTV.RPValidationKitTVTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TVOS_DEPLOYMENT_TARGET = 9.1;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
 		};
-		E61508D71CA9B1EB00D3D70E /* Release */ = {
+		AD13E5841E4CCFE300A28EAA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = "RPValidationKitTests/Info-tvOS.plist";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEVELOPMENT_TEAM = QTWPSC4W56;
+				INFOPLIST_FILE = RPValidationKitTVTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rentpath.RPValidationKit-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rentpath.RPValidationKitTV.RPValidationKitTVTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TVOS_DEPLOYMENT_TARGET = 9.1;
+				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
 		};
@@ -793,23 +830,21 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E61508D81CA9B1EB00D3D70E /* Build configuration list for PBXNativeTarget "RPValidationKitTV" */ = {
+		AD13E57F1E4CCFE300A28EAA /* Build configuration list for PBXNativeTarget "RPValidationKitTV" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E61508D41CA9B1EB00D3D70E /* Debug */,
-				E61508D51CA9B1EB00D3D70E /* Release */,
+				AD13E5801E4CCFE300A28EAA /* Debug */,
+				AD13E5811E4CCFE300A28EAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		E61508D91CA9B1EB00D3D70E /* Build configuration list for PBXNativeTarget "RPValidationKitTVTests" */ = {
+		AD13E5821E4CCFE300A28EAA /* Build configuration list for PBXNativeTarget "RPValidationKitTVTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E61508D61CA9B1EB00D3D70E /* Debug */,
-				E61508D71CA9B1EB00D3D70E /* Release */,
+				AD13E5831E4CCFE300A28EAA /* Debug */,
+				AD13E5841E4CCFE300A28EAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		E6F682151CA5A461009255CB /* Build configuration list for PBXProject "RPValidationKit" */ = {
 			isa = XCConfigurationList;
