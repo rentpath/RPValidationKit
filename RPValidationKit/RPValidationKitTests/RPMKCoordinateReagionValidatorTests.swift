@@ -8,7 +8,12 @@
 
 import XCTest
 import MapKit
-@testable import RPValidationKit
+
+#if os(iOS)
+    @testable import RPValidationKit
+#else
+    @testable import RPValidationKitTV
+#endif
 
 class RPMKCoordinateReagionValidatorTests: XCTestCase {
     
