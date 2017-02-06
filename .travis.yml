@@ -1,5 +1,5 @@
 language: objective-c
-osx_image: xcode8
+osx_image: xcode8.1
 notifications:
   slack:
     rooms:
@@ -14,23 +14,15 @@ env:
     # PIVOTAL_TOKEN
     - secure: "gYiOnVocrjiQ087xsXExS8hD7ODLobbd5kpB18+4IL+nGY6EUMGF+++U4/ONq4lRYOGVhY+ti0F2SacaQAq50YyxOpU8RPyrz6Qm1OVwyXabj5WSkf7JGg7cUm3DOytsqpoEhJYheMc9/otKTi6ltEOm8rNb5qN7QK6kR9Qq1w2gQ+Me6e0o3gLy0auh1kGQAJr36BLYeRabEKmhrCnFHH0lrCo9XMTxd3sTewd6+63In1TKj7OV9LKGP++/VvxyEN0WBhhkkmFVd6K9u35zhaE8ApcKZ8oDcXekJ/lsQkWPo237eFclB4auYv3HN3LGgLPO+ovgVDfEG59hUzEEz2KRslYIFU2aEbaCik3c8h2Th+q5tgCGhdImayEjYVVuO1zXWCFGz+APGpl35drz/Ab60yg4mMi5f199U+/UEx/cNKAjkJ0YRKOQCfMbUpbuuTyEGMPsgzbAmW+29Js3Po2jYyiR7kEL2qJzgC/D4dSxWtLMUWnIU7oAxbz+uH/6JTfhG5xhRVphcSics4Y/AGkcK8QQLO0P+OGV11y6527yi5MadkJWludOpkYz3EO0mCIax6PR50rnpxVS6dzh8GXn5Gmj0szcForgh6yNg93ja+Ff3Dei5g3ybFWOG+QIxverya8caMEH6JPaKxylunnd+ibTDzTdSVzFu+JOxhE="
 before_install:
-  # - brew update
-  # - brew outdated carthage || brew upgrade carthage
-before_script:
-  - carthage bootstrap --use-ssh --platform iOS
-script: 
-  - xcodebuild -workspace RPValidationKit.xcworkspace -scheme 'RPValidationKit' -destination "name=iPhone 7" build test | xcpretty -c; test ${PIPESTATUS[0]} -eq 0
-before_deploy:
-  - carthage build --no-skip-current --platform iOS
-  - carthage archive $FRAMEWORK_NAME
+   - brew update
+   - brew outdated carthage || brew upgrade carthage
+
+script:
+  - fastlane build --env build
+
 after_success:
-  - sleep 5
-  - git config --global user.email "builds@travis-ci.com"
-  - git config --global user.name "Travis CI"
-  - export OLD_GIT_TAG=$(git tag --sort version:refname | tail -n1)
-  - export NEW_GIT_TAG=$(echo $OLD_GIT_TAG | (IFS=".$IFS" ; read a b c && echo $a.$b.$((c + 1))))
-  - git tag $NEW_GIT_TAG -a -m "Generated tag $NEW_GIT_TAG"
-  - if [ "$TRAVIS_BRANCH" == "master" ]; then git push --quiet https://$GITHUB_ACCESS_TOKEN@github.com/$ORGANIZATION/$REPOSITORY $NEW_GIT_TAG > /dev/null 2>&1; fi
+  - fastlane deploy --env build
+
 deploy:
   provider: releases
   api_key:
