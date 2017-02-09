@@ -47,6 +47,14 @@
 		AD13E59B1E4CD01F00A28EAA /* RPZipCodeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988DCDB1CC0175A00561FFD /* RPZipCodeValidator.swift */; };
 		AD13E59C1E4CD01F00A28EAA /* RPMaxValueValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E627C82C1D708AC1009B5404 /* RPMaxValueValidator.swift */; };
 		AD13E59D1E4CD01F00A28EAA /* RPMinValueValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E627C82F1D708ACD009B5404 /* RPMinValueValidator.swift */; };
+		AD13E59E1E4CD65100A28EAA /* RPCityStateValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988DCD31CC010CE00561FFD /* RPCityStateValidatorTests.swift */; };
+		AD13E59F1E4CD65100A28EAA /* RPValidationKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6822A1CA5A461009255CB /* RPValidationKitTests.swift */; };
+		AD13E5A01E4CD65100A28EAA /* RPMKCoordinateReagionValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDDA01CBEC47500CF0B9B /* RPMKCoordinateReagionValidatorTests.swift */; };
+		AD13E5A11E4CD65100A28EAA /* RPNumericValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5EDDA51CBECD6C00CF0B9B /* RPNumericValidatorTests.swift */; };
+		AD13E5A21E4CD65100A28EAA /* RPStreetAddressValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1944BC1F1CC00DC2006004DA /* RPStreetAddressValidatorTests.swift */; };
+		AD13E5A31E4CD65100A28EAA /* RPZipCodeValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1988DCDE1CC018F600561FFD /* RPZipCodeValidatorTests.swift */; };
+		AD13E5A41E4CD65100A28EAA /* RPMaxValueValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E627C8321D708D92009B5404 /* RPMaxValueValidatorTests.swift */; };
+		AD13E5A51E4CD65100A28EAA /* RPMinValueValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E627C8371D708E93009B5404 /* RPMinValueValidatorTests.swift */; };
 		ADC6C00A1CAC285F00969BE0 /* RPValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0041CAC285F00969BE0 /* RPValidationManager.swift */; };
 		ADC6C00B1CAC285F00969BE0 /* RPValidatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0051CAC285F00969BE0 /* RPValidatable.swift */; };
 		ADC6C00C1CAC285F00969BE0 /* RPValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6C0061CAC285F00969BE0 /* RPValidation.swift */; };
@@ -119,7 +127,6 @@
 		ADC6C0151CAC28BB00969BE0 /* RPMinLengthValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPMinLengthValidator.swift; sourceTree = "<group>"; };
 		ADC6C0161CAC28BB00969BE0 /* RPPhoneValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPPhoneValidator.swift; sourceTree = "<group>"; };
 		ADC6C0171CAC28BB00969BE0 /* RPRequiredValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPRequiredValidator.swift; sourceTree = "<group>"; };
-		E61508D31CA9B1EB00D3D70E /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		E627C82C1D708AC1009B5404 /* RPMaxValueValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPMaxValueValidator.swift; sourceTree = "<group>"; };
 		E627C82F1D708ACD009B5404 /* RPMinValueValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPMinValueValidator.swift; sourceTree = "<group>"; };
 		E627C8321D708D92009B5404 /* RPMaxValueValidatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPMaxValueValidatorTests.swift; sourceTree = "<group>"; };
@@ -288,7 +295,6 @@
 				E627C8321D708D92009B5404 /* RPMaxValueValidatorTests.swift */,
 				E627C8371D708E93009B5404 /* RPMinValueValidatorTests.swift */,
 				E6F6822C1CA5A461009255CB /* Info.plist */,
-				E61508D31CA9B1EB00D3D70E /* Info-tvOS.plist */,
 			);
 			name = Tests;
 			path = RPValidationKitTests;
@@ -516,7 +522,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD13E5A01E4CD65100A28EAA /* RPMKCoordinateReagionValidatorTests.swift in Sources */,
+				AD13E59F1E4CD65100A28EAA /* RPValidationKitTests.swift in Sources */,
+				AD13E5A21E4CD65100A28EAA /* RPStreetAddressValidatorTests.swift in Sources */,
+				AD13E5A11E4CD65100A28EAA /* RPNumericValidatorTests.swift in Sources */,
 				AD13E57C1E4CCFE300A28EAA /* RPValidationKitTVTests.swift in Sources */,
+				AD13E5A31E4CD65100A28EAA /* RPZipCodeValidatorTests.swift in Sources */,
+				AD13E59E1E4CD65100A28EAA /* RPCityStateValidatorTests.swift in Sources */,
+				AD13E5A51E4CD65100A28EAA /* RPMinValueValidatorTests.swift in Sources */,
+				AD13E5A41E4CD65100A28EAA /* RPMaxValueValidatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

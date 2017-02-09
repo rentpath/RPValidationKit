@@ -7,7 +7,12 @@
 //
 
 import XCTest
-@testable import RPValidationKit
+
+#if os(iOS)
+    @testable import RPValidationKit
+#else
+    @testable import RPValidationKitTV
+#endif
 
 class RPMinValueValidatorTests: XCTestCase {
     

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AD13E5381E4CCD6700A28EAA"
+               BlueprintIdentifier = "AD13E56D1E4CCFE200A28EAA"
                BuildableName = "RPValidationKitTV.framework"
                BlueprintName = "RPValidationKitTV"
                ReferencedContainer = "container:RPValidationKit.xcodeproj">
@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AD13E5751E4CCFE200A28EAA"
+               BuildableName = "RPValidationKitTVTests.xctest"
+               BlueprintName = "RPValidationKitTVTests"
+               ReferencedContainer = "container:RPValidationKit.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "AD13E56D1E4CCFE200A28EAA"
+            BuildableName = "RPValidationKitTV.framework"
+            BlueprintName = "RPValidationKitTV"
+            ReferencedContainer = "container:RPValidationKit.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -45,7 +64,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AD13E5381E4CCD6700A28EAA"
+            BlueprintIdentifier = "AD13E56D1E4CCFE200A28EAA"
             BuildableName = "RPValidationKitTV.framework"
             BlueprintName = "RPValidationKitTV"
             ReferencedContainer = "container:RPValidationKit.xcodeproj">
@@ -63,7 +82,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AD13E5381E4CCD6700A28EAA"
+            BlueprintIdentifier = "AD13E56D1E4CCFE200A28EAA"
             BuildableName = "RPValidationKitTV.framework"
             BlueprintName = "RPValidationKitTV"
             ReferencedContainer = "container:RPValidationKit.xcodeproj">
