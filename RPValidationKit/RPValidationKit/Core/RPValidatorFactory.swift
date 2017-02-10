@@ -25,7 +25,7 @@ open class RPValidatorFactory {
     }
     
     open func createValidator(_ type: String) -> RPValidator {
-        let typeParts = type.components(separatedBy: ":")
+        let typeParts = type.components(separatedBy: ":").map { $0.trimmingCharacters(in: .whitespaces) }
         let validatorType = typeParts[0]
         let args: String? = typeParts.count > 1 ? typeParts[1] : nil
         return RPValidationReflection.createObject(registry[validatorType]!, initializer: #selector(RPValidator.init), argument: args) as! RPValidator

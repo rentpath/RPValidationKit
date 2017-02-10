@@ -26,8 +26,20 @@ class RPMaxValueValidatorTests: XCTestCase {
         XCTAssertFalse(validator.validate("20"))
     }
     
-    func testCreateValidatorFromString() {
-        let validator = RPValidatorFactory.sharedInstance.createValidator("maxvalue:10")
+    func testCreateValidatorFromStringVariantOne() {
+        let validator = RPValidatorFactory.sharedInstance.createValidator("maxvalue : 10")
+        XCTAssertTrue(validator.validate("4"))
+        XCTAssertFalse(validator.validate("20"))
+    }
+    
+    func testCreateValidatorFromStringVariantTwo() {
+        let validator = RPValidatorFactory.sharedInstance.createValidator("maxvalue: 10")
+        XCTAssertTrue(validator.validate("4"))
+        XCTAssertFalse(validator.validate("20"))
+    }
+    
+    func testCreateValidatorFromStringVariantThree() {
+        let validator = RPValidatorFactory.sharedInstance.createValidator("maxvalue :10")
         XCTAssertTrue(validator.validate("4"))
         XCTAssertFalse(validator.validate("20"))
     }
