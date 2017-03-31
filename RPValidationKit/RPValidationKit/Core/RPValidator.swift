@@ -6,6 +6,8 @@
 //  Copyright © 2016 Rentpath. All rights reserved.
 //
 
+import Foundation
+
 open class RPValidator: NSObject {
     
     public init(string: String? = nil) {

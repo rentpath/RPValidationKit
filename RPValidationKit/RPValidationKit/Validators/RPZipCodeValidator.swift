@@ -20,6 +20,8 @@
  * SOFTWARE.
  */
 
+import Foundation
+
 open class RPZipCodeValidator: RPValidator {
     
     let ZIP_REGEX = "^[0-9]{5}(-([0-9]{1,4}))?$"

@@ -20,6 +20,8 @@
  * SOFTWARE.
  */
 
+import Foundation
+
 open class RPStreetAddressValidator: RPValidator {
     
     let STREET_REGEX = "^\\d{1,}(\\s{1}\\w{1,})(\\s{1}?\\w{1,})+$"

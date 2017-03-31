@@ -8,11 +8,7 @@
 
 import XCTest
 
-#if os(iOS)
-    @testable import RPValidationKit
-#else
-    @testable import RPValidationKitTV
-#endif
+@testable import RPValidationKit
 
 class RPCityStateValidatorTests: XCTestCase {
 

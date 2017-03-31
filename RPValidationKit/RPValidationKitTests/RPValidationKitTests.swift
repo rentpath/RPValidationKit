@@ -8,11 +8,7 @@
 
 import XCTest
 
-#if os(iOS)
-    @testable import RPValidationKit
-#else
-    @testable import RPValidationKitTV
-#endif
+@testable import RPValidationKit
 
 class RPValidationKitTests: XCTestCase {
     
@@ -160,18 +156,5 @@ class RPValidationKitTests: XCTestCase {
         XCTAssert(result.isValid == true, "The form failed validation")
         XCTAssert(result.errorMessages.count == 0, "The form validation should have 0 error messages but instead has \(result.errorMessages.count)")
         XCTAssert(result.validFields.count == 2, "There should be 2 valid fields")
-    }
-    
-    func testValidatorFactory() {
-        let maxLengthValidator = RPValidatorFactory.sharedInstance.createValidator("maxlength:10")
-        XCTAssertNotNil(maxLengthValidator)
-        
-        let nameField = UITextField()
-        nameField.validators = [maxLengthValidator]
-        nameField.validatableName = "Name"
-        nameField.text = "Test"
-        
-        let result = nameField.validate()
-        XCTAssert(result.isValid == true, "The field should validate")
     }
 }

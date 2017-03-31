@@ -8,11 +8,7 @@
 
 import XCTest
 
-#if os(iOS)
-    @testable import RPValidationKit
-#else
-    @testable import RPValidationKitTV
-#endif
+@testable import RPValidationKit
 
 class RPMaxValueValidatorTests: XCTestCase {
     
@@ -23,12 +19,6 @@ class RPMaxValueValidatorTests: XCTestCase {
     
     func testValidationFailsForInvalidValue() {
         let validator = RPMaxValueValidator(maxValue: 10)
-        XCTAssertFalse(validator.validate("20"))
-    }
-    
-    func testCreateValidatorFromString() {
-        let validator = RPValidatorFactory.sharedInstance.createValidator("maxvalue:10")
-        XCTAssertTrue(validator.validate("4"))
         XCTAssertFalse(validator.validate("20"))
     }
 }
