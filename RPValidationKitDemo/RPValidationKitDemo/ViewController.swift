@@ -45,7 +45,7 @@ class ViewController: UIViewController {
             ageTextField.addTarget(self, action: #selector(validateTextFieldOnChange(_:)), for: .editingChanged)
             ageTextField.validators = [RPIntegerValidator()]
             
-            let maxValueValidator = RPValidatorFactory.sharedInstance.createValidator("maxvalue:10")
+            let maxValueValidator = RPMaxValueValidator(maxValue: 10)
             ageTextField.validators.append(maxValueValidator)
             
             ageTextField.backgroundColor = defaultColor

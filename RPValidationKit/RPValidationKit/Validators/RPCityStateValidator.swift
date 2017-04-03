@@ -20,6 +20,8 @@
  * SOFTWARE.
  */
 
+import Foundation
+
 open class RPCityStateValidator: RPValidator {
     
     let CITY_STATE_REGEX = "^([^,]+),\\s?([A-Za-z]{2,})$"

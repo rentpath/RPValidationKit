@@ -20,6 +20,8 @@
  * SOFTWARE.
  */
 
+import Foundation
+
 open class RPNumbericValidator: RPValidator {
     
     open override func getType() -> String {

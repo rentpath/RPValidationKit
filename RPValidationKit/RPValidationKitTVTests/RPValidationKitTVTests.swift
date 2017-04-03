@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import RPValidationKitTV
+@testable import RPValidationKit
 
 class RPValidationKitTVTests: XCTestCase {
     
