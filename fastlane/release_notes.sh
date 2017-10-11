@@ -18,7 +18,7 @@ else
     echo "<*_tag> -> can also be a SHA -> example 0915fe27c3af54fda7b9d0f79f79a6b4b8a0f7cf -> ./release_notes.sh 0915fe27c3af54fda7b9d0f79f79a6b4b8a0f7cf 1.4.5"
     exit $?
 fi
-ALL_NOTES="## [What's New](https://github.com/$ORGANIZATION/$REPOSITORY/compare/$OLD_GIT_TAG...$NEW_GIT_TAG)\r\n\r\nCommit | Author | Story | Type | Title\r\n------------ | ------------- | ------------- | ------------- | -------------\r\n"
+ALL_NOTES="## [What's New](https://github.com/$ORGANIZATION/$REPOSITORY/compare/$OLD_GIT_TAG...$NEW_GIT_TAG)\r\n\r\nCommit | Author | Card | Type | Title\r\n------------ | ------------- | ------------- | ------------- | -------------\r\n"
 RELEASE_NOTES=$(git log --no-merges --pretty=format:"{\"abbreviated_commit_hash\":\"%h\", \"commit_hash\":\"%H\", \"author_name\":\"%an\", \"subject\":\"%s\"}" $OLD_GIT_TAG...$NEW_GIT_TAG)
 echo "$RELEASE_NOTES" |
 (
