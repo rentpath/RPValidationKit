@@ -33,7 +33,7 @@ open class RPZipCodeValidator: RPValidator {
     open override func validate(_ zipCode: String) -> Bool {
         
         // Check for an invalid zip in the format of 999999
-        let reversedSearchTerm = Array(zipCode.characters.reversed()).reduce("") { $0 + "\($1)" }
+        let reversedSearchTerm = Array(zipCode.reversed()).reduce("") { $0 + "\($1)" }
         if reversedSearchTerm == zipCode {
             return false
         }
@@ -45,7 +45,7 @@ open class RPZipCodeValidator: RPValidator {
             print("Error validating zipcode. Error: \(error.localizedDescription)")
             return false
         }
-        let matches = zipRegex.numberOfMatches(in: zipCode, options: NSRegularExpression.MatchingOptions.reportCompletion, range: NSMakeRange(0, zipCode.characters.count))
+        let matches = zipRegex.numberOfMatches(in: zipCode, options: NSRegularExpression.MatchingOptions.reportCompletion, range: NSMakeRange(0, zipCode.count))
         
         return matches != 0
     }

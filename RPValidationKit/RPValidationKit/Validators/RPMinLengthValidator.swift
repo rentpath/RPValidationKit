@@ -42,7 +42,7 @@ open class RPMinLengthValidator: RPValidator {
     }
 
     open override func validate(_ value: String) -> Bool {
-        return value.characters.count >= minLength
+        return value.count >= minLength
     }
     
     open override func validateField(_ fieldName: String, value: String) -> RPValidation {

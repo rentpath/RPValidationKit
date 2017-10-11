@@ -32,7 +32,7 @@ open class RPStreetAddressValidator: RPValidator {
     
     open override func validate(_ address: String) -> Bool {
         let trimmedAddress = address.trimmingCharacters(in: CharacterSet.whitespaces)
-        if trimmedAddress.characters.count == 0 {
+        if trimmedAddress.count == 0 {
             return false
         }
         

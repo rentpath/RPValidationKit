@@ -42,7 +42,7 @@ open class RPMaxLengthValidator: RPValidator {
     }
     
     open override func validate(_ value: String) -> Bool {
-        return value.characters.count <= maxLength
+        return value.count <= maxLength
     }
 
     open override func validateField(_ fieldName: String, value: String) -> RPValidation {
